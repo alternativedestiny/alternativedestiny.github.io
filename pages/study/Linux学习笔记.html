@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux 学习笔记 | 北方酱Hoppou~</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/hoppou_nobg.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="北方酱Hoppou~的个人主页">
+    
+    <link rel="preload" href="/assets/css/0.styles.e14bcbda.css" as="style"><link rel="preload" href="/assets/js/app.873120b7.js" as="script"><link rel="preload" href="/assets/js/2.3072bb76.js" as="script"><link rel="preload" href="/assets/js/68.1be377b3.js" as="script"><link rel="prefetch" href="/assets/js/10.1207609b.js"><link rel="prefetch" href="/assets/js/11.9bc48425.js"><link rel="prefetch" href="/assets/js/12.dc08ce13.js"><link rel="prefetch" href="/assets/js/13.196dff4c.js"><link rel="prefetch" href="/assets/js/14.8a0feea4.js"><link rel="prefetch" href="/assets/js/15.5f7e35cd.js"><link rel="prefetch" href="/assets/js/16.e71e238a.js"><link rel="prefetch" href="/assets/js/17.d6af53fb.js"><link rel="prefetch" href="/assets/js/18.5bf23ab4.js"><link rel="prefetch" href="/assets/js/19.4ec16e0d.js"><link rel="prefetch" href="/assets/js/20.42bb9b26.js"><link rel="prefetch" href="/assets/js/21.de4993c7.js"><link rel="prefetch" href="/assets/js/22.70316b78.js"><link rel="prefetch" href="/assets/js/23.be7b06e9.js"><link rel="prefetch" href="/assets/js/24.d5520ed0.js"><link rel="prefetch" href="/assets/js/25.3a405964.js"><link rel="prefetch" href="/assets/js/26.50ed4124.js"><link rel="prefetch" href="/assets/js/27.5e56e09b.js"><link rel="prefetch" href="/assets/js/28.ff6d72d8.js"><link rel="prefetch" href="/assets/js/29.9d088a70.js"><link rel="prefetch" href="/assets/js/3.307cdc30.js"><link rel="prefetch" href="/assets/js/30.c26a13e4.js"><link rel="prefetch" href="/assets/js/31.bce9a689.js"><link rel="prefetch" href="/assets/js/32.0a2f8e1a.js"><link rel="prefetch" href="/assets/js/33.3323a51f.js"><link rel="prefetch" href="/assets/js/34.c396c236.js"><link rel="prefetch" href="/assets/js/35.9ad63021.js"><link rel="prefetch" href="/assets/js/36.f69f7238.js"><link rel="prefetch" href="/assets/js/37.de2ca75d.js"><link rel="prefetch" href="/assets/js/38.e24495c0.js"><link rel="prefetch" href="/assets/js/39.07879d5f.js"><link rel="prefetch" href="/assets/js/4.0245bf49.js"><link rel="prefetch" href="/assets/js/40.0d438b08.js"><link rel="prefetch" href="/assets/js/41.cedecab2.js"><link rel="prefetch" href="/assets/js/42.a287724c.js"><link rel="prefetch" href="/assets/js/43.f3e3ab39.js"><link rel="prefetch" href="/assets/js/44.54c80f80.js"><link rel="prefetch" href="/assets/js/45.d05ba106.js"><link rel="prefetch" href="/assets/js/46.11e5ea35.js"><link rel="prefetch" href="/assets/js/47.d1d160fc.js"><link rel="prefetch" href="/assets/js/48.f9bce1c1.js"><link rel="prefetch" href="/assets/js/49.f467537d.js"><link rel="prefetch" href="/assets/js/5.eef79904.js"><link rel="prefetch" href="/assets/js/50.f3e88b10.js"><link rel="prefetch" href="/assets/js/51.841c03fc.js"><link rel="prefetch" href="/assets/js/52.a6ec69c4.js"><link rel="prefetch" href="/assets/js/53.5e04d851.js"><link rel="prefetch" href="/assets/js/54.5f8afedb.js"><link rel="prefetch" href="/assets/js/55.cbccbe90.js"><link rel="prefetch" href="/assets/js/56.fad690b4.js"><link rel="prefetch" href="/assets/js/57.34d4ef65.js"><link rel="prefetch" href="/assets/js/58.9ad03d89.js"><link rel="prefetch" href="/assets/js/59.b63c95f1.js"><link rel="prefetch" href="/assets/js/6.96d4213e.js"><link rel="prefetch" href="/assets/js/60.5a35df65.js"><link rel="prefetch" href="/assets/js/61.308c6f7a.js"><link rel="prefetch" href="/assets/js/62.8f0b386e.js"><link rel="prefetch" href="/assets/js/63.90d87d01.js"><link rel="prefetch" href="/assets/js/64.a8c82a04.js"><link rel="prefetch" href="/assets/js/65.3e67219a.js"><link rel="prefetch" href="/assets/js/66.091c45fd.js"><link rel="prefetch" href="/assets/js/67.f232d216.js"><link rel="prefetch" href="/assets/js/69.b5159968.js"><link rel="prefetch" href="/assets/js/7.8bd831ea.js"><link rel="prefetch" href="/assets/js/70.947ca571.js"><link rel="prefetch" href="/assets/js/71.b3d5f499.js"><link rel="prefetch" href="/assets/js/72.ba0b0e73.js"><link rel="prefetch" href="/assets/js/73.618be5ba.js"><link rel="prefetch" href="/assets/js/74.d66c9783.js"><link rel="prefetch" href="/assets/js/75.811a20b7.js"><link rel="prefetch" href="/assets/js/76.4f4c73c8.js"><link rel="prefetch" href="/assets/js/77.de406471.js"><link rel="prefetch" href="/assets/js/8.a648cabf.js"><link rel="prefetch" href="/assets/js/9.b9cbb12c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e14bcbda.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/hoppou_nobg.jpg" alt="北方酱Hoppou~" class="logo"> <span class="site-name can-hide">北方酱Hoppou~</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Python-01-环境.html" class="nav-link">
+  Python-01-环境
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-02-数据类型.html" class="nav-link">
+  Python-02-数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-03-文件处理.html" class="nav-link">
+  Python-03-文件处理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-04-Numpy.html" class="nav-link">
+  Python-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-05-Pandas.html" class="nav-link">
+  Python-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-06-Matplotlib.html" class="nav-link">
+  Python-06-Matplotlib
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-07-SciPy.html" class="nav-link">
+  Python-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-08-Pyinstaller.html" class="nav-link">
+  Python-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-09-Mysql.html" class="nav-link">
+  Python-09-Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-10-Neo4j.html" class="nav-link">
+  Python-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-11-Django.html" class="nav-link">
+  Python-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-12-Word2Vec.html" class="nav-link">
+  Python-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-13-PyTorch.html" class="nav-link">
+  Python-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python_Pycharm.html" class="nav-link">
+  Python_Pycharm
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python_代码块.html" class="nav-link">
+  Python_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境.html" class="nav-link">
+  Cpp-01-环境
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型.html" class="nav-link">
+  Cpp-02-数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构.html" class="nav-link">
+  Cpp-03-数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针.html" class="nav-link">
+  Cpp-04-指针
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数.html" class="nav-link">
+  Cpp-05-函数
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出.html" class="nav-link">
+  Cpp-06-输入输出
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象.html" class="nav-link">
+  Cpp-07-面向对象
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/Keras学习笔记.html" class="nav-link">
+  Keras学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/层次聚类.html" class="nav-link">
+  层次聚类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/谱聚类.html" class="nav-link">
+  谱聚类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Ubuntu笔记.html" class="nav-link">
+  Ubuntu笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/重启打印服务.html" class="nav-link">
+  重启打印服务
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Python-01-环境.html" class="nav-link">
+  Python-01-环境
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-02-数据类型.html" class="nav-link">
+  Python-02-数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-03-文件处理.html" class="nav-link">
+  Python-03-文件处理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-04-Numpy.html" class="nav-link">
+  Python-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-05-Pandas.html" class="nav-link">
+  Python-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-06-Matplotlib.html" class="nav-link">
+  Python-06-Matplotlib
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-07-SciPy.html" class="nav-link">
+  Python-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-08-Pyinstaller.html" class="nav-link">
+  Python-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-09-Mysql.html" class="nav-link">
+  Python-09-Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-10-Neo4j.html" class="nav-link">
+  Python-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-11-Django.html" class="nav-link">
+  Python-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-12-Word2Vec.html" class="nav-link">
+  Python-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-13-PyTorch.html" class="nav-link">
+  Python-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python_Pycharm.html" class="nav-link">
+  Python_Pycharm
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python_代码块.html" class="nav-link">
+  Python_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境.html" class="nav-link">
+  Cpp-01-环境
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型.html" class="nav-link">
+  Cpp-02-数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构.html" class="nav-link">
+  Cpp-03-数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针.html" class="nav-link">
+  Cpp-04-指针
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数.html" class="nav-link">
+  Cpp-05-函数
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出.html" class="nav-link">
+  Cpp-06-输入输出
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象.html" class="nav-link">
+  Cpp-07-面向对象
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/Keras学习笔记.html" class="nav-link">
+  Keras学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/层次聚类.html" class="nav-link">
+  层次聚类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/谱聚类.html" class="nav-link">
+  谱聚类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Ubuntu笔记.html" class="nav-link">
+  Ubuntu笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/重启打印服务.html" class="nav-link">
+  重启打印服务
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/study/Docker笔记.html" class="sidebar-link">Docker</a></li><li><a href="/pages/study/Git学习笔记.html" class="sidebar-link">Git 学习笔记</a></li><li><a href="/pages/study/Java学习笔记.html" class="sidebar-link">Java笔记</a></li><li><a href="/pages/study/libsvm学习笔记.html" class="sidebar-link">libsvm学习笔记</a></li><li><a href="/pages/study/Linux学习笔记.html" class="active sidebar-link">Linux 学习笔记</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/study/Linux学习笔记.html#_1-系统安装及配置-ubuntu" class="sidebar-link">1. 系统安装及配置（Ubuntu）</a></li><li class="sidebar-sub-header"><a href="/pages/study/Linux学习笔记.html#_2-概念" class="sidebar-link">2. 概念</a></li><li class="sidebar-sub-header"><a href="/pages/study/Linux学习笔记.html#_3-基础使用" class="sidebar-link">3. 基础使用</a></li><li class="sidebar-sub-header"><a href="/pages/study/Linux学习笔记.html#_4-vi-用法" class="sidebar-link">4. vi 用法</a></li><li class="sidebar-sub-header"><a href="/pages/study/Linux学习笔记.html#_5-shell-脚本" class="sidebar-link">5. Shell 脚本</a></li><li class="sidebar-sub-header"><a href="/pages/study/Linux学习笔记.html#_6-常用指令" class="sidebar-link">6. 常用指令</a></li><li class="sidebar-sub-header"><a href="/pages/study/Linux学习笔记.html#_7-linux-c" class="sidebar-link">7. Linux &amp; c++</a></li><li class="sidebar-sub-header"><a href="/pages/study/Linux学习笔记.html#_8-用户和组" class="sidebar-link">8. 用户和组</a></li><li class="sidebar-sub-header"><a href="/pages/study/Linux学习笔记.html#_9-定时任务-crontab" class="sidebar-link">9. 定时任务 crontab</a></li><li class="sidebar-sub-header"><a href="/pages/study/Linux学习笔记.html#_10-备注" class="sidebar-link">10. 备注</a></li></ul></li><li><a href="/pages/study/Markdown语法.html" class="sidebar-link">Markdown 语法速览</a></li><li><a href="/pages/study/MySQL笔记.html" class="sidebar-link">MySQL笔记</a></li><li><a href="/pages/study/TCP IP学习笔记.html" class="sidebar-link">TCP/IP笔记</a></li><li><a href="/pages/study/Tomcat笔记.html" class="sidebar-link">Tomcat笔记</a></li><li><a href="/pages/study/Ubuntu笔记.html" class="sidebar-link">Ubuntu笔记</a></li><li><a href="/pages/study/力扣题解.html" class="sidebar-link">力扣题解</a></li><li><a href="/pages/study/文件系统.html" class="sidebar-link">文件系统</a></li><li><a href="/pages/study/算法笔记.html" class="sidebar-link">算法笔记</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="linux-学习笔记"><a href="#linux-学习笔记" class="header-anchor">#</a> Linux 学习笔记</h1> <h2 id="_1-系统安装及配置-ubuntu"><a href="#_1-系统安装及配置-ubuntu" class="header-anchor">#</a> 1. 系统安装及配置（Ubuntu）</h2> <h3 id="_1-1-更换软件源"><a href="#_1-1-更换软件源" class="header-anchor">#</a> 1.1. 更换软件源</h3> <ol><li>备份原始源文件/etc/apt/sources.list
+<code>sudo cp sources.list sources_backup.list</code></li> <li>更换 <a href="https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/" target="_blank" rel="noopener noreferrer">清华源<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>更新软件列表
+<code>sudo apt-get update</code></li></ol> <h3 id="_1-2-配置-ssh"><a href="#_1-2-配置-ssh" class="header-anchor">#</a> 1.2. 配置 ssh</h3> <ol><li><p>查看有没有安装 ssh, ubuntu 默认安装了 ssh-client</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>dpkg -l <span class="token operator">|</span> <span class="token function">grep</span> <span class="token function">ssh</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>如果没有安装</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 连接其他机器</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> openssh-client
+<span class="token comment"># 被其他机器连接</span>
+<span class="token function">sudo</span> apty-get <span class="token function">install</span> openssh-server
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><p>查看 ssh 有没有开启</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">ps</span> -e <span class="token operator">|</span> <span class="token function">grep</span> <span class="token function">ssh</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ol> <h2 id="_2-概念"><a href="#_2-概念" class="header-anchor">#</a> 2. 概念</h2> <ol><li>BASH（Bourne Again SHell）：bash 是最初 Unix 上由 Steve Bourne 写成 shell 程序 sh 的增强版</li></ol> <h2 id="_3-基础使用"><a href="#_3-基础使用" class="header-anchor">#</a> 3. 基础使用</h2> <ol><li><p>文件操作</p> <ol><li><p>pwd(print name of current working directory) 打印出当前工作目录名</p></li> <li><p>cd(Change directory) 更改目录</p> <ol><li>符号“.”指的是工作目录，“..”指的是工作目录的父目录</li></ol></li> <li><p>ls(List directory contents) 列出目录内容</p> <ol><li>-a：add，显示全部文件（包括隐藏文件）</li> <li>-l：long，结果以长模式输出</li> <li>-t：按文件修改时间先后排序</li> <li>-r：结果以相反顺序输出</li> <li>-S：结果按文件大小排序</li> <li>长模式</li></ol> <table><thead><tr><th>drwxr-sr-x</th> <th>9</th> <th>user</th> <th>user</th> <th>283 Jul 23 06:09</th> <th>user</th></tr></thead> <tbody><tr><td>权限：用户、同组、其他</td> <td>文件硬链接数目</td> <td>文件所有者用户名</td> <td>用户组</td> <td>上次修改时间</td> <td>文件名</td></tr></tbody></table></li></ol></li> <li><p>操作系统</p> <ol><li><p>file：确定文件类型</p></li> <li><p>less：浏览文件内容</p> <table><thead><tr><th>命令</th> <th>行为</th></tr></thead> <tbody><tr><td>PageUp</td> <td>向上翻滚一页</td></tr> <tr><td>PageDown</td> <td>向下翻滚一页</td></tr> <tr><td>h</td> <td>显示帮助</td></tr> <tr><td>q</td> <td>退出 less</td></tr></tbody></table></li></ol></li> <li><p>使用命令</p> <ol><li>type：说明怎样解释一个命令名</li> <li>which：显示会执行那个可执行程序</li> <li>man：显示命令手册页</li> <li>apropos：显示一系列适合的命令</li> <li>info：显示命令 info</li> <li>whatis：显示一个命令的简洁描述</li> <li>alias：创建命令别名</li></ol></li> <li><p>I/O 重定向：允许我们改变输出地点和输入来源</p> <ol><li>命令
+<ol><li>cat：连接文件</li> <li>sort：排序文本行</li> <li>uniq：报道或省略重复行</li> <li>grep：打印匹配行</li> <li>wc：打印文件中的换行符，字，和字节个数</li> <li>head：输出文件第一部分（-n 调整打印行数）</li> <li>tail：输出文件的最后一部分（-n 调整打印行数）</li> <li>tee：从标准输入 Stdin 读取数据，并同时写到标准输出 Stdout 和文件</li></ol></li> <li>管道
+<ol><li>command1 | command2 一个命令的标准输出可以通过管道送至另一个命令的标准输入</li></ol></li></ol></li> <li><p>shell 命令</p> <ol><li>echo：</li></ol></li> <li><p>键盘高级操作技巧</p> <ol><li>clear：清空屏幕</li> <li>history：显示历史列表内容</li></ol></li></ol> <h2 id="_4-vi-用法"><a href="#_4-vi-用法" class="header-anchor">#</a> 4. vi 用法</h2> <ol><li><p>vi 的模式</p> <ul><li>一般模式（默认）：移动光标、粘贴、拷贝、存盘、退出等</li> <li>编辑模式：在一般模式中键入<code>i, o, a, r</code>可进入编辑模式，在此模式下可完成文本输入操作，“Esc”返回一般模式</li> <li>指令模式：在一般模式下键入<code>: / ?</code>进入指令模式，执行查找、读取、存盘、离开等命令</li></ul></li> <li><p>vi 退格和方向键不能使用的问题</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 编辑 vimrc.tiny 文件</span>
+<span class="token function">sudo</span> <span class="token function">vi</span> /etc/vim/vimrc.tiny
+<span class="token comment"># 修改 set compatible 为</span>
+<span class="token builtin class-name">set</span> nocompatible
+<span class="token comment"># 增加</span>
+<span class="token builtin class-name">set</span> <span class="token assign-left variable">backspace</span><span class="token operator">=</span><span class="token number">2</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li> <li><p>vi 指令</p> <table><thead><tr><th>命令</th> <th>应用模式</th> <th>功能</th></tr></thead> <tbody><tr><td>a</td> <td>一般模式</td> <td>增加文本</td></tr> <tr><td>i</td> <td>一般模式</td> <td>插入文本</td></tr> <tr><td>o</td> <td>一般模式</td> <td>插入新的一行</td></tr> <tr><td>k</td> <td>一般模式</td> <td>上移</td></tr> <tr><td>j</td> <td>一般模式</td> <td>下移</td></tr> <tr><td>h</td> <td>一般模式</td> <td>左移</td></tr> <tr><td>l</td> <td>一般模式</td> <td>右移</td></tr> <tr><td>r</td> <td>一般模式</td> <td>替换字符</td></tr> <tr><td>0</td> <td>一般模式</td> <td>移动到行首字符处</td></tr> <tr><td>$</td> <td>一般模式</td> <td>移动到行尾字符处</td></tr> <tr><td>Ctrl+b</td> <td>一般模式</td> <td>向上翻页</td></tr> <tr><td>Ctrl+f</td> <td>一般模式</td> <td>向下翻页</td></tr> <tr><td>Ctrl+u</td> <td>一般模式</td> <td>向上翻半页</td></tr> <tr><td>Ctrl+d</td> <td>一般模式</td> <td>向下翻半页</td></tr> <tr><td>x</td> <td>一般模式</td> <td>删除本文，相当于 Del</td></tr> <tr><td>X</td> <td>一般模式</td> <td>删除本文，相当于 Backspace</td></tr> <tr><td>dd</td> <td>一般模式</td> <td>删除当前行</td></tr> <tr><td>n dd</td> <td>一般模式</td> <td>删除指定行数</td></tr> <tr><td>D</td> <td>一般模式</td> <td>删除光标后本行所有内容，包含光标所在的字符</td></tr> <tr><td>u</td> <td>一般模式</td> <td>撤销上一步操作，相当于 Ctrl+z</td></tr> <tr><td>d0</td> <td>一般模式</td> <td>删除光标前本行所有内容，不包含光标所在的字符</td></tr> <tr><td>dw</td> <td>一般模式</td> <td>删除光标开始位置的字，包含光标所在的字符</td></tr> <tr><td>Esc</td> <td>编辑模式</td> <td>退回到一般模式</td></tr> <tr><td>:w</td> <td>指令模式</td> <td>存盘</td></tr> <tr><td>:w!</td> <td>指令模式</td> <td>强行存盘</td></tr> <tr><td>:q</td> <td>指令模式</td> <td>退出</td></tr> <tr><td>:q!</td> <td>指令模式</td> <td>强制退出</td></tr> <tr><td>:wq</td> <td>指令模式</td> <td>存盘退出</td></tr> <tr><td>:w filename</td> <td>指令模式</td> <td>另存为“filename”文件</td></tr> <tr><td>/word</td> <td>指令模式</td> <td>向后寻找字符串“word”, n 继续查找下一个</td></tr> <tr><td>?word</td> <td>指令模式</td> <td>向前寻找字符串“word”, n 继续查找下一个</td></tr> <tr><td>:set number</td> <td>指令模式</td> <td>打开行号显示</td></tr> <tr><td>:set paste</td> <td>指令模式</td> <td>然后输入 o 进入复制模式，避免复制缩进问题</td></tr> <tr><td>:n</td> <td>指令模式</td> <td>跳到第 n 行</td></tr> <tr><td>:0/$</td> <td>指令模式</td> <td>跳到第一行/最后一行</td></tr> <tr><td>:a,bs/s1/s2/g</td> <td>指令模式</td> <td>将 a 到 b 行的 s1 全部替换成 s2, /g 不询问直接替换</td></tr></tbody></table></li></ol> <h2 id="_5-shell-脚本"><a href="#_5-shell-脚本" class="header-anchor">#</a> 5. Shell 脚本</h2> <ol><li><p>什么是 Shell 脚本：一个 Shell 脚本就是一个包含一系列命令的文件。</p></li> <li><p>创建脚本文件</p> <ol><li><p>编写一个脚本</p></li> <li><p>使脚本文件可执行（需要设置脚本文件的权限，使其可执行）</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">chmod</span> <span class="token number">775</span> shell
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>常见权限设置：775——每个人都能执行，700——只有文件所有者能执行</li></ul></li> <li><p>把脚本文件放置到 shell 能够到的地方，一般放在<code>/home/me/bin</code>下，因为这个文件默认在 PATH 配置中</p></li></ol></li> <li><p>执行脚本</p> <ol><li>工作目录执行 <code>./shell.sh</code></li> <li>绝对路径执行 <code>/home/user/Desktop/Project/shell.sh</code></li> <li>sh 执行 <code>sh shell.sh</code> 或 <code>bash shell.sh</code></li> <li>shell 环境执行 <code>. shell.sh</code> 或 <code>source shell.sh</code></li> <li>bash 执行<code>bash xx.sh</code></li></ol></li> <li><p>find 指令：find -name &quot;xx*&quot;</p></li> <li><p>grep 指令：grep 要查的字符 文件</p></li> <li><p>top 指令：查询系统资源使用情况</p></li></ol> <h2 id="_6-常用指令"><a href="#_6-常用指令" class="header-anchor">#</a> 6. 常用指令</h2> <h3 id="_6-1-查询指令"><a href="#_6-1-查询指令" class="header-anchor">#</a> 6.1. 查询指令</h3> <ol><li><p>find 指令：find -name &quot;xx*&quot;</p></li> <li><p>findcpp xxx：查询含有 xxx 的 cpp 文件，findh 类似</p></li> <li><p>grep 指令：grep 要查的字符 文件</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 查找含 print 字符的 cpp 文件</span>
+<span class="token function">grep</span> print *cpp
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li></ol> <h3 id="_6-2-进程指令"><a href="#_6-2-进程指令" class="header-anchor">#</a> 6.2. 进程指令</h3> <ol><li><p>进程信息</p> <table><thead><tr><th>名称</th> <th>描述</th></tr></thead> <tbody><tr><td>USER</td> <td>启动该进程的账户名称</td></tr> <tr><td>PID</td> <td>进程 ID</td></tr> <tr><td>TTY</td> <td>表明该进程在那个终端上运行</td></tr> <tr><td>STAT</td> <td>进程状态</td></tr> <tr><td>START</td> <td>启动该进程的时间</td></tr> <tr><td>TIME</td> <td>该进程占用的 CPU 时间</td></tr> <tr><td>COMMAND</td> <td>启动该进程的命令的名称</td></tr> <tr><td>%CPU</td> <td>占用 CPU 的百分比</td></tr> <tr><td>%MEM</td> <td>占用内存的百分比</td></tr> <tr><td>VSZ</td> <td>占用虚拟内存 (swap 空间）的大小</td></tr> <tr><td>RSS</td> <td>占用常驻内存（物理内存）的大小</td></tr></tbody></table> <ul><li><blockquote><p>TTY：'?' 表示未知或不需要终端</p></blockquote></li> <li><blockquote><p>STAT：S（休眠）、Z（僵死）、&lt;（高优先级）、N（低优先级）、s（父进程）、+（前台进程）</p></blockquote></li></ul></li> <li><p>查询进程</p> <ol><li><p>ps：查找与进程相关的 PID 号</p> <table><thead><tr><th>命令</th> <th>功能</th></tr></thead> <tbody><tr><td>a</td> <td>列出所有进程</td></tr> <tr><td>e</td> <td>显示每个程序所使用的环境变量</td></tr> <tr><td>f</td> <td>显示树状结构</td></tr> <tr><td>u</td> <td>以用户为主的进程显示</td></tr> <tr><td>x</td> <td>显示所有程序，不以终端区分</td></tr> <tr><td>-aux</td> <td>组合命令</td></tr> <tr><td>|less</td> <td>筛选</td></tr> <tr><td>--sort</td> <td>排序</td></tr></tbody></table></li> <li><p>关闭进程</p> <ol><li>当用户在前台执行某个进程时，可以按 Ctrl+C 组合键强制进行中断</li> <li>kill PID</li> <li>kill -9 PID 强制终止</li> <li>killall 进程名</li></ol></li> <li><p>top 命令：类似 Windows 资源管理器</p></li> <li><p>pgrep 命令：查询进程信息</p> <ol><li>pgreg -l &quot;进程名&quot;</li></ol></li> <li><p>pstree 命令：查看进程树</p> <ol><li>pstree 命令默认情况下只显示个进程的名称</li> <li>结合“-p”选项使用时可以同时列出对应的 PID 号</li> <li>结合“-u”选项可以列出对应的用户名</li> <li>结合“-a”选项可以列出完整的命令信息</li></ol></li></ol></li></ol> <h3 id="_6-3-运行程序"><a href="#_6-3-运行程序" class="header-anchor">#</a> 6.3. 运行程序</h3> <ol><li><p>运行程序指令</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 后台运行程序：关闭终端不影响程序运行</span>
+./app <span class="token operator">&amp;</span>
+<span class="token comment"># 后台运行程序，终端不显示输出</span>
+./app <span class="token operator">&gt;</span> /dev/null <span class="token operator">&amp;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li></ol> <h3 id="_6-4-网络指令"><a href="#_6-4-网络指令" class="header-anchor">#</a> 6.4. 网络指令</h3> <ol><li><p>Netstat 参数</p> <table><thead><tr><th>参数</th> <th>功能</th></tr></thead> <tbody><tr><td>-a(all)</td> <td>显示所有选项，默认不显示 LISTEN 相关</td></tr> <tr><td>-t(tcp)</td> <td>仅显示 tcp 相关选项</td></tr> <tr><td>-u (udp)</td> <td>仅显示 udp 相关选项</td></tr> <tr><td>-n</td> <td>拒绝显示别名，能显示数字的全部转化成数字</td></tr> <tr><td>-l</td> <td>仅列出有在 Listen （监听） 的服務状态</td></tr> <tr><td>-p</td> <td>显示建立相关链接的程序名</td></tr> <tr><td>-r</td> <td>显示路由信息，路由表</td></tr> <tr><td>-e</td> <td>显示扩展信息，例如 uid 等</td></tr> <tr><td>-s</td> <td>按各个协议进行统计</td></tr> <tr><td>-c</td> <td>每隔一个固定时间，执行该 netstat 命令</td></tr></tbody></table></li> <li><p>TCP 状态</p> <table><thead><tr><th>状态</th> <th>解释</th></tr></thead> <tbody><tr><td>LISTEN</td> <td>等待接收连</td></tr> <tr><td>ESTABLISHED</td> <td>一个处于活跃状态的连接</td></tr> <tr><td>TIME_WAIT</td> <td>一个刚被终止的连接。它只持续 1 至 2 分钟，然后就会变成 LISTEN 状态</td></tr></tbody></table></li> <li><p>参考链接 <a href="https://www.cnblogs.com/cheesezh/p/5169498.html" target="_blank" rel="noopener noreferrer">Linux netstat 命令介绍<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li></ol> <h3 id="_6-5-其他指令"><a href="#_6-5-其他指令" class="header-anchor">#</a> 6.5. 其他指令</h3> <table><thead><tr><th>指令</th> <th>功能</th></tr></thead> <tbody><tr><td>h</td> <td>查询历史指令输入记录</td></tr></tbody></table> <ol><li><p>ssh 开图</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">ssh</span> <span class="token function">ip</span> 地址 -Y
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>scp 拷贝文件</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># scp 文件名 对端路径</span>
+<span class="token function">scp</span> test.txt linuxName:/home/username/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>创建快捷方式</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># ln -s 目标文件夹 快捷方式名</span>
+<span class="token function">ls</span> -s abc/def/g g   <span class="token comment"># 创建文件夹 g 的快捷方式</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li></ol> <h2 id="_7-linux-c"><a href="#_7-linux-c" class="header-anchor">#</a> 7. Linux &amp; c++</h2> <h3 id="_7-1-库的使用"><a href="#_7-1-库的使用" class="header-anchor">#</a> 7.1. 库的使用</h3> <h4 id="_7-1-1-库分类"><a href="#_7-1-1-库分类" class="header-anchor">#</a> 7.1.1. 库分类</h4> <ol><li>静态库：静态库的代码在编译过程中已经被载入可执行程序，因此体积较大</li> <li>动态库（共享库）：代码不会连接到目标文件之中，只有当动态库可访问时，应用程序才能正确执行动态库函数。执行动态库的方式有隐式调用和显式调用
+<ol><li>隐式调用：也称共享库的静态加载，动态库在应用开始执行时会自动载入内存，进程结束时又自动卸载。隐式调用的编译方式与静态库一致</li> <li>显式调用：也称共享库的动态加载，编译时可以不显式的提供原动态库文件及名称，但是必须遵循 dlopen 等函数的规则实现调用</li></ol></li></ol> <h4 id="_7-1-2-静态库"><a href="#_7-1-2-静态库" class="header-anchor">#</a> 7.1.2. 静态库</h4> <ol><li><p>静态库生成：设计源码-&gt;编译<code>.o</code>文件-&gt;链接静态库，命名规则<code>libxxx.a</code></p></li> <li><p>静态库的应用模型</p> <ol><li>调用库函数代码</li> <li>编译链接选项</li></ol> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># cc -O -o main.c ./libxxx.a</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>执行目标程序<code># ./main</code></p></li></ol> <h4 id="_7-1-3-动态库"><a href="#_7-1-3-动态库" class="header-anchor">#</a> 7.1.3. 动态库</h4> <ol><li><p>动态库生成：</p> <ol><li>设计源码（exp：d1.c &amp; d2.c）</li> <li>Linux 和其它使用 gcc 编译器的 Unix</li></ol> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code>gcc <span class="token operator">-</span>fpic <span class="token operator">-</span>c d1<span class="token punctuation">.</span>c d2<span class="token punctuation">.</span>c <span class="token comment">/*编译。o 为扩展名的中间目标文件*/</span>
+gcc <span class="token operator">-</span>shared <span class="token operator">-</span>o d1<span class="token punctuation">.</span>so d1<span class="token punctuation">.</span>o <span class="token comment">/*创建动态库文件 d1.so*/</span>
+gcc <span class="token operator">-</span>shared <span class="token operator">-</span>o d2<span class="token punctuation">.</span>so d2<span class="token punctuation">.</span>o <span class="token comment">/*创建动态库文件 d2.so*/</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>或者可以一步到位</p> <div class="language-cpp line-numbers-mode"><pre class="language-cpp"><code>gcc <span class="token operator">-</span>O <span class="token operator">-</span>fpic <span class="token operator">-</span>shared <span class="token operator">-</span>o d1<span class="token punctuation">.</span>so d1<span class="token punctuation">.</span>c<span class="token comment">/*创建动态库文件 d1.so*/</span>
+gcc <span class="token operator">-</span>O <span class="token operator">-</span>fpic <span class="token operator">-</span>shared <span class="token operator">-</span>o d2<span class="token punctuation">.</span>so d2<span class="token punctuation">.</span>c<span class="token comment">/*创建动态库文件 d2.so*/</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>动态库的隐式调用</p> <ol><li><p>调用库函数代码（main 程序 main.c）</p></li> <li><p>编译链接选项</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># cp d1.so dll.so</span>
+<span class="token comment"># cc -O -o main main.c ./dll.so</span>
+<span class="token comment"># ./main  /*运行程序*/</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>动态库查找：动态库文件变更位置后程序无法正常运行，解决方法：带路径编译或更改环境变量</p></li> <li><p>动态库更换：动态链接库取代静态库的好处之一是随时升级库的内容</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># cp d2.so dll.so</span>
+<span class="token comment"># ./main</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li></ol></li> <li><p>动态库的显式调用</p> <ol><li><p>函数族：显式调用动态库，编译时无需库文件，执行时动态库可存储于人艺文志，库里共享对象必须先申请后使用，不同版本的动态库，只要其共享对象接口相同，就可以直接动态加载。</p> <ol><li><p>打开动态库</p> <div class="language-c line-numbers-mode"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;dlfcn.h&gt;</span></span>
+<span class="token keyword">void</span> <span class="token operator">*</span><span class="token function">dlopen</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>pathname<span class="token punctuation">,</span> <span class="token keyword">int</span> mode<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">//加载动态库</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ul><li>pathname：带路径的动态库名</li> <li>mode：动态库加载方式
+<ul><li>RTLD_LAZY：动态库的对象符号在被调用时解析</li> <li>RTLD_NOW：动态库对象的所有符号在函数 dlopen 返回前被解析</li></ul></li></ul></li> <li><p>获取动态库对象地址</p> <div class="language-c line-numbers-mode"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;dlfcn.h&gt;</span></span>
+<span class="token keyword">void</span> <span class="token operator">*</span><span class="token function">dlsym</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>handle<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">//dlsym 在动态库中搜索与字符串 name 同名的对象</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ul><li>handle：由函数 dlopen 返回成功加载动态库的句柄</li> <li>name：待使用对象的名称（动态库中包含的函数名或变量名）</li></ul></li> <li><p>错误检查</p> <div class="language-c line-numbers-mode"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;dlfcn.h&gt;</span></span>
+<span class="token keyword">char</span> <span class="token operator">*</span><span class="token function">dlerror</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//获取显示动态库操作中的错误信息</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>关闭动态库</p> <div class="language-c line-numbers-mode"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;dlfcn.h&gt;</span></span>
+<span class="token keyword">void</span> <span class="token operator">*</span><span class="token function">dlclose</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>handle<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//动态库使用完必须关闭</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li></ol></li> <li><p>应用模型：打开动态库-&gt;获取对象地址-&gt;执行动态对象（可回到上一步）-&gt;关闭动态库</p></li></ol></li></ol> <h4 id="_7-1-4-小结"><a href="#_7-1-4-小结" class="header-anchor">#</a> 7.1.4. 小结</h4> <ul><li><p>三种库调用对比</p> <table><thead><tr><th>对比项</th> <th>静态库</th> <th>隐式调用</th> <th>显式调用</th></tr></thead> <tbody><tr><td>编译参数</td> <td>传递编译器</td> <td>传递编译器</td> <td>不需要</td></tr> <tr><td>链接到目标文件</td> <td>是</td> <td>否</td> <td>否</td></tr> <tr><td>库存储位置</td> <td>不需要</td> <td>特定位置</td> <td>任意位置</td></tr> <tr><td>载入时间</td> <td>进程启动</td> <td>进程启动</td> <td>任意时刻</td></tr></tbody></table></li></ul> <h3 id="_7-2-标准文件编程库"><a href="#_7-2-标准文件编程库" class="header-anchor">#</a> 7.2. 标准文件编程库</h3> <h4 id="_7-2-1-文件的创建、打开、关闭和删除"><a href="#_7-2-1-文件的创建、打开、关闭和删除" class="header-anchor">#</a> 7.2.1. 文件的创建、打开、关闭和删除</h4> <ul><li>filename：打开文件的名称（带路径）</li> <li>type：打开文件的方式，由权限和类型两部分组成</li> <li>stream：已经打开的文件指针</li></ul> <ol><li><p>fopen 函数：打开或创建一个文本</p> <div class="language-c line-numbers-mode"><pre class="language-c"><code><span class="token function">fopen</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>filename<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>type<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><table><thead><tr><th>方式</th> <th>描述</th></tr></thead> <tbody><tr><td>r</td> <td>以只读方式打开，不能更改内容，若文件不存在则报错</td></tr> <tr><td>w</td> <td>以只写方式打开，若文件已存在，清空原文件内容，否则创建新文件</td></tr> <tr><td>a</td> <td>以追加方式打开，若文件已存在，则在文件末尾增加内容，否则创建新文件</td></tr> <tr><td>r+</td> <td>以读写方式打开，若文件不存在则报错</td></tr> <tr><td>w+</td> <td>以读写方式打开，若文件已存在，清空原文件内容，否则创建新文件</td></tr> <tr><td>a+</td> <td>以读取和追加模式打开文件，全文读取，文末追加，若文件不存在创建新文件</td></tr> <tr><td>b</td> <td>以二进制模式打开或创建文件，否则以文本文件打开或创建文件</td></tr></tbody></table></li> <li><p>freopen 函数：实现文件流的替换。它首先关闭一个文件流，再创建新的文件流</p> <div class="language-c line-numbers-mode"><pre class="language-c"><code>FILE <span class="token operator">*</span><span class="token function">freopen</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>filename<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>type<span class="token punctuation">,</span> FILE <span class="token operator">*</span>stream<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><table><thead><tr><th>FILE 标识符</th> <th>文件</th></tr></thead> <tbody><tr><td>stdout</td> <td>标准输出</td></tr> <tr><td>stdin</td> <td>标准输入</td></tr> <tr><td>stderr</td> <td>标准错误输出</td></tr></tbody></table></li> <li><p>fclose 函数</p> <div class="language-c line-numbers-mode"><pre class="language-c"><code><span class="token comment">// 关闭文件流，成功时返回 0，否则返回 EOF</span>
+<span class="token keyword">int</span> <span class="token function">fclose</span><span class="token punctuation">(</span>FILE <span class="token operator">*</span>stream<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>remove 函数</p> <div class="language-c line-numbers-mode"><pre class="language-c"><code><span class="token comment">// 删除指定文件或目录</span>
+<span class="token keyword">int</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>filename<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>rename 函数</p> <div class="language-c line-numbers-mode"><pre class="language-c"><code><span class="token comment">// 重命名</span>
+<span class="token keyword">int</span> <span class="token function">rename</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>oldname<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>newname<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>二进制文件与文本文件</p> <ol><li>文本文件又称为 ASCII 码文件，可以用 vi 等文本编辑器编辑其中任意字符，也可以直接操作以空额、制表符或换行符分割的单词和文本。C 语言源代码是典型的文本文件。</li> <li>二进制文件中可以包含任意字符，没有固定格式，文本编辑器无法正常阅读，所有对文件的解析都由应用程序完成。C 语言编译后的可执行文件就是二进制文件。</li></ol></li></ol> <h4 id="_7-2-2-文件的无格式读写"><a href="#_7-2-2-文件的无格式读写" class="header-anchor">#</a> 7.2.2. 文件的无格式读写</h4> <ol><li><p>字符读写：每次之操作一个字符</p> <ol><li><p>字符输入函数族</p> <div class="language-c line-numbers-mode"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token comment">// getc 以 unsigned char 类型读取文件输入流 stream 中的一个字符，并将该无符号字符转化为整型后返回，同时移动文件指针到下一个字符处</span>
+<span class="token keyword">int</span> <span class="token function">getc</span><span class="token punctuation">(</span>FILE <span class="token operator">*</span>stream<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// getchar 实际上是关于 getc 的宏定义“getc(stdin)”</span>
+<span class="token keyword">int</span> <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// fgetc 功能类似于 getc，但是执行速度远低于 getc</span>
+<span class="token keyword">int</span> <span class="token function">fgetc</span><span class="token punctuation">(</span>FILE <span class="token operator">*</span>stream<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 错误时都返回 EOF，EOF 一般定义为 int 型-1</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div></li> <li><p>字符输出函数族</p> <div class="language-c line-numbers-mode"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token comment">// 函数 putc 先将 int 型参数 c 自动转换为 unsigned char 类型，然后写入文件流 stream 中，同时移动文件指针到下一个字符处</span>
+<span class="token keyword">int</span> <span class="token function">putc</span><span class="token punctuation">(</span><span class="token keyword">int</span> c<span class="token punctuation">,</span> FILE <span class="token operator">*</span>stream<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">putchar</span><span class="token punctuation">(</span><span class="token keyword">int</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">fputc</span><span class="token punctuation">(</span><span class="token keyword">int</span> c<span class="token punctuation">,</span> FILE <span class="token operator">*</span>stream<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li></ol></li> <li><p>行读写</p> <ol><li><p>行输入函数族</p> <div class="language-c line-numbers-mode"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token comment">//</span>
+<span class="token keyword">char</span> <span class="token operator">*</span><span class="token function">gets</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">char</span> <span class="token operator">*</span><span class="token function">fgets</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>s<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">,</span> FILE <span class="token operator">*</span>stream<span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li></ol></li></ol> <h3 id="_7-3-linux-命令"><a href="#_7-3-linux-命令" class="header-anchor">#</a> 7.3. linux 命令</h3> <ol><li><p>grep 文件搜索</p> <ol><li>常用命令
+<ol><li>grep：在没有参数的情况下，只输出符合 RE（Regular Expression）字符。</li> <li>egrep：等同于 grep -E，和 grep 最大的区别就是表现在转义符上比如 grep 做次数匹配时、{n,m}egrep 则不需要直接{n，m}。egrep 方便，简介。</li> <li>fgrep：等同于 grep -f，但是不能使用正则表达式。所有的字符匹配功能均已消失。</li></ol></li> <li>参数说明 <code>grep [OPTIONS] PATTERN（模式） [file]</code></li></ol></li> <li><p>压缩与解压</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 压缩</span>
+<span class="token function">tar</span> -zcvf filename.tar <span class="token function">dirname</span>
+<span class="token comment"># 解压</span>
+<span class="token function">tar</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li></ol> <h3 id="_7-4-coredump"><a href="#_7-4-coredump" class="header-anchor">#</a> 7.4. coredump</h3> <ol><li><p>coredump 概念：程序调试</p></li> <li><p>coredump 开启</p> <ol><li>输入命令<code>ulimit -c</code>，结果为 0 表示未打开</li> <li>输入命令<code>ulimit -c unlimited</code>开启 coredump</li></ol></li> <li><p>gdb 调试</p> <ol><li>调试 core 文件<code>gdb program coredumpfile</code></li> <li>调试服务程序<code>gdb program PID</code></li></ol></li> <li><p>多个 core 文件可以使用<code>file</code>命令查询 core 文件所属，比如</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 列出所有 core 文件所属</span>
+<span class="token function">file</span> core*
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li></ol> <ul><li><a href="https://www.cnblogs.com/Anker/p/6079580.html" target="_blank" rel="noopener noreferrer">linux 下 core dump<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <h2 id="_8-用户和组"><a href="#_8-用户和组" class="header-anchor">#</a> 8. 用户和组</h2> <h3 id="_8-1-创建用户和组"><a href="#_8-1-创建用户和组" class="header-anchor">#</a> 8.1. 创建用户和组</h3> <ol><li><p>创建用户，参考 <a href="https://www.cnblogs.com/xd502djj/archive/2011/11/23/2260094.html" target="_blank" rel="noopener noreferrer">添加删除用户和用户组<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 创建用户</span>
+adduser username  <span class="token comment"># 用户名</span>
+<span class="token function">passwd</span> <span class="token number">1234</span> <span class="token comment"># 密码</span>
+
+<span class="token comment"># 创建组</span>
+<span class="token function">groupadd</span> group
+
+<span class="token comment"># 同时创建用户并添加到组</span>
+<span class="token function">useradd</span> -g group username
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div></li> <li><p>给已有的用户添加组</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">usermod</span> -G group username  <span class="token comment"># 会把这个用户从其他组中删除</span>
+<span class="token function">usermod</span> -a group username
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li></ol> <h3 id="_8-2-删除用户和组"><a href="#_8-2-删除用户和组" class="header-anchor">#</a> 8.2. 删除用户和组</h3> <ol><li><p>关闭/释放用户</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 临时关闭</span>
+<span class="token function">passwd</span> username -l
+<span class="token comment"># 重新释放</span>
+<span class="token function">passwd</span> username -u
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><p>永久删除用户/组</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">userdel</span> username
+<span class="token function">groupdel</span> group
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>从组中删除用户</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>gpasswd -d username group
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ol> <h3 id="_8-3-操作用户和组"><a href="#_8-3-操作用户和组" class="header-anchor">#</a> 8.3. 操作用户和组</h3> <ol><li><p>查看用户/组列表</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 查看用户</span>
+<span class="token function">cat</span> /etc/passwd
+<span class="token comment"># 查看组，分四个字段 用户组：用户组密码：GID: 用户列表</span>
+<span class="token function">cat</span> /etc/group
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li></ol> <h2 id="_9-定时任务-crontab"><a href="#_9-定时任务-crontab" class="header-anchor">#</a> 9. 定时任务 crontab</h2> <ol><li><p>指令</p> <table><thead><tr><th>指令</th> <th>功能</th></tr></thead> <tbody><tr><td>crontab -e</td> <td>编辑</td></tr> <tr><td>crontab -l</td> <td>显示</td></tr> <tr><td>crontab -r</td> <td>删除</td></tr> <tr><td>crontab -i</td> <td>带提示删除</td></tr></tbody></table></li> <li><p>crontab 脚本用*表示时间，中间用空格隔开</p> <table><thead><tr><th>*号</th> <th>含义</th> <th>范围</th></tr></thead> <tbody><tr><td>第一个</td> <td>分钟</td> <td>0-59</td></tr> <tr><td>第二个</td> <td>小时</td> <td>0-23</td></tr> <tr><td>第三个</td> <td>日</td> <td>1-31</td></tr> <tr><td>第四个</td> <td>月</td> <td>1-12</td></tr> <tr><td>第五个</td> <td>周</td> <td>0-7(0 和 7 都表示周日）</td></tr></tbody></table></li> <li><p>特殊符号</p> <table><thead><tr><th>符号</th> <th>功能</th> <th>示例</th></tr></thead> <tbody><tr><td>*</td> <td>代表任何时间</td> <td></td></tr> <tr><td>,</td> <td>代表不连续时间</td> <td>比如 <code>0 8,10,12 * * *</code> 表示每天 8,10,12 点各执行命令</td></tr> <tr><td>-</td> <td>电表连续时间范围</td> <td>比如 <code>0 5 * * 1-6</code> 表示每周一至周六 5 点执行命令</td></tr> <tr><td>/</td> <td>表示每个</td> <td>比如 <code>*/10 * * * *</code> 表示每 10 分钟执行一次命令</td></tr></tbody></table></li> <li><p>多条指令</p> <table><thead><tr><th>符号</th> <th>功能</th></tr></thead> <tbody><tr><td><code>;</code></td> <td>连续执行，不考虑对错</td></tr> <tr><td><code>&amp;&amp;</code></td> <td>中间有错就停止，没错就一直执行下去</td></tr> <tr><td><code>||</code></td> <td>遇到可以成功执行的命令，那么命令停止执行，即便后面有正确的命令也不执行</td></tr></tbody></table></li> <li><p>示例</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 进入编辑</span>
+<span class="token function">crontab</span> -e
+
+<span class="token comment"># 编写脚本：每 5min 输出一次 hello</span>
+*/5 * * * * ehco <span class="token string">'hello'</span>
+
+<span class="token comment"># 备份文件：每周 1-6,05:00 删除旧文件，备份新文件</span>
+<span class="token number">0</span> <span class="token number">5</span> * * <span class="token number">1</span>-6 <span class="token function">rm</span> -rf filename_bak <span class="token operator">&amp;&amp;</span> <span class="token function">cp</span> -r filename filename_bak
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li></ol> <h2 id="_10-备注"><a href="#_10-备注" class="header-anchor">#</a> 10. 备注</h2> <ul><li><a href="http://billie66.github.io/TLCL/book/index.html" target="_blank" rel="noopener noreferrer">教程地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">6/21/2021, 2:38:10 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/study/libsvm学习笔记.html" class="prev">
+        libsvm学习笔记
+      </a></span> <span class="next"><a href="/pages/study/Markdown语法.html">
+        Markdown 语法速览
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div class="cat-container" data-v-a13867c0><canvas id="vuepress-cat" width="280" height="250" class="live2d" data-v-a13867c0></canvas></div></div></div>
+    <script src="/assets/js/app.873120b7.js" defer></script><script src="/assets/js/2.3072bb76.js" defer></script><script src="/assets/js/68.1be377b3.js" defer></script>
+  </body>
+</html>

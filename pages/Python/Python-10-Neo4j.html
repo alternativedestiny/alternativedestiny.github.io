@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>10. Neo4j 图数据库 | 北方酱Hoppou~</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/hoppou_nobg.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="北方酱Hoppou~的个人主页">
+    
+    <link rel="preload" href="/assets/css/0.styles.e14bcbda.css" as="style"><link rel="preload" href="/assets/js/app.873120b7.js" as="script"><link rel="preload" href="/assets/js/2.3072bb76.js" as="script"><link rel="preload" href="/assets/js/8.a648cabf.js" as="script"><link rel="prefetch" href="/assets/js/10.1207609b.js"><link rel="prefetch" href="/assets/js/11.9bc48425.js"><link rel="prefetch" href="/assets/js/12.dc08ce13.js"><link rel="prefetch" href="/assets/js/13.196dff4c.js"><link rel="prefetch" href="/assets/js/14.8a0feea4.js"><link rel="prefetch" href="/assets/js/15.5f7e35cd.js"><link rel="prefetch" href="/assets/js/16.e71e238a.js"><link rel="prefetch" href="/assets/js/17.d6af53fb.js"><link rel="prefetch" href="/assets/js/18.5bf23ab4.js"><link rel="prefetch" href="/assets/js/19.4ec16e0d.js"><link rel="prefetch" href="/assets/js/20.42bb9b26.js"><link rel="prefetch" href="/assets/js/21.de4993c7.js"><link rel="prefetch" href="/assets/js/22.70316b78.js"><link rel="prefetch" href="/assets/js/23.be7b06e9.js"><link rel="prefetch" href="/assets/js/24.d5520ed0.js"><link rel="prefetch" href="/assets/js/25.3a405964.js"><link rel="prefetch" href="/assets/js/26.50ed4124.js"><link rel="prefetch" href="/assets/js/27.5e56e09b.js"><link rel="prefetch" href="/assets/js/28.ff6d72d8.js"><link rel="prefetch" href="/assets/js/29.9d088a70.js"><link rel="prefetch" href="/assets/js/3.307cdc30.js"><link rel="prefetch" href="/assets/js/30.c26a13e4.js"><link rel="prefetch" href="/assets/js/31.bce9a689.js"><link rel="prefetch" href="/assets/js/32.0a2f8e1a.js"><link rel="prefetch" href="/assets/js/33.3323a51f.js"><link rel="prefetch" href="/assets/js/34.c396c236.js"><link rel="prefetch" href="/assets/js/35.9ad63021.js"><link rel="prefetch" href="/assets/js/36.f69f7238.js"><link rel="prefetch" href="/assets/js/37.de2ca75d.js"><link rel="prefetch" href="/assets/js/38.e24495c0.js"><link rel="prefetch" href="/assets/js/39.07879d5f.js"><link rel="prefetch" href="/assets/js/4.0245bf49.js"><link rel="prefetch" href="/assets/js/40.0d438b08.js"><link rel="prefetch" href="/assets/js/41.cedecab2.js"><link rel="prefetch" href="/assets/js/42.a287724c.js"><link rel="prefetch" href="/assets/js/43.f3e3ab39.js"><link rel="prefetch" href="/assets/js/44.54c80f80.js"><link rel="prefetch" href="/assets/js/45.d05ba106.js"><link rel="prefetch" href="/assets/js/46.11e5ea35.js"><link rel="prefetch" href="/assets/js/47.d1d160fc.js"><link rel="prefetch" href="/assets/js/48.f9bce1c1.js"><link rel="prefetch" href="/assets/js/49.f467537d.js"><link rel="prefetch" href="/assets/js/5.eef79904.js"><link rel="prefetch" href="/assets/js/50.f3e88b10.js"><link rel="prefetch" href="/assets/js/51.841c03fc.js"><link rel="prefetch" href="/assets/js/52.a6ec69c4.js"><link rel="prefetch" href="/assets/js/53.5e04d851.js"><link rel="prefetch" href="/assets/js/54.5f8afedb.js"><link rel="prefetch" href="/assets/js/55.cbccbe90.js"><link rel="prefetch" href="/assets/js/56.fad690b4.js"><link rel="prefetch" href="/assets/js/57.34d4ef65.js"><link rel="prefetch" href="/assets/js/58.9ad03d89.js"><link rel="prefetch" href="/assets/js/59.b63c95f1.js"><link rel="prefetch" href="/assets/js/6.96d4213e.js"><link rel="prefetch" href="/assets/js/60.5a35df65.js"><link rel="prefetch" href="/assets/js/61.308c6f7a.js"><link rel="prefetch" href="/assets/js/62.8f0b386e.js"><link rel="prefetch" href="/assets/js/63.90d87d01.js"><link rel="prefetch" href="/assets/js/64.a8c82a04.js"><link rel="prefetch" href="/assets/js/65.3e67219a.js"><link rel="prefetch" href="/assets/js/66.091c45fd.js"><link rel="prefetch" href="/assets/js/67.f232d216.js"><link rel="prefetch" href="/assets/js/68.1be377b3.js"><link rel="prefetch" href="/assets/js/69.b5159968.js"><link rel="prefetch" href="/assets/js/7.8bd831ea.js"><link rel="prefetch" href="/assets/js/70.947ca571.js"><link rel="prefetch" href="/assets/js/71.b3d5f499.js"><link rel="prefetch" href="/assets/js/72.ba0b0e73.js"><link rel="prefetch" href="/assets/js/73.618be5ba.js"><link rel="prefetch" href="/assets/js/74.d66c9783.js"><link rel="prefetch" href="/assets/js/75.811a20b7.js"><link rel="prefetch" href="/assets/js/76.4f4c73c8.js"><link rel="prefetch" href="/assets/js/77.de406471.js"><link rel="prefetch" href="/assets/js/9.b9cbb12c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e14bcbda.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/hoppou_nobg.jpg" alt="北方酱Hoppou~" class="logo"> <span class="site-name can-hide">北方酱Hoppou~</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Python-01-环境.html" class="nav-link">
+  Python-01-环境
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-02-数据类型.html" class="nav-link">
+  Python-02-数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-03-文件处理.html" class="nav-link">
+  Python-03-文件处理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-04-Numpy.html" class="nav-link">
+  Python-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-05-Pandas.html" class="nav-link">
+  Python-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-06-Matplotlib.html" class="nav-link">
+  Python-06-Matplotlib
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-07-SciPy.html" class="nav-link">
+  Python-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-08-Pyinstaller.html" class="nav-link">
+  Python-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-09-Mysql.html" class="nav-link">
+  Python-09-Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-10-Neo4j.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Python-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-11-Django.html" class="nav-link">
+  Python-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-12-Word2Vec.html" class="nav-link">
+  Python-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-13-PyTorch.html" class="nav-link">
+  Python-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python_Pycharm.html" class="nav-link">
+  Python_Pycharm
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python_代码块.html" class="nav-link">
+  Python_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境.html" class="nav-link">
+  Cpp-01-环境
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型.html" class="nav-link">
+  Cpp-02-数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构.html" class="nav-link">
+  Cpp-03-数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针.html" class="nav-link">
+  Cpp-04-指针
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数.html" class="nav-link">
+  Cpp-05-函数
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出.html" class="nav-link">
+  Cpp-06-输入输出
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象.html" class="nav-link">
+  Cpp-07-面向对象
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/Keras学习笔记.html" class="nav-link">
+  Keras学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/层次聚类.html" class="nav-link">
+  层次聚类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/谱聚类.html" class="nav-link">
+  谱聚类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Ubuntu笔记.html" class="nav-link">
+  Ubuntu笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/重启打印服务.html" class="nav-link">
+  重启打印服务
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Python-01-环境.html" class="nav-link">
+  Python-01-环境
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-02-数据类型.html" class="nav-link">
+  Python-02-数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-03-文件处理.html" class="nav-link">
+  Python-03-文件处理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-04-Numpy.html" class="nav-link">
+  Python-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-05-Pandas.html" class="nav-link">
+  Python-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-06-Matplotlib.html" class="nav-link">
+  Python-06-Matplotlib
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-07-SciPy.html" class="nav-link">
+  Python-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-08-Pyinstaller.html" class="nav-link">
+  Python-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-09-Mysql.html" class="nav-link">
+  Python-09-Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-10-Neo4j.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Python-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-11-Django.html" class="nav-link">
+  Python-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-12-Word2Vec.html" class="nav-link">
+  Python-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python-13-PyTorch.html" class="nav-link">
+  Python-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python_Pycharm.html" class="nav-link">
+  Python_Pycharm
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Python_代码块.html" class="nav-link">
+  Python_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境.html" class="nav-link">
+  Cpp-01-环境
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型.html" class="nav-link">
+  Cpp-02-数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构.html" class="nav-link">
+  Cpp-03-数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针.html" class="nav-link">
+  Cpp-04-指针
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数.html" class="nav-link">
+  Cpp-05-函数
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出.html" class="nav-link">
+  Cpp-06-输入输出
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象.html" class="nav-link">
+  Cpp-07-面向对象
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/Keras学习笔记.html" class="nav-link">
+  Keras学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/层次聚类.html" class="nav-link">
+  层次聚类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/谱聚类.html" class="nav-link">
+  谱聚类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Ubuntu笔记.html" class="nav-link">
+  Ubuntu笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/重启打印服务.html" class="nav-link">
+  重启打印服务
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/Python/Python-01-环境.html" class="sidebar-link">1. Python 环境</a></li><li><a href="/pages/Python/Python-02-数据类型.html" class="sidebar-link">2. 数据类型</a></li><li><a href="/pages/Python/Python-03-文件处理.html" class="sidebar-link">3. 文件</a></li><li><a href="/pages/Python/Python-04-Numpy.html" class="sidebar-link">4. Numpy</a></li><li><a href="/pages/Python/Python-05-Pandas.html" class="sidebar-link">5. Pandas</a></li><li><a href="/pages/Python/Python-06-Matplotlib.html" class="sidebar-link">6. Matplotlib 绘图</a></li><li><a href="/pages/Python/Python-07-SciPy.html" class="sidebar-link">7. SciPy 笔记</a></li><li><a href="/pages/Python/Python-08-Pyinstaller.html" class="sidebar-link">8. Pyinstaller 打包</a></li><li><a href="/pages/Python/Python-09-Mysql.html" class="sidebar-link">9. 数据库</a></li><li><a href="/pages/Python/Python-10-Neo4j.html" aria-current="page" class="active sidebar-link">10. Neo4j 图数据库</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/Python/Python-10-Neo4j.html#_1-安装配置" class="sidebar-link">1. 安装配置</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Python-10-Neo4j.html#_2-py2neo-使用" class="sidebar-link">2. py2neo 使用</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Python-10-Neo4j.html#_3-neomodel-使用" class="sidebar-link">3. Neomodel 使用</a></li></ul></li><li><a href="/pages/Python/Python-11-Django.html" class="sidebar-link">11. Django</a></li><li><a href="/pages/Python/Python-12-Word2Vec.html" class="sidebar-link">12. Word2Vec</a></li><li><a href="/pages/Python/Python-13-PyTorch.html" class="sidebar-link">13. PyTorch 笔记</a></li><li><a href="/pages/Python/Python_Pycharm.html" class="sidebar-link">Pycharm</a></li><li><a href="/pages/Python/Python_代码块.html" class="sidebar-link">Python 代码块</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_10-neo4j-图数据库"><a href="#_10-neo4j-图数据库" class="header-anchor">#</a> 10. Neo4j 图数据库</h1> <h2 id="_1-安装配置"><a href="#_1-安装配置" class="header-anchor">#</a> 1. 安装配置</h2> <ol><li>安装配置 JDK 环境，比如需要 jdk11 以上版本</li> <li>从 <a href="https://neo4j.com/" target="_blank" rel="noopener noreferrer">neo4j 官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 的 <a href="https://neo4j.com/download-center/#community" target="_blank" rel="noopener noreferrer">下载地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 下载安装包</li> <li>离线安装包解压即可</li> <li>启动数据库
+<ol><li><p>在<code>../neo4j-community-4.0.3/bin</code>安装目录下打开命令行</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>neo4j console
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>正常数据库打开效果</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>D:<span class="token punctuation">\</span>neo4j-community-4.0.3<span class="token punctuation">\</span>bin<span class="token operator">&gt;</span>neo4j console
+<span class="token number">2020</span>-07-02 06:57:01.863+0000 INFO  <span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span> Neo4j <span class="token number">4.0</span>.3 <span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+<span class="token number">2020</span>-07-02 06:57:01.868+0000 INFO  Starting<span class="token punctuation">..</span>.
+<span class="token number">2020</span>-07-02 06:57:10.438+0000 INFO  Bolt enabled on localhost:7687.
+<span class="token number">2020</span>-07-02 06:57:10.439+0000 INFO  Started.
+<span class="token number">2020</span>-07-02 06:57:11.376+0000 INFO  Remote interface available at http://localhost:7474/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li> <li><p>在浏览器中打开 <code>http://localhost:7474/</code> 即可访问数据库</p> <img src="/assets/img/neo4j-browser.79866ed7.png" width="800"></li> <li><p>默认用户名<code>neo4j</code>，密码<code>neo4j</code>，首次登录会要求修改密码</p> <img src="/assets/img/neo4j-browser1.414c48a2.png" width="800"></li></ol></li></ol> <h2 id="_2-py2neo-使用"><a href="#_2-py2neo-使用" class="header-anchor">#</a> 2. py2neo 使用</h2> <h3 id="_2-1-安装"><a href="#_2-1-安装" class="header-anchor">#</a> 2.1. 安装</h3> <ol><li><p>安装<code>py2neo</code>库</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>pip <span class="token function">install</span> py2neo
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>连接数据库</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> py2neo <span class="token keyword">import</span> Graph<span class="token punctuation">,</span> Node<span class="token punctuation">,</span> Relationship
+
+<span class="token comment"># 连接数据库</span>
+neo_graph <span class="token operator">=</span> Graph<span class="token punctuation">(</span>
+    <span class="token string">'http://localhost:7474'</span><span class="token punctuation">,</span>
+    username<span class="token operator">=</span><span class="token string">'neo4j'</span><span class="token punctuation">,</span>
+    password<span class="token operator">=</span><span class="token string">'password'</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment"># 简写 1</span>
+neo <span class="token operator">=</span> Graph<span class="token punctuation">(</span><span class="token string">'localhost'</span><span class="token punctuation">,</span> auth<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'neo4j'</span><span class="token punctuation">,</span> <span class="token string">'password'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 简写 2</span>
+neo <span class="token operator">=</span> Graph<span class="token punctuation">(</span><span class="token string">'localhost'</span><span class="token punctuation">,</span> password<span class="token operator">=</span><span class="token string">'password'</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div></li> <li><p>demo</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> py2neo <span class="token keyword">import</span> Graph<span class="token punctuation">,</span> Node<span class="token punctuation">,</span> Relationship
+
+<span class="token comment"># 连接数据库</span>
+neo_graph <span class="token operator">=</span> Graph<span class="token punctuation">(</span>
+<span class="token string">'http://localhost:7474'</span><span class="token punctuation">,</span>
+username<span class="token operator">=</span><span class="token string">'neo4j'</span><span class="token punctuation">,</span>
+password<span class="token operator">=</span><span class="token string">'password'</span>
+<span class="token punctuation">)</span>
+test <span class="token operator">=</span> neo_graph<span class="token punctuation">.</span>begin<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 建立节点</span>
+a <span class="token operator">=</span> Node<span class="token punctuation">(</span><span class="token string">'person'</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'Alice'</span><span class="token punctuation">)</span>
+b <span class="token operator">=</span> Node<span class="token punctuation">(</span><span class="token string">'person'</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'Bos'</span><span class="token punctuation">)</span>
+<span class="token comment"># 创建关系</span>
+ab <span class="token operator">=</span> Relationship<span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token string">'knows'</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+<span class="token comment"># 写入数据库</span>
+test<span class="token punctuation">.</span>create<span class="token punctuation">(</span>ab<span class="token punctuation">)</span>
+test<span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>ab<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><blockquote><p>(Alice)-[:knows {}]-&gt;(Bos)</p></blockquote> <img src="/assets/img/neo4j-demo.6a6a8de6.png" width="800"></li></ol> <h3 id="_2-2-增"><a href="#_2-2-增" class="header-anchor">#</a> 2.2. 增</h3> <ol><li><p>创建节点与属性</p> <ol><li><p>py2neo 写法</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 建立节点</span>
+a <span class="token operator">=</span> Node<span class="token punctuation">(</span><span class="token string">'person'</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'Alice'</span><span class="token punctuation">)</span>
+b <span class="token operator">=</span> Node<span class="token punctuation">(</span><span class="token string">'person'</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'Bob'</span><span class="token punctuation">)</span>
+ab <span class="token operator">=</span> Relationship<span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token string">'knows'</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+<span class="token comment"># 添加属性</span>
+a<span class="token punctuation">[</span><span class="token string">'age'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">20</span>
+b<span class="token punctuation">[</span><span class="token string">'age'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">21</span>
+ab<span class="token punctuation">[</span><span class="token string">'time'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'2020-07-03'</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>ab<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><blockquote><p>(:person {age: 20, name: 'Alice'})
+(:person {age: 21, name: 'Bos'})
+(Alice)-[:knows {time: '2020-07-03'}]-&gt;(Bos)</p></blockquote></li> <li><p>cypher 写法</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code>neo<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token string">'create(p:person{name:&quot;Alice&quot;, age:16})'</span><span class="token punctuation">)</span>
+neo<span class="token punctuation">.</span>begin<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li></ol></li> <li><p>设置默认属性 setdefault</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code>a<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span><span class="token string">'location'</span><span class="token punctuation">,</span> <span class="token string">'beijing'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><blockquote><p>(:person {age: 20, location: 'beijing', name: 'Alice'})</p></blockquote></li> <li><p>属性批量更新 update</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code>data <span class="token operator">=</span> <span class="token punctuation">{</span>
+<span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'amy'</span><span class="token punctuation">,</span>
+<span class="token string">'age'</span><span class="token punctuation">:</span> <span class="token number">21</span>
+<span class="token punctuation">}</span>
+
+a<span class="token punctuation">.</span>update<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><blockquote><p>(:person {age: 21, location: 'beijing', name: 'amy'})</p></blockquote></li></ol> <h3 id="_2-3-删"><a href="#_2-3-删" class="header-anchor">#</a> 2.3. 删</h3> <ol><li><p>删除节点</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 删除节点 2</span>
+neo<span class="token punctuation">.</span>delete<span class="token punctuation">(</span>neo<span class="token punctuation">.</span>nodes<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+neo<span class="token punctuation">.</span>begin<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>删库</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> py2neo <span class="token keyword">import</span> Graph<span class="token punctuation">,</span> Node<span class="token punctuation">,</span> Relationship<span class="token punctuation">,</span> walk
+
+neo <span class="token operator">=</span> Graph<span class="token punctuation">(</span>
+<span class="token string">'http://localhost:7474'</span><span class="token punctuation">,</span>
+username<span class="token operator">=</span><span class="token string">'neo4j'</span><span class="token punctuation">,</span>
+password<span class="token operator">=</span><span class="token string">'password'</span>
+<span class="token punctuation">)</span>
+
+neo<span class="token punctuation">.</span>delete_all<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div></li></ol> <h3 id="_2-4-改"><a href="#_2-4-改" class="header-anchor">#</a> 2.4. 改</h3> <h3 id="_2-5-查"><a href="#_2-5-查" class="header-anchor">#</a> 2.5. 查</h3> <ol><li><p>查询节点</p> <ol><li><p>通过 nodes 的 id 查询</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> py2neo <span class="token keyword">import</span> Graph
+
+neo <span class="token operator">=</span> Graph<span class="token punctuation">(</span>
+    <span class="token string">'http://localhost:7474'</span><span class="token punctuation">,</span>
+    username<span class="token operator">=</span><span class="token string">'neo4j'</span><span class="token punctuation">,</span>
+    password<span class="token operator">=</span><span class="token string">'password'</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>neo<span class="token punctuation">.</span>nodes<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>neo<span class="token punctuation">.</span>nodes<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><blockquote><p>(_1:person {age: 21, name: 'Bob'})</p></blockquote></li> <li><p>通过 Cypher 语言查询</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code>n <span class="token operator">=</span> neo<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token string">&quot;MATCH (a:person) RETURN a.name,a.age LIMIT 4&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> n<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>{'a.name': 'amy', 'a.age': 21}
+{'a.name': 'Bob', 'a.age': 21}</p></blockquote></li> <li><p>通过 NodeMatcher 查询</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code>matcher <span class="token operator">=</span> NodeMatcher<span class="token punctuation">(</span>neo<span class="token punctuation">)</span>
+find <span class="token operator">=</span> matcher<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">'person'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>where<span class="token punctuation">(</span><span class="token string">'_.name=&quot;Bob&quot;'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>first<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>find<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>(_1:person {age: 21, name: 'Bob'})</p></blockquote></li></ol></li> <li><p>查询</p></li></ol> <h2 id="_3-neomodel-使用"><a href="#_3-neomodel-使用" class="header-anchor">#</a> 3. Neomodel 使用</h2> <h3 id="_3-1-安装"><a href="#_3-1-安装" class="header-anchor">#</a> 3.1. 安装</h3> <ol><li><p>安装 neomodel</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>pip <span class="token function">install</span> neomodel
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>连接数据库</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> neomodel <span class="token keyword">import</span> config
+<span class="token comment"># 默认用户名密码</span>
+config<span class="token punctuation">.</span>DATABASE_URL <span class="token operator">=</span> <span class="token string">'bolt://neo4j:neo4j@localhost:7687'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>或</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> neomodel <span class="token keyword">import</span> db
+db<span class="token punctuation">.</span>set_connection<span class="token punctuation">(</span><span class="token string">'bolt://neo4j:neo4j@localhost:7687'</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li></ol> <h3 id="_3-2-创建模型"><a href="#_3-2-创建模型" class="header-anchor">#</a> 3.2. 创建模型</h3> <ol><li><p>定义关系和模型，命名为 models.py</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> neomodel <span class="token keyword">import</span> <span class="token punctuation">(</span>config<span class="token punctuation">,</span> StructuredNode<span class="token punctuation">,</span> StringProperty<span class="token punctuation">,</span> IntegerProperty<span class="token punctuation">,</span>
+    UniqueIdProperty<span class="token punctuation">,</span> RelationshipTo<span class="token punctuation">)</span>
+
+<span class="token comment"># 节点 1 country</span>
+<span class="token keyword">class</span> <span class="token class-name">Country</span><span class="token punctuation">(</span>StructuredNode<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    code <span class="token operator">=</span> StringProperty<span class="token punctuation">(</span>unique_index<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 节点 2 person</span>
+<span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">(</span>StructuredNode<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    uid <span class="token operator">=</span> UniqueIdProperty<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    name <span class="token operator">=</span> StringProperty<span class="token punctuation">(</span>unique_index<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    age <span class="token operator">=</span> IntegerProperty<span class="token punctuation">(</span>index<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># traverse outgoing IS_FROM relations, inflate to Country objects</span>
+    country <span class="token operator">=</span> RelationshipTo<span class="token punctuation">(</span>Country<span class="token punctuation">,</span> <span class="token string">'IS_FROM'</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div></li> <li><p>关系类型</p> <table><thead><tr><th>关系</th> <th>方向</th> <th>备注</th></tr></thead> <tbody><tr><td>Relationship</td> <td>双向</td> <td>双向查询</td></tr> <tr><td>RelationshipTo</td> <td>正向</td> <td>可以从当前节点查到对象节点</td></tr> <tr><td>RelationshipFrom</td> <td>反向</td> <td>可以从对象节点查询当前节点</td></tr></tbody></table></li></ol> <h3 id="_3-3-使用模型"><a href="#_3-3-使用模型" class="header-anchor">#</a> 3.3. 使用模型</h3> <ol><li><p>创建模型</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> neomodel <span class="token keyword">import</span> config
+<span class="token keyword">import</span> models
+
+config<span class="token punctuation">.</span>DATABASE_URL <span class="token operator">=</span> <span class="token string">'bolt://neo4j:password@localhost:7687'</span>
+
+jim <span class="token operator">=</span> test<span class="token punctuation">.</span>Person<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'jim'</span><span class="token punctuation">,</span> age<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li> <li><p>查询节点</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 单一查询（如果有多个会报错）</span>
+jim <span class="token operator">=</span> models<span class="token punctuation">.</span>Person<span class="token punctuation">.</span>nodes<span class="token punctuation">.</span>get_or_none<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'jim'</span><span class="token punctuation">)</span>
+<span class="token comment"># 查询第一个</span>
+ch <span class="token operator">=</span> models<span class="token punctuation">.</span>Country<span class="token punctuation">.</span>nodes<span class="token punctuation">.</span>first_or_none<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'China'</span><span class="token punctuation">)</span>
+<span class="token comment"># 多项查询，返回一个对象列表</span>
+ch <span class="token operator">=</span> models<span class="token punctuation">.</span>Country<span class="token punctuation">.</span>nodes<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'China'</span><span class="token punctuation">)</span>
+<span class="token comment"># 全部</span>
+all_nodes <span class="token operator">=</span> Person<span class="token punctuation">.</span>ndoes<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li> <li><p>创建关系</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 获取节点</span>
+jim <span class="token operator">=</span> models<span class="token punctuation">.</span>Person<span class="token punctuation">.</span>nodes<span class="token punctuation">.</span>get_or_none<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'jim'</span><span class="token punctuation">)</span>
+<span class="token comment"># 创建节点</span>
+ch <span class="token operator">=</span> models<span class="token punctuation">.</span>Country<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'China'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 创建节点关系</span>
+jim<span class="token punctuation">.</span>country<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>ch<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li> <li><p>更新节点</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 获取节点</span>
+jim <span class="token operator">=</span> models<span class="token punctuation">.</span>Person<span class="token punctuation">.</span>nodes<span class="token punctuation">.</span>get_or_none<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'jim'</span><span class="token punctuation">)</span>
+<span class="token comment"># 更新数据</span>
+jim<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">4</span>
+<span class="token comment"># 保存更新</span>
+jim<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li> <li><p>删除</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code>am <span class="token operator">=</span> models<span class="token punctuation">.</span>Country<span class="token punctuation">.</span>nodes<span class="token punctuation">.</span>get_or_none<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'American'</span><span class="token punctuation">)</span>
+am<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>官方 <a href="https://neomodel.readthedocs.io/en/latest/getting_started.html#" target="_blank" rel="noopener noreferrer">文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">6/30/2021, 3:23:44 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/Python/Python-09-Mysql.html" class="prev">
+        9. 数据库
+      </a></span> <span class="next"><a href="/pages/Python/Python-11-Django.html">
+        11. Django
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div class="cat-container" data-v-a13867c0><canvas id="vuepress-cat" width="280" height="250" class="live2d" data-v-a13867c0></canvas></div></div></div>
+    <script src="/assets/js/app.873120b7.js" defer></script><script src="/assets/js/2.3072bb76.js" defer></script><script src="/assets/js/8.a648cabf.js" defer></script>
+  </body>
+</html>
