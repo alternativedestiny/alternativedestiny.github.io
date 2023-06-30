@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>18. 机器学习 MachineLearning | 北方酱Hoppou~</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/hoppou_nobg.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="北方酱Hoppou~的个人主页">
+    
+    <link rel="preload" href="/assets/css/0.styles.80a5cd61.css" as="style"><link rel="preload" href="/assets/js/app.bf86356c.js" as="script"><link rel="preload" href="/assets/js/2.6938d6ea.js" as="script"><link rel="preload" href="/assets/js/24.6606b9ff.js" as="script"><link rel="prefetch" href="/assets/js/10.bdca0d0f.js"><link rel="prefetch" href="/assets/js/11.9c73297f.js"><link rel="prefetch" href="/assets/js/12.cefb5eb3.js"><link rel="prefetch" href="/assets/js/13.ca6f67af.js"><link rel="prefetch" href="/assets/js/14.aa571088.js"><link rel="prefetch" href="/assets/js/15.4b03a2d2.js"><link rel="prefetch" href="/assets/js/16.0b5aec7f.js"><link rel="prefetch" href="/assets/js/17.d10fbfcf.js"><link rel="prefetch" href="/assets/js/18.36f2bd4c.js"><link rel="prefetch" href="/assets/js/19.15e74034.js"><link rel="prefetch" href="/assets/js/20.ffefd55c.js"><link rel="prefetch" href="/assets/js/21.24c9c02a.js"><link rel="prefetch" href="/assets/js/22.f8d73958.js"><link rel="prefetch" href="/assets/js/23.cea2b23f.js"><link rel="prefetch" href="/assets/js/25.7e2c4009.js"><link rel="prefetch" href="/assets/js/26.2f486bca.js"><link rel="prefetch" href="/assets/js/27.f4499c41.js"><link rel="prefetch" href="/assets/js/28.5a381f2d.js"><link rel="prefetch" href="/assets/js/29.41102da9.js"><link rel="prefetch" href="/assets/js/3.d7ced79a.js"><link rel="prefetch" href="/assets/js/30.3ffc23c2.js"><link rel="prefetch" href="/assets/js/31.077ec6e9.js"><link rel="prefetch" href="/assets/js/32.d21611cb.js"><link rel="prefetch" href="/assets/js/33.38ceb61b.js"><link rel="prefetch" href="/assets/js/34.59a0c927.js"><link rel="prefetch" href="/assets/js/35.255eafcb.js"><link rel="prefetch" href="/assets/js/36.41916c0d.js"><link rel="prefetch" href="/assets/js/37.3577f14e.js"><link rel="prefetch" href="/assets/js/38.071709da.js"><link rel="prefetch" href="/assets/js/39.097851a2.js"><link rel="prefetch" href="/assets/js/4.0244df3b.js"><link rel="prefetch" href="/assets/js/40.d59840e6.js"><link rel="prefetch" href="/assets/js/41.ad25d8ab.js"><link rel="prefetch" href="/assets/js/42.b7fe8f20.js"><link rel="prefetch" href="/assets/js/43.0af61973.js"><link rel="prefetch" href="/assets/js/44.e566586b.js"><link rel="prefetch" href="/assets/js/45.d267435e.js"><link rel="prefetch" href="/assets/js/46.25a0d6c7.js"><link rel="prefetch" href="/assets/js/47.60f82362.js"><link rel="prefetch" href="/assets/js/48.2bb12b8d.js"><link rel="prefetch" href="/assets/js/49.5662a3a5.js"><link rel="prefetch" href="/assets/js/5.80568f0c.js"><link rel="prefetch" href="/assets/js/50.2554a84b.js"><link rel="prefetch" href="/assets/js/51.eaf58ddb.js"><link rel="prefetch" href="/assets/js/52.1ced69b6.js"><link rel="prefetch" href="/assets/js/53.9fcc79ec.js"><link rel="prefetch" href="/assets/js/54.079120a0.js"><link rel="prefetch" href="/assets/js/55.2aeb89d2.js"><link rel="prefetch" href="/assets/js/56.d39d2ed5.js"><link rel="prefetch" href="/assets/js/57.d7667a7f.js"><link rel="prefetch" href="/assets/js/58.21d55374.js"><link rel="prefetch" href="/assets/js/59.36cbba10.js"><link rel="prefetch" href="/assets/js/6.cb285fdc.js"><link rel="prefetch" href="/assets/js/60.f56e1f99.js"><link rel="prefetch" href="/assets/js/61.85d4e33a.js"><link rel="prefetch" href="/assets/js/62.09de7b0c.js"><link rel="prefetch" href="/assets/js/63.d4950e6d.js"><link rel="prefetch" href="/assets/js/64.95d3600e.js"><link rel="prefetch" href="/assets/js/65.b44dc974.js"><link rel="prefetch" href="/assets/js/66.88899658.js"><link rel="prefetch" href="/assets/js/67.042d954c.js"><link rel="prefetch" href="/assets/js/68.ac7810f1.js"><link rel="prefetch" href="/assets/js/69.4f9e7e09.js"><link rel="prefetch" href="/assets/js/7.6a9b305d.js"><link rel="prefetch" href="/assets/js/70.48b19758.js"><link rel="prefetch" href="/assets/js/71.748e8cf7.js"><link rel="prefetch" href="/assets/js/72.d50bef4b.js"><link rel="prefetch" href="/assets/js/73.0ac924bc.js"><link rel="prefetch" href="/assets/js/74.ef39d98b.js"><link rel="prefetch" href="/assets/js/75.4b8f6284.js"><link rel="prefetch" href="/assets/js/76.018f7ad0.js"><link rel="prefetch" href="/assets/js/77.69175c21.js"><link rel="prefetch" href="/assets/js/78.da0cf581.js"><link rel="prefetch" href="/assets/js/79.fbdce5ea.js"><link rel="prefetch" href="/assets/js/8.9c0ce64e.js"><link rel="prefetch" href="/assets/js/80.5ff6044c.js"><link rel="prefetch" href="/assets/js/81.972cb6f6.js"><link rel="prefetch" href="/assets/js/82.c1c485ba.js"><link rel="prefetch" href="/assets/js/83.6fe57a40.js"><link rel="prefetch" href="/assets/js/84.6fadc008.js"><link rel="prefetch" href="/assets/js/85.05e412a1.js"><link rel="prefetch" href="/assets/js/86.1fe91a31.js"><link rel="prefetch" href="/assets/js/87.99ed37ff.js"><link rel="prefetch" href="/assets/js/88.bd5c1c43.js"><link rel="prefetch" href="/assets/js/89.96dd7681.js"><link rel="prefetch" href="/assets/js/9.1901a415.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.80a5cd61.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/hoppou_nobg.jpg" alt="北方酱Hoppou~" class="logo"> <span class="site-name can-hide">北方酱Hoppou~</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Py-01-环境_Env.html" class="nav-link">
+  Py-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-02-数据类型_DataType.html" class="nav-link">
+  Py-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-03-文件处理_File.html" class="nav-link">
+  Py-03-文件处理_File
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-04-Numpy.html" class="nav-link">
+  Py-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-05-Pandas.html" class="nav-link">
+  Py-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-06-绘图_Plot.html" class="nav-link">
+  Py-06-绘图_Plot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-07-SciPy.html" class="nav-link">
+  Py-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-08-Pyinstaller.html" class="nav-link">
+  Py-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-09-Database.html" class="nav-link">
+  Py-09-Database
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-10-Neo4j.html" class="nav-link">
+  Py-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-11-Django.html" class="nav-link">
+  Py-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-12-Word2Vec.html" class="nav-link">
+  Py-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-13-PyTorch.html" class="nav-link">
+  Py-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-14-Keras.html" class="nav-link">
+  Py-14-Keras
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-15-Sklearn.html" class="nav-link">
+  Py-15-Sklearn
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-16-Tkinter.html" class="nav-link">
+  Py-16-Tkinter
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-17-Geatpy.html" class="nav-link">
+  Py-17-Geatpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-18-MachineLearning.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Py-18-MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-19-PandaPower.html" class="nav-link">
+  Py-19-PandaPower
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-20-PyQt.html" class="nav-link">
+  Py-20-PyQt
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py_代码块.html" class="nav-link">
+  Py_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境_Env.html" class="nav-link">
+  Cpp-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型_DataType.html" class="nav-link">
+  Cpp-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构_DataStruct.html" class="nav-link">
+  Cpp-03-数据结构_DataStruct
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针_Point.html" class="nav-link">
+  Cpp-04-指针_Point
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数_Func.html" class="nav-link">
+  Cpp-05-函数_Func
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出&amp;文件_IO.html" class="nav-link">
+  Cpp-06-输入输出&amp;文件_IO
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象_Class.html" class="nav-link">
+  Cpp-07-面向对象_Class
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-08-知识点_Knowledge.html" class="nav-link">
+  Cpp-08-知识点_Knowledge
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/强化学习.html" class="nav-link">
+  强化学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/朴素贝叶斯.html" class="nav-link">
+  朴素贝叶斯
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/统计学习方法.html" class="nav-link">
+  统计学习方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Go 学习笔记.html" class="nav-link">
+  Go 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/KotlinNote.html" class="nav-link">
+  KotlinNote
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MATLAB笔记.html" class="nav-link">
+  MATLAB笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VSCode插件开发.html" class="nav-link">
+  VSCode插件开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Windows笔记.html" class="nav-link">
+  Windows笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Word 技巧.html" class="nav-link">
+  Word 技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Py-01-环境_Env.html" class="nav-link">
+  Py-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-02-数据类型_DataType.html" class="nav-link">
+  Py-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-03-文件处理_File.html" class="nav-link">
+  Py-03-文件处理_File
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-04-Numpy.html" class="nav-link">
+  Py-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-05-Pandas.html" class="nav-link">
+  Py-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-06-绘图_Plot.html" class="nav-link">
+  Py-06-绘图_Plot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-07-SciPy.html" class="nav-link">
+  Py-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-08-Pyinstaller.html" class="nav-link">
+  Py-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-09-Database.html" class="nav-link">
+  Py-09-Database
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-10-Neo4j.html" class="nav-link">
+  Py-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-11-Django.html" class="nav-link">
+  Py-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-12-Word2Vec.html" class="nav-link">
+  Py-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-13-PyTorch.html" class="nav-link">
+  Py-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-14-Keras.html" class="nav-link">
+  Py-14-Keras
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-15-Sklearn.html" class="nav-link">
+  Py-15-Sklearn
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-16-Tkinter.html" class="nav-link">
+  Py-16-Tkinter
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-17-Geatpy.html" class="nav-link">
+  Py-17-Geatpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-18-MachineLearning.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Py-18-MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-19-PandaPower.html" class="nav-link">
+  Py-19-PandaPower
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-20-PyQt.html" class="nav-link">
+  Py-20-PyQt
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py_代码块.html" class="nav-link">
+  Py_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境_Env.html" class="nav-link">
+  Cpp-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型_DataType.html" class="nav-link">
+  Cpp-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构_DataStruct.html" class="nav-link">
+  Cpp-03-数据结构_DataStruct
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针_Point.html" class="nav-link">
+  Cpp-04-指针_Point
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数_Func.html" class="nav-link">
+  Cpp-05-函数_Func
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出&amp;文件_IO.html" class="nav-link">
+  Cpp-06-输入输出&amp;文件_IO
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象_Class.html" class="nav-link">
+  Cpp-07-面向对象_Class
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-08-知识点_Knowledge.html" class="nav-link">
+  Cpp-08-知识点_Knowledge
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/强化学习.html" class="nav-link">
+  强化学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/朴素贝叶斯.html" class="nav-link">
+  朴素贝叶斯
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/统计学习方法.html" class="nav-link">
+  统计学习方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Go 学习笔记.html" class="nav-link">
+  Go 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/KotlinNote.html" class="nav-link">
+  KotlinNote
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MATLAB笔记.html" class="nav-link">
+  MATLAB笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VSCode插件开发.html" class="nav-link">
+  VSCode插件开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Windows笔记.html" class="nav-link">
+  Windows笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Word 技巧.html" class="nav-link">
+  Word 技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/Python/Py-01-环境_Env.html" class="sidebar-link">1. Python 环境</a></li><li><a href="/pages/Python/Py-02-数据类型_DataType.html" class="sidebar-link">2. Python 数据类型</a></li><li><a href="/pages/Python/Py-03-文件处理_File.html" class="sidebar-link">3. 文件</a></li><li><a href="/pages/Python/Py-04-Numpy.html" class="sidebar-link">4. Numpy 矩阵运算</a></li><li><a href="/pages/Python/Py-05-Pandas.html" class="sidebar-link">5. Pandas 数据处理</a></li><li><a href="/pages/Python/Py-06-绘图_Plot.html" class="sidebar-link">6. Matplotlib, Pyecharts 绘图</a></li><li><a href="/pages/Python/Py-07-SciPy.html" class="sidebar-link">7. SciPy 笔记</a></li><li><a href="/pages/Python/Py-08-Pyinstaller.html" class="sidebar-link">8. Pyinstaller 打包</a></li><li><a href="/pages/Python/Py-09-Database.html" class="sidebar-link">9. Database</a></li><li><a href="/pages/Python/Py-10-Neo4j.html" class="sidebar-link">10. Neo4j 图数据库</a></li><li><a href="/pages/Python/Py-11-Django.html" class="sidebar-link">11. Django-基于 Python 的 Web 框架</a></li><li><a href="/pages/Python/Py-12-Word2Vec.html" class="sidebar-link">12. Word2Vec</a></li><li><a href="/pages/Python/Py-13-PyTorch.html" class="sidebar-link">13. PyTorch 笔记</a></li><li><a href="/pages/Python/Py-14-Keras.html" class="sidebar-link">14. Keras 学习笔记</a></li><li><a href="/pages/Python/Py-15-Sklearn.html" class="sidebar-link">15. Scikit-learn</a></li><li><a href="/pages/Python/Py-16-Tkinter.html" class="sidebar-link">16. Tkinter</a></li><li><a href="/pages/Python/Py-17-Geatpy.html" class="sidebar-link">17. Geatpy 进化算法</a></li><li><a href="/pages/Python/Py-18-MachineLearning.html" aria-current="page" class="active sidebar-link">18. 机器学习 MachineLearning</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/Python/Py-18-MachineLearning.html#_1-基础" class="sidebar-link">1. 基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/Python/Py-18-MachineLearning.html#_1-1-数据标准化-归一化-normalization" class="sidebar-link">1.1. 数据标准化（归一化）normalization</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-18-MachineLearning.html#_1-2-激活函数-activation" class="sidebar-link">1.2. 激活函数 Activation</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-18-MachineLearning.html#_2-监督学习" class="sidebar-link">2. 监督学习</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/Python/Py-18-MachineLearning.html#_2-1-k-近邻算法-k-means" class="sidebar-link">2.1. K 近邻算法 K-Means</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-18-MachineLearning.html#_3-神经网络-neuralnetwork" class="sidebar-link">3. 神经网络 NeuralNetwork</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/Python/Py-18-MachineLearning.html#_3-1-神经网络种类" class="sidebar-link">3.1. 神经网络种类</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-18-MachineLearning.html#_3-2-全连接神经网络-fully-connected-neural-network" class="sidebar-link">3.2. 全连接神经网络 Fully Connected Neural Network</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-18-MachineLearning.html#_3-3-卷积神经网络-cnn" class="sidebar-link">3.3. 卷积神经网络 CNN</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-18-MachineLearning.html#_3-4-循环神经网络-rnn" class="sidebar-link">3.4. 循环神经网络 RNN</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-18-MachineLearning.html#_4-图神经网络-gnn" class="sidebar-link">4. 图神经网络 GNN</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/Python/Py-18-MachineLearning.html#_4-1-图卷积网络-gcn" class="sidebar-link">4.1. 图卷积网络 GCN</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-18-MachineLearning.html#_4-2-图注意力神经网络-gat" class="sidebar-link">4.2. 图注意力神经网络 GAT</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-18-MachineLearning.html#_5-强化学习" class="sidebar-link">5. 强化学习</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-18-MachineLearning.html#_6-模型评估" class="sidebar-link">6. 模型评估</a></li></ul></li><li><a href="/pages/Python/Py-19-PandaPower.html" class="sidebar-link">19. PandaPower</a></li><li><a href="/pages/Python/Py-20-PyQt.html" class="sidebar-link">20. PyQt</a></li><li><a href="/pages/Python/Py_代码块.html" class="sidebar-link">Python 代码块</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_18-机器学习-machinelearning"><a href="#_18-机器学习-machinelearning" class="header-anchor">#</a> 18. 机器学习 MachineLearning</h1> <h2 id="_1-基础"><a href="#_1-基础" class="header-anchor">#</a> 1. 基础</h2> <h3 id="_1-1-数据标准化-归一化-normalization"><a href="#_1-1-数据标准化-归一化-normalization" class="header-anchor">#</a> 1.1. 数据标准化（归一化）normalization</h3> <ol><li><p>Z-Score</p> <ol><li><p>Z-Score 通过 (x-μ)/σ 将两组或多组数据转化为无单位的 Z-Score 分值，使得数据标准统一化，提高了数据可比性，削弱了数据解释性。<a href="https://blog.csdn.net/Orange_Spotty_Cat/article/details/80312154" target="_blank" rel="noopener noreferrer">参考链接🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li> <li><p>计算公式：x-观测值，μ-总体平均值，σ-总体标准差</p>
+z = \frac{(x-μ)}{σ} 
+
+</li> <li><p>代码</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> sklearn <span class="token keyword">import</span> preprocessing
+
+scaled_x <span class="token operator">=</span> preprocessing<span class="token punctuation">.</span>scale<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>优点：</p> <ul><li>计算简单，使用起来比较方便；</li> <li>当数据分布非常凌乱，无法进行最大、最小值的判断时，用 Z-score 可以实现数据的规范化处理。</li></ul></li> <li><p>缺点：</p> <ul><li>总体平均值与方差不一定可知</li> <li>对于数据分布有要求</li> <li>结果没有实际意义，只能用于比较</li></ul></li></ol></li> <li><p>min-max</p> <ol><li><p>也称为离差标准化，是对原始数据的线性变换，使结果值映射到 [0 - 1] 之间</p> <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mi>x</mi><mo>−</mo><msub><mi>x</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub></mrow><mrow><msub><mi>x</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>−</mo><msub><mi>x</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">x = \frac{x-x_{min}}{x_{max}-x_{min}} 
+</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="strut" style="height:1.2603300000000002em;"></span><span class="strut bottom" style="height:2.09633em;vertical-align:-0.8360000000000001em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit">x</span><span class="mrel">=</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">m</span><span class="mord mathit">a</span><span class="mord mathit">x</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">−</span><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">m</span><span class="mord mathit">i</span><span class="mord mathit">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit">x</span><span class="mbin">−</span><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">m</span><span class="mord mathit">i</span><span class="mord mathit">n</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></span></p></li> <li><p>代码</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># min-max 归一化，输入为 np 格式</span>
+<span class="token keyword">def</span> <span class="token function">normalization</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    _range <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token operator">-</span> np<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>data <span class="token operator">-</span> np<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> _range
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><p>sklearn 的用法参考 <a href="/pages/Python/Py-15-Sklearn.html###-2.1.-归一化">SKlearn 归一化</a></p></li></ol></li> <li><p>小数定标法</p> <ol><li><p>小数定标规范化就是通过移动小数点的位置来进行规范化。小数点移动多少位取决于属性 A 的取值中的最大绝对值。</p></li> <li><p>举个例子，比如属性 A 的取值范围是 -999 到 88，那么最大绝对值为 999，小数点就会移动 3 位，即新数值 = 原数值 /1000。那么 A 的取值范围就被规范化为 -0.999 到 0.088。</p></li> <li><p>代码</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token comment"># 初始化数据</span>
+x <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token number">0.</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">3.</span><span class="token punctuation">,</span>  <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span> <span class="token number">3.</span><span class="token punctuation">,</span>  <span class="token number">1.</span><span class="token punctuation">,</span>  <span class="token number">2.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span> <span class="token number">0.</span><span class="token punctuation">,</span>  <span class="token number">1.</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment"># 小数定标规范化</span>
+j <span class="token operator">=</span> np<span class="token punctuation">.</span>ceil<span class="token punctuation">(</span>np<span class="token punctuation">.</span>log10<span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token builtin">abs</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 获取小数点移动位数</span>
+scaled_x <span class="token operator">=</span> x<span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token operator">**</span>j<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li></ol></li> <li><p>参考链接</p> <ol><li><a href="https://joshuaqyh.github.io/2019/02/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E4%B8%89%E7%A7%8D%E6%95%B0%E6%8D%AE%E8%A7%84%E8%8C%83%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95%E6%B3%95/" target="_blank" rel="noopener noreferrer">常用的三种数据规范化的方法及 python 实现🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ol></li></ol> <h3 id="_1-2-激活函数-activation"><a href="#_1-2-激活函数-activation" class="header-anchor">#</a> 1.2. 激活函数 Activation</h3> <p><img src="/assets/img/2022-11-23_12.a54e5344.png" alt="图 2"></p> <h2 id="_2-监督学习"><a href="#_2-监督学习" class="header-anchor">#</a> 2. 监督学习</h2> <h3 id="_2-1-k-近邻算法-k-means"><a href="#_2-1-k-近邻算法-k-means" class="header-anchor">#</a> 2.1. K 近邻算法 K-Means</h3> <ol><li>算法流程
+<ol><li>计算已知类别数据集中的点与当前点的距离</li> <li>按照距离依次排序</li> <li>选取与当前点距离最小的 K 个点</li> <li>确定前 K 个点所在类别的出现概率</li> <li>返回前 K 个点出现频率最高的类别作为当前点预测分类</li></ol></li></ol> <h2 id="_3-神经网络-neuralnetwork"><a href="#_3-神经网络-neuralnetwork" class="header-anchor">#</a> 3. 神经网络 NeuralNetwork</h2> <h3 id="_3-1-神经网络种类"><a href="#_3-1-神经网络种类" class="header-anchor">#</a> 3.1. 神经网络种类</h3> <ol><li><p>神经网络种类图，<a href="https://www.asimovinstitute.org/neural-network-zoo/" target="_blank" rel="noopener noreferrer">原图链接🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><img src="/assets/img/NeuralNetworkZoo20042019.ffc1b001.png" alt="NeuralNetworks"></p> <table><thead><tr><th>模型</th> <th>全名</th> <th>中文名</th></tr></thead> <tbody><tr><td>P</td> <td>Perceptron</td> <td>感知机</td></tr> <tr><td>FF</td> <td>Feed Forward</td> <td>前馈神经网络</td></tr> <tr><td>RBF</td> <td>Radial basis function</td> <td>径向基神经网络</td></tr> <tr><td>DFF</td> <td>Deep Feed Forward</td> <td>深度前馈神经网络</td></tr> <tr><td>RNN</td> <td>Recurrent Neural Network</td> <td>循环神经网络</td></tr> <tr><td>LSTM</td> <td>Long/Short Term Network</td> <td>长/短期记忆</td></tr> <tr><td>GRU</td> <td>Gated Recurrent Unit</td> <td>门循环单元</td></tr> <tr><td>AE</td> <td>Auto Encoder</td> <td>自编码机</td></tr> <tr><td>VAE</td> <td>Variational Auto Encoder</td> <td>变分自编码机</td></tr> <tr><td>DAE</td> <td>Denoising Auto Encoder</td> <td>去噪自编码机</td></tr> <tr><td>SAE</td> <td>Sparse Auto Encoder</td> <td>稀疏自编码机</td></tr> <tr><td>MC</td> <td>Markov Chain</td> <td>马尔科夫链</td></tr> <tr><td>HN</td> <td>Hopfield Network</td> <td>霍普菲尔网络</td></tr> <tr><td>BM</td> <td>Boltzmann Machine</td> <td>玻尔兹曼机</td></tr> <tr><td>RBM</td> <td>Restricted BM</td> <td>受限玻尔兹曼机</td></tr> <tr><td>DBN</td> <td>Deep Belief Network</td> <td>深度信念网络</td></tr> <tr><td>DCN</td> <td>Deep Convolutional Network</td> <td>深度卷积网络</td></tr> <tr><td>DN</td> <td>Deconvolutional Network</td> <td>解卷积网络</td></tr> <tr><td>DCIGN</td> <td>Deep Convolutional Inverse Graphics Network</td> <td>深度卷积逆向图网络</td></tr> <tr><td>GAN</td> <td>Generative Adversarial Network</td> <td>生成式对抗网络</td></tr> <tr><td>LSM</td> <td>Liquid State Machine</td> <td>液态机</td></tr> <tr><td>ELM</td> <td>Extreme Learning Machine</td> <td>极限学习机</td></tr> <tr><td>ESN</td> <td>Echo State Network</td> <td>回声状态网络</td></tr> <tr><td>DRN</td> <td>Deep Residual Network</td> <td>深度残差网络</td></tr> <tr><td>DNC</td> <td>Differentiable Neural Computer</td> <td>可微神经计算机</td></tr> <tr><td>NTM</td> <td>Neural Turing Machine</td> <td>神经图灵机</td></tr> <tr><td>CN</td> <td>Capsule Network</td> <td>胶囊网络</td></tr> <tr><td>KN</td> <td>Kohonen Network</td> <td>Kohonen 网络</td></tr> <tr><td>AN</td> <td>Attention Network</td> <td>注意力网络</td></tr></tbody></table> <ul><li><a href="https://blog.csdn.net/qq_35082030/article/details/73368962" target="_blank" rel="noopener noreferrer">一文看懂 25 个神经网络模型🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li> <li><p>深度前馈网络 (deep feedforward network)，也叫做前馈神经网络 (feedforward neurnal network) 或者多层感知机 (multilayer perceptron, MLP)。</p></li> <li><p>前向传播：将上一层的输出作为下一层的输入，并计算下一层的输出，一直到运算到输出层为止。</p></li> <li><p>反向传播（back propagation, BP）算法是 &quot;误差反向传播&quot; 的简称，也称为 backprop，允许来自代价函数的信息通过网络向后流动，以便计算梯度。反向传播是一种与最优化方法（如梯度下降法）结合使用的，用来训练人工神经网络的常见方法。该方法对网络中所有权重计算损失函数的梯度。这个梯度会反馈给最优化方法，用来更新权值以最小化损失函数。</p></li></ol> <h3 id="_3-2-全连接神经网络-fully-connected-neural-network"><a href="#_3-2-全连接神经网络-fully-connected-neural-network" class="header-anchor">#</a> 3.2. 全连接神经网络 Fully Connected Neural Network</h3> <ol><li>全连接网络（FC）、前馈神经网络（BP）、多层感知机（MLP）三种称呼实质是一样的。以全连接网络为例讲解训练过程。全连接网络实际上可以看作由多个隐藏层 (dense) 组成的网络模型，隐藏层的每个节点都与上一层所有节点相连，所以叫全连接。</li></ol> <h3 id="_3-3-卷积神经网络-cnn"><a href="#_3-3-卷积神经网络-cnn" class="header-anchor">#</a> 3.3. 卷积神经网络 CNN</h3> <h3 id="_3-4-循环神经网络-rnn"><a href="#_3-4-循环神经网络-rnn" class="header-anchor">#</a> 3.4. 循环神经网络 RNN</h3> <h2 id="_4-图神经网络-gnn"><a href="#_4-图神经网络-gnn" class="header-anchor">#</a> 4. 图神经网络 GNN</h2> <ol><li>图神经网络（Graph Neural Network）: 包括图卷积网络 (Graph Convolution Network, GCN), 图注意力神经网络 (Graph Attention Network, GAN), 图自编码器 (Graph Autoencoders), 图生成网络 (Graph Generative Network), 图时空网络 (Graph Spatial-temporal Network)</li> <li>优点
+<ol><li>半监督学习</li> <li>不需要全部标签</li> <li>用少量标签也能训练</li> <li>计算损失时也只有有标签的</li></ol></li></ol> <h3 id="_4-1-图卷积网络-gcn"><a href="#_4-1-图卷积网络-gcn" class="header-anchor">#</a> 4.1. 图卷积网络 GCN</h3> <h3 id="_4-2-图注意力神经网络-gat"><a href="#_4-2-图注意力神经网络-gat" class="header-anchor">#</a> 4.2. 图注意力神经网络 GAT</h3> <h2 id="_5-强化学习"><a href="#_5-强化学习" class="header-anchor">#</a> 5. 强化学习</h2> <h2 id="_6-模型评估"><a href="#_6-模型评估" class="header-anchor">#</a> 6. 模型评估</h2> <ol><li><p><strong>模型泛化能力</strong>：泛化能力指的是训练得到的模型对未知数据的预测能力。建模的目的是让模型不仅对已知数据，而且对未知数据都能有较好的预测能力。</p></li> <li><p><strong>过拟合与欠拟合</strong>：当模型对训练集学习的太好的时候，基于训练集误差很小，而基于测试集误差会很大，这种情况我们称之为过拟合，反之则称为欠拟合。</p></li> <li><p><strong>模型准确性</strong>：通过偏差方差衡量模型本身的拟合能力与波动性。同时，结合分类与回归问题对应的评估指标对预测误差进行量化的衡量与比较。</p></li> <li><p><strong>模型稳定性</strong>：训练完模型后，假使模型在训练集、测试集上表现都很优异，也不能说在真实业务场景下可以放心的使用它，由于业务背景与人群构成随时间会发生变化，因此需要考察模型的特征是否稳定能够运用在实际中。</p></li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">3/30/2023, 2:14:30 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/Python/Py-17-Geatpy.html" class="prev">
+        17. Geatpy 进化算法
+      </a></span> <span class="next"><a href="/pages/Python/Py-19-PandaPower.html">
+        19. PandaPower
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div class="cat-container" data-v-a13867c0><canvas id="vuepress-cat" width="280" height="250" class="live2d" data-v-a13867c0></canvas></div></div></div>
+    <script src="/assets/js/app.bf86356c.js" defer></script><script src="/assets/js/2.6938d6ea.js" defer></script><script src="/assets/js/24.6606b9ff.js" defer></script>
+  </body>
+</html>

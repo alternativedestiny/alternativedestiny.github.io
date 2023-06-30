@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>14. Keras 学习笔记 | 北方酱Hoppou~</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/hoppou_nobg.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="北方酱Hoppou~的个人主页">
+    
+    <link rel="preload" href="/assets/css/0.styles.80a5cd61.css" as="style"><link rel="preload" href="/assets/js/app.bf86356c.js" as="script"><link rel="preload" href="/assets/js/2.6938d6ea.js" as="script"><link rel="preload" href="/assets/js/14.aa571088.js" as="script"><link rel="prefetch" href="/assets/js/10.bdca0d0f.js"><link rel="prefetch" href="/assets/js/11.9c73297f.js"><link rel="prefetch" href="/assets/js/12.cefb5eb3.js"><link rel="prefetch" href="/assets/js/13.ca6f67af.js"><link rel="prefetch" href="/assets/js/15.4b03a2d2.js"><link rel="prefetch" href="/assets/js/16.0b5aec7f.js"><link rel="prefetch" href="/assets/js/17.d10fbfcf.js"><link rel="prefetch" href="/assets/js/18.36f2bd4c.js"><link rel="prefetch" href="/assets/js/19.15e74034.js"><link rel="prefetch" href="/assets/js/20.ffefd55c.js"><link rel="prefetch" href="/assets/js/21.24c9c02a.js"><link rel="prefetch" href="/assets/js/22.f8d73958.js"><link rel="prefetch" href="/assets/js/23.cea2b23f.js"><link rel="prefetch" href="/assets/js/24.6606b9ff.js"><link rel="prefetch" href="/assets/js/25.7e2c4009.js"><link rel="prefetch" href="/assets/js/26.2f486bca.js"><link rel="prefetch" href="/assets/js/27.f4499c41.js"><link rel="prefetch" href="/assets/js/28.5a381f2d.js"><link rel="prefetch" href="/assets/js/29.41102da9.js"><link rel="prefetch" href="/assets/js/3.d7ced79a.js"><link rel="prefetch" href="/assets/js/30.3ffc23c2.js"><link rel="prefetch" href="/assets/js/31.077ec6e9.js"><link rel="prefetch" href="/assets/js/32.d21611cb.js"><link rel="prefetch" href="/assets/js/33.38ceb61b.js"><link rel="prefetch" href="/assets/js/34.59a0c927.js"><link rel="prefetch" href="/assets/js/35.255eafcb.js"><link rel="prefetch" href="/assets/js/36.41916c0d.js"><link rel="prefetch" href="/assets/js/37.3577f14e.js"><link rel="prefetch" href="/assets/js/38.071709da.js"><link rel="prefetch" href="/assets/js/39.097851a2.js"><link rel="prefetch" href="/assets/js/4.0244df3b.js"><link rel="prefetch" href="/assets/js/40.d59840e6.js"><link rel="prefetch" href="/assets/js/41.ad25d8ab.js"><link rel="prefetch" href="/assets/js/42.b7fe8f20.js"><link rel="prefetch" href="/assets/js/43.0af61973.js"><link rel="prefetch" href="/assets/js/44.e566586b.js"><link rel="prefetch" href="/assets/js/45.d267435e.js"><link rel="prefetch" href="/assets/js/46.25a0d6c7.js"><link rel="prefetch" href="/assets/js/47.60f82362.js"><link rel="prefetch" href="/assets/js/48.2bb12b8d.js"><link rel="prefetch" href="/assets/js/49.5662a3a5.js"><link rel="prefetch" href="/assets/js/5.80568f0c.js"><link rel="prefetch" href="/assets/js/50.2554a84b.js"><link rel="prefetch" href="/assets/js/51.eaf58ddb.js"><link rel="prefetch" href="/assets/js/52.1ced69b6.js"><link rel="prefetch" href="/assets/js/53.9fcc79ec.js"><link rel="prefetch" href="/assets/js/54.079120a0.js"><link rel="prefetch" href="/assets/js/55.2aeb89d2.js"><link rel="prefetch" href="/assets/js/56.d39d2ed5.js"><link rel="prefetch" href="/assets/js/57.d7667a7f.js"><link rel="prefetch" href="/assets/js/58.21d55374.js"><link rel="prefetch" href="/assets/js/59.36cbba10.js"><link rel="prefetch" href="/assets/js/6.cb285fdc.js"><link rel="prefetch" href="/assets/js/60.f56e1f99.js"><link rel="prefetch" href="/assets/js/61.85d4e33a.js"><link rel="prefetch" href="/assets/js/62.09de7b0c.js"><link rel="prefetch" href="/assets/js/63.d4950e6d.js"><link rel="prefetch" href="/assets/js/64.95d3600e.js"><link rel="prefetch" href="/assets/js/65.b44dc974.js"><link rel="prefetch" href="/assets/js/66.88899658.js"><link rel="prefetch" href="/assets/js/67.042d954c.js"><link rel="prefetch" href="/assets/js/68.ac7810f1.js"><link rel="prefetch" href="/assets/js/69.4f9e7e09.js"><link rel="prefetch" href="/assets/js/7.6a9b305d.js"><link rel="prefetch" href="/assets/js/70.48b19758.js"><link rel="prefetch" href="/assets/js/71.748e8cf7.js"><link rel="prefetch" href="/assets/js/72.d50bef4b.js"><link rel="prefetch" href="/assets/js/73.0ac924bc.js"><link rel="prefetch" href="/assets/js/74.ef39d98b.js"><link rel="prefetch" href="/assets/js/75.4b8f6284.js"><link rel="prefetch" href="/assets/js/76.018f7ad0.js"><link rel="prefetch" href="/assets/js/77.69175c21.js"><link rel="prefetch" href="/assets/js/78.da0cf581.js"><link rel="prefetch" href="/assets/js/79.fbdce5ea.js"><link rel="prefetch" href="/assets/js/8.9c0ce64e.js"><link rel="prefetch" href="/assets/js/80.5ff6044c.js"><link rel="prefetch" href="/assets/js/81.972cb6f6.js"><link rel="prefetch" href="/assets/js/82.c1c485ba.js"><link rel="prefetch" href="/assets/js/83.6fe57a40.js"><link rel="prefetch" href="/assets/js/84.6fadc008.js"><link rel="prefetch" href="/assets/js/85.05e412a1.js"><link rel="prefetch" href="/assets/js/86.1fe91a31.js"><link rel="prefetch" href="/assets/js/87.99ed37ff.js"><link rel="prefetch" href="/assets/js/88.bd5c1c43.js"><link rel="prefetch" href="/assets/js/89.96dd7681.js"><link rel="prefetch" href="/assets/js/9.1901a415.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.80a5cd61.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/hoppou_nobg.jpg" alt="北方酱Hoppou~" class="logo"> <span class="site-name can-hide">北方酱Hoppou~</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Py-01-环境_Env.html" class="nav-link">
+  Py-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-02-数据类型_DataType.html" class="nav-link">
+  Py-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-03-文件处理_File.html" class="nav-link">
+  Py-03-文件处理_File
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-04-Numpy.html" class="nav-link">
+  Py-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-05-Pandas.html" class="nav-link">
+  Py-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-06-绘图_Plot.html" class="nav-link">
+  Py-06-绘图_Plot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-07-SciPy.html" class="nav-link">
+  Py-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-08-Pyinstaller.html" class="nav-link">
+  Py-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-09-Database.html" class="nav-link">
+  Py-09-Database
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-10-Neo4j.html" class="nav-link">
+  Py-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-11-Django.html" class="nav-link">
+  Py-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-12-Word2Vec.html" class="nav-link">
+  Py-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-13-PyTorch.html" class="nav-link">
+  Py-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-14-Keras.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Py-14-Keras
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-15-Sklearn.html" class="nav-link">
+  Py-15-Sklearn
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-16-Tkinter.html" class="nav-link">
+  Py-16-Tkinter
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-17-Geatpy.html" class="nav-link">
+  Py-17-Geatpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-18-MachineLearning.html" class="nav-link">
+  Py-18-MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-19-PandaPower.html" class="nav-link">
+  Py-19-PandaPower
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-20-PyQt.html" class="nav-link">
+  Py-20-PyQt
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py_代码块.html" class="nav-link">
+  Py_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境_Env.html" class="nav-link">
+  Cpp-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型_DataType.html" class="nav-link">
+  Cpp-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构_DataStruct.html" class="nav-link">
+  Cpp-03-数据结构_DataStruct
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针_Point.html" class="nav-link">
+  Cpp-04-指针_Point
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数_Func.html" class="nav-link">
+  Cpp-05-函数_Func
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出&amp;文件_IO.html" class="nav-link">
+  Cpp-06-输入输出&amp;文件_IO
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象_Class.html" class="nav-link">
+  Cpp-07-面向对象_Class
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-08-知识点_Knowledge.html" class="nav-link">
+  Cpp-08-知识点_Knowledge
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/强化学习.html" class="nav-link">
+  强化学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/朴素贝叶斯.html" class="nav-link">
+  朴素贝叶斯
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/统计学习方法.html" class="nav-link">
+  统计学习方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Go 学习笔记.html" class="nav-link">
+  Go 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/KotlinNote.html" class="nav-link">
+  KotlinNote
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MATLAB笔记.html" class="nav-link">
+  MATLAB笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VSCode插件开发.html" class="nav-link">
+  VSCode插件开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Windows笔记.html" class="nav-link">
+  Windows笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Word 技巧.html" class="nav-link">
+  Word 技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Py-01-环境_Env.html" class="nav-link">
+  Py-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-02-数据类型_DataType.html" class="nav-link">
+  Py-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-03-文件处理_File.html" class="nav-link">
+  Py-03-文件处理_File
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-04-Numpy.html" class="nav-link">
+  Py-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-05-Pandas.html" class="nav-link">
+  Py-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-06-绘图_Plot.html" class="nav-link">
+  Py-06-绘图_Plot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-07-SciPy.html" class="nav-link">
+  Py-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-08-Pyinstaller.html" class="nav-link">
+  Py-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-09-Database.html" class="nav-link">
+  Py-09-Database
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-10-Neo4j.html" class="nav-link">
+  Py-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-11-Django.html" class="nav-link">
+  Py-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-12-Word2Vec.html" class="nav-link">
+  Py-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-13-PyTorch.html" class="nav-link">
+  Py-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-14-Keras.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Py-14-Keras
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-15-Sklearn.html" class="nav-link">
+  Py-15-Sklearn
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-16-Tkinter.html" class="nav-link">
+  Py-16-Tkinter
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-17-Geatpy.html" class="nav-link">
+  Py-17-Geatpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-18-MachineLearning.html" class="nav-link">
+  Py-18-MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-19-PandaPower.html" class="nav-link">
+  Py-19-PandaPower
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-20-PyQt.html" class="nav-link">
+  Py-20-PyQt
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py_代码块.html" class="nav-link">
+  Py_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境_Env.html" class="nav-link">
+  Cpp-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型_DataType.html" class="nav-link">
+  Cpp-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构_DataStruct.html" class="nav-link">
+  Cpp-03-数据结构_DataStruct
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针_Point.html" class="nav-link">
+  Cpp-04-指针_Point
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数_Func.html" class="nav-link">
+  Cpp-05-函数_Func
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出&amp;文件_IO.html" class="nav-link">
+  Cpp-06-输入输出&amp;文件_IO
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象_Class.html" class="nav-link">
+  Cpp-07-面向对象_Class
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-08-知识点_Knowledge.html" class="nav-link">
+  Cpp-08-知识点_Knowledge
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/强化学习.html" class="nav-link">
+  强化学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/朴素贝叶斯.html" class="nav-link">
+  朴素贝叶斯
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/统计学习方法.html" class="nav-link">
+  统计学习方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Go 学习笔记.html" class="nav-link">
+  Go 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/KotlinNote.html" class="nav-link">
+  KotlinNote
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MATLAB笔记.html" class="nav-link">
+  MATLAB笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VSCode插件开发.html" class="nav-link">
+  VSCode插件开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Windows笔记.html" class="nav-link">
+  Windows笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Word 技巧.html" class="nav-link">
+  Word 技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/Python/Py-01-环境_Env.html" class="sidebar-link">1. Python 环境</a></li><li><a href="/pages/Python/Py-02-数据类型_DataType.html" class="sidebar-link">2. Python 数据类型</a></li><li><a href="/pages/Python/Py-03-文件处理_File.html" class="sidebar-link">3. 文件</a></li><li><a href="/pages/Python/Py-04-Numpy.html" class="sidebar-link">4. Numpy 矩阵运算</a></li><li><a href="/pages/Python/Py-05-Pandas.html" class="sidebar-link">5. Pandas 数据处理</a></li><li><a href="/pages/Python/Py-06-绘图_Plot.html" class="sidebar-link">6. Matplotlib, Pyecharts 绘图</a></li><li><a href="/pages/Python/Py-07-SciPy.html" class="sidebar-link">7. SciPy 笔记</a></li><li><a href="/pages/Python/Py-08-Pyinstaller.html" class="sidebar-link">8. Pyinstaller 打包</a></li><li><a href="/pages/Python/Py-09-Database.html" class="sidebar-link">9. Database</a></li><li><a href="/pages/Python/Py-10-Neo4j.html" class="sidebar-link">10. Neo4j 图数据库</a></li><li><a href="/pages/Python/Py-11-Django.html" class="sidebar-link">11. Django-基于 Python 的 Web 框架</a></li><li><a href="/pages/Python/Py-12-Word2Vec.html" class="sidebar-link">12. Word2Vec</a></li><li><a href="/pages/Python/Py-13-PyTorch.html" class="sidebar-link">13. PyTorch 笔记</a></li><li><a href="/pages/Python/Py-14-Keras.html" aria-current="page" class="active sidebar-link">14. Keras 学习笔记</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/Python/Py-14-Keras.html#_1-安装" class="sidebar-link">1. 安装</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-14-Keras.html#_2-keras-层" class="sidebar-link">2. keras 层</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/Python/Py-14-Keras.html#_2-1-核心层" class="sidebar-link">2.1. 核心层</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-14-Keras.html#_2-2-求解-compile" class="sidebar-link">2.2. 求解 compile</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-14-Keras.html#_2-3-训练-fit" class="sidebar-link">2.3. 训练 fit</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-14-Keras.html#_2-4-模型保存与加载" class="sidebar-link">2.4. 模型保存与加载</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-14-Keras.html#_3-模型搭建" class="sidebar-link">3. 模型搭建</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/Python/Py-14-Keras.html#_3-1-多层感知机-全链接-dnn-mlp" class="sidebar-link">3.1. 多层感知机（全链接/DNN) MLP</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-14-Keras.html#_3-2-手写数字识别-原文链接🔗" class="sidebar-link">3.2. 手写数字识别，原文链接🔗</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-14-Keras.html#_3-3-长短期记忆-lstm" class="sidebar-link">3.3. 长短期记忆 LSTM</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-14-Keras.html#_4-备注" class="sidebar-link">4. 备注</a></li></ul></li><li><a href="/pages/Python/Py-15-Sklearn.html" class="sidebar-link">15. Scikit-learn</a></li><li><a href="/pages/Python/Py-16-Tkinter.html" class="sidebar-link">16. Tkinter</a></li><li><a href="/pages/Python/Py-17-Geatpy.html" class="sidebar-link">17. Geatpy 进化算法</a></li><li><a href="/pages/Python/Py-18-MachineLearning.html" class="sidebar-link">18. 机器学习 MachineLearning</a></li><li><a href="/pages/Python/Py-19-PandaPower.html" class="sidebar-link">19. PandaPower</a></li><li><a href="/pages/Python/Py-20-PyQt.html" class="sidebar-link">20. PyQt</a></li><li><a href="/pages/Python/Py_代码块.html" class="sidebar-link">Python 代码块</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_14-keras-学习笔记"><a href="#_14-keras-学习笔记" class="header-anchor">#</a> 14. Keras 学习笔记</h1> <h2 id="_1-安装"><a href="#_1-安装" class="header-anchor">#</a> 1. 安装</h2> <ol><li><p>pip 安装</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 安装 cpu 版的 tensorflow, 最新版本的 python 不一定支持，不建议 python 版本太新</span>
+pip <span class="token function">install</span> tensorflow
+<span class="token comment"># 或者安装 gpu 版的 tensorflow（需要 CUDA 支持）</span>
+pip <span class="token function">install</span> tensorflow-gpu
+
+<span class="token comment"># 安装 keras</span>
+pip <span class="token function">install</span> keras
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></li> <li><p>使用 gpu 进行训练需要配置 cuda 环境，参考 <a href="/pages/Python/Python-01-环境_Env.html##-5.-CUDA-安装">CUDA 安装</a></p></li> <li><p>使用 gpu 进行训练</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 在代码开头加入如下设置</span>
+
+<span class="token keyword">import</span> os
+os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">&quot;CUDA_VISIBLE_DEVICES&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'0'</span>    <span class="token comment"># 使用 0 号 gpu</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><p>keras 结构</p> <p><img src="/assets/img/2021-12-16_88.3ccc2130.png" alt="图 1"></p></li></ol> <h2 id="_2-keras-层"><a href="#_2-keras-层" class="header-anchor">#</a> 2. keras 层</h2> <h3 id="_2-1-核心层"><a href="#_2-1-核心层" class="header-anchor">#</a> 2.1. 核心层</h3> <ol><li><p>全连接层：神经网络中最常用的，实现对神经网络里的神经元激活</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># units：全连接层输出的维度，即下一层神经元的个数</span>
+<span class="token comment"># activation：激活函数，默认使用 Relu</span>
+<span class="token comment"># use_bias：是否使用 bias 偏置</span>
+Dense<span class="token punctuation">(</span>units<span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">,</span> use_base<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 作为输入层：输入为 60*1 维数据，激活函数 relu</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> input_shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 作为中间层（隐含层）</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 作为输出层，units = 输出维数</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p><a href="https://blog.csdn.net/weixin_44551646/article/details/112911215" target="_blank" rel="noopener noreferrer">全连接层用法🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li> <li><p>激活层：对上一层的</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 激活函数，relu、tanh、sigmoid 等</span>
+Activation<span class="token punctuation">(</span>activation<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><img src="/assets/img/2022-11-23_12.a54e5344.png" alt="图 2"></p></li> <li><p>Dropout 层：对上一层的神经元随机选取一定比例的失活，不更新，但是权重仍然保留，防止过拟合</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># rate：失活比例，0-1 浮点数</span>
+Droupout<span class="token punctuation">(</span>rate<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>Flatten 层：将一个维度大于或等于 3 的高维矩阵，“压扁”为一个二维矩阵。即保留第一个维度（如：batch 的个数），然后将剩下维度的值相乘作为“压扁”矩阵的第二个维度</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code>Flatten<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>Reshape 层：将输入的维度重构成特定的 shape</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># target_shape：目标矩阵的维度，不包含 batch 样本数</span>
+Reshape<span class="token punctuation">(</span>target_shape<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>卷积层：卷积操作分为一维、二维、三维，分别为 Conv1D、Conv2D、Conv3D。一维卷积主要应用于以时间序列数据或文本数据，二维卷积通常应用于图像数据。由于这三种的使用和参数都基本相同，所以主要以处理图像数据的 Conv2D 进行说明</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># filters：卷积核的个数</span>
+<span class="token comment"># kernel_size：卷积核的大小</span>
+<span class="token comment"># strides：步长，二维中默认为 (1,1)，一维中默认为 1</span>
+<span class="token comment"># Padding：补“0”策略，‘valid’指卷积后的大小与原来的大小可以不同，‘same’指卷积后的大小与原来大小一致</span>
+Conv2D<span class="token punctuation">(</span>filters<span class="token punctuation">,</span> kernel_size<span class="token punctuation">,</span> strides<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> padding<span class="token operator">=</span><span class="token string">'valid'</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li> <li><p>池化层：与卷积层一样，最大统计量池化和平均统计量池化也有三种，分别为 MaxPooling1D、MaxPooling2D、MaxPooling3D 和 AveragePooling1D、AveragePooling2D、AveragePooling3D，由于使用和参数基本相同，所以主要以 MaxPooling2D 进行说明</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># poll_size：长度为 2 的整数 tuple，表示在横向和纵向的下采样因子，一维则为纵向下采样因子</span>
+MaxPolling<span class="token punctuation">(</span>poll_size<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> strides<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> padding<span class="token operator">=</span><span class="token string">'valid'</span><span class="token punctuation">)</span>
+<span class="token comment"># 上面的代码表示</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>循环层：循环神经网络中的 RNN、LSTM 和 GRU 都继承本层，所以该父类的参数同样使用于对应的子类 SimpleRNN、LSTM 和 GRU</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># retrun_sequences：控制返回类型，‘False’返回输出序列的最后一个输出，‘True’则返回整个序列</span>
+Recurrent<span class="token punctuation">(</span>return_sequences<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>嵌入层：该层只能用在模型的第一层，是将所有索引标号的稀疏矩阵映射到致密的低维矩阵。如我们对文本数据进行处理时，我们对每个词编号后，我们希望将词编号变成词向量就可以使用嵌入层</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># input_dim：大或等于 0 的整数，字典长度，即输入数据最大下标+1</span>
+<span class="token comment"># output_dim：大于 0 的则行数，代表全连接嵌入的维度</span>
+<span class="token comment"># input_length：当输入序列的长度固定时，该值为其长度。如果要在该层后接 Flatten 层，然后接 Dense 层，则必须指定该参数，否则 Dense 层的输出维度无法自动推断</span>
+Embedding<span class="token punctuation">(</span>input_dim<span class="token punctuation">,</span> output_dim<span class="token punctuation">,</span> input_length<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><p><a href="https://www.bilibili.com/video/BV1hE411t7RN?p=18" target="_blank" rel="noopener noreferrer">视频教程🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li></ol> <h3 id="_2-2-求解-compile"><a href="#_2-2-求解-compile" class="header-anchor">#</a> 2.2. 求解 compile</h3> <ol><li><p>创建求解</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code>model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>loss<span class="token operator">=</span><span class="token string">'mean_squared_error'</span><span class="token punctuation">,</span>  <span class="token comment"># 损失函数</span>
+              optimizer<span class="token operator">=</span><span class="token string">'adam'</span><span class="token punctuation">,</span>  <span class="token comment"># 优化器</span>
+              metrics<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 准确率标准</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>损失函数 loss</p> <table><thead><tr><th>函数</th> <th>中文名</th></tr></thead> <tbody><tr><td>mean_squared_error</td> <td>均方误差</td></tr> <tr><td>mean_absolute_error</td> <td>平均绝对误差</td></tr> <tr><td>mean_absolute_percentage_error</td> <td>平均绝对百分比误差</td></tr> <tr><td>mean_squared_logarithmic_error</td> <td>均方对数误差</td></tr> <tr><td>squared_hinge</td> <td>平方合页（铰链）</td></tr> <tr><td>hinge</td> <td>合页（铰链）</td></tr> <tr><td>categorical_hinge</td> <td>分类合页（铰链）</td></tr> <tr><td>logcosh</td> <td>预测误差的双曲余弦的对数</td></tr> <tr><td>categorical_crossentropy</td> <td>分类交叉熵</td></tr></tbody></table></li> <li><p>优化器 optimizer</p> <table><thead><tr><th>函数</th> <th>备注</th></tr></thead> <tbody><tr><td>SGD</td> <td>随机梯度下降</td></tr> <tr><td>RMSprop</td> <td>RMSProp 优化器，MSProp 优化算法是 AdaGrad 算法的一种改进。将梯度除以最近幅度的移动平均值。</td></tr> <tr><td>Adagrad</td> <td>Adagrad 是一种具有特定参数学习率的优化器，它根据参数在训练期间的更新频率进行自适应调整。</td></tr> <tr><td>Adadelta</td> <td>Adadelta 是 Adagrad 的一个具有更强鲁棒性的的扩展版本</td></tr> <tr><td>Adam</td> <td>Adam 本质上是 RMSProp 与动量 momentum 的结合</td></tr> <tr><td>Adamax</td> <td>Adam 算法基于无穷范数（infinity norm）的变种</td></tr> <tr><td>Nadam</td> <td>Nesterov 版本 Adam 优化器</td></tr></tbody></table></li> <li><p>评价函数 metrics：同损失函数相似，但是评价函数不会用于训练</p></li> <li><p>参考链接</p> <ol><li><a href="https://www.jianshu.com/p/f9c6f7c94533" target="_blank" rel="noopener noreferrer">compile 参数详解🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ol></li></ol> <h3 id="_2-3-训练-fit"><a href="#_2-3-训练-fit" class="header-anchor">#</a> 2.3. 训练 fit</h3> <ol><li><p>创建训练</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 模型训练</span>
+<span class="token comment"># x_train: 训练集输入</span>
+<span class="token comment"># y_train: 训练集输出</span>
+<span class="token comment"># validation_split: 交叉验证</span>
+<span class="token comment"># batch_size: 每组训练 32 个数据，60000 数据就要训练 60000/32=1875 组</span>
+<span class="token comment"># epochs: 训练 5 回合</span>
+<span class="token comment"># verbose: 1-训练过程可视；0-训练结果不可视</span>
+model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> validation_split<span class="token operator">=</span><span class="token number">0.5</span><span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token comment"># 如果有专门的验证集</span>
+<span class="token comment"># x_test: 验证集输入</span>
+<span class="token comment"># y_test: 验证集输出</span>
+model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> validation_data<span class="token operator">=</span><span class="token punctuation">[</span>x_test<span class="token punctuation">,</span> y_test<span class="token punctuation">]</span><span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div></li> <li><p>参数设置</p> <table><thead><tr><th>参数</th> <th>配置</th> <th>备注</th></tr></thead> <tbody><tr><td>validation_split</td> <td>0~1</td> <td>默认不进行交叉验证，交叉验证比例：0.1 表示每次保留 10%数据进行验证</td></tr> <tr><td>batch_size</td> <td>整数</td> <td>表示每次进行训练的数据个数，数字越大内存（或显存）占用越大</td></tr> <tr><td>epochs</td> <td>整数</td> <td>最大训练回合数，如果没有设置提前截至条件则就是训练回合数</td></tr> <tr><td>verbose</td> <td>0/1，默认 0</td> <td>1-训练过程可视；0-训练结果不可视</td></tr></tbody></table></li> <li><p>参数关系</p>
+每个 epoch 训练的组数 = \frac{x\_train.size() * (1-validation\_split)}{batch\_size} 
+
+</li> <li><p>早停法</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> keras <span class="token keyword">import</span> callbacks
+
+<span class="token comment"># monitor: loss/accuracy/val_loss/val_accuracy</span>
+<span class="token comment"># patience: </span>
+callback <span class="token operator">=</span> callbacks<span class="token punctuation">.</span>EarlyStopping<span class="token punctuation">(</span>monitor<span class="token operator">=</span><span class="token string">'loss'</span><span class="token punctuation">,</span> patience<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> validation_split<span class="token operator">=</span><span class="token number">0.05</span><span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">500</span><span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> callbacks<span class="token operator">=</span><span class="token punctuation">[</span>callback<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li></ol> <h3 id="_2-4-模型保存与加载"><a href="#_2-4-模型保存与加载" class="header-anchor">#</a> 2.4. 模型保存与加载</h3> <ol><li><p>保存模型</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code>model<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'./model/model_name.h5'</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>加载模型</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> keras<span class="token punctuation">.</span>models <span class="token keyword">import</span> load_model
+
+model <span class="token operator">=</span> load_model<span class="token punctuation">(</span><span class="token string">'./model/model_name.h5'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 还可以继续训练，参数与训练时的参数相同</span>
+model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li> <li><p>模型使用</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 模型输出</span>
+y_pre <span class="token operator">=</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>x_input<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li></ol> <h2 id="_3-模型搭建"><a href="#_3-模型搭建" class="header-anchor">#</a> 3. 模型搭建</h2> <h3 id="_3-1-多层感知机-全链接-dnn-mlp"><a href="#_3-1-多层感知机-全链接-dnn-mlp" class="header-anchor">#</a> 3.1. 多层感知机（全链接/DNN) MLP</h3> <ol><li><p>模型搭建</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">build_model</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 创建模型</span>
+    units <span class="token operator">=</span> <span class="token number">500</span>  <span class="token comment"># 神经元</span>
+    model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># 输入层</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">,</span> input_shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># 隐含层</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">4</span> <span class="token operator">*</span> units<span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dropout<span class="token punctuation">(</span><span class="token number">0.2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> units<span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dropout<span class="token punctuation">(</span><span class="token number">0.2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span>units<span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'tanh'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dropout<span class="token punctuation">(</span><span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># 输出层</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 显示模型</span>
+    model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    self<span class="token punctuation">.</span>model <span class="token operator">=</span> model  <span class="token comment"># 在类中时将模型赋给类变量</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div></li> <li><p>模型训练</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">train</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 模型训练</span>
+    model <span class="token operator">=</span> self<span class="token punctuation">.</span>model
+
+    model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>loss<span class="token operator">=</span><span class="token string">'mse'</span><span class="token punctuation">,</span>  <span class="token comment"># 损失函数</span>
+                    optimizer<span class="token operator">=</span><span class="token string">'adam'</span><span class="token punctuation">,</span>  <span class="token comment"># 优化器</span>
+                    metrics<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">,</span> <span class="token string">'mae'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 准确率标准</span>
+
+    x_train<span class="token punctuation">,</span> y_train <span class="token operator">=</span> self<span class="token punctuation">.</span>x_data<span class="token punctuation">,</span> self<span class="token punctuation">.</span>y_data
+
+    <span class="token comment"># 训练模型</span>
+    callback <span class="token operator">=</span> callbacks<span class="token punctuation">.</span>EarlyStopping<span class="token punctuation">(</span>monitor<span class="token operator">=</span><span class="token string">'accuracy'</span><span class="token punctuation">,</span> patience<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+    model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> validation_split<span class="token operator">=</span><span class="token number">0.05</span><span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">500</span><span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> callbacks<span class="token operator">=</span><span class="token punctuation">[</span>callback<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 保存训练过程</span>
+    df_his <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token string">'loss'</span><span class="token punctuation">:</span> model<span class="token punctuation">.</span>history<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'loss'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">'acc'</span><span class="token punctuation">:</span> model<span class="token punctuation">.</span>history<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">'val_loss'</span><span class="token punctuation">:</span> model<span class="token punctuation">.</span>history<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'val_loss'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">'val_acc'</span><span class="token punctuation">:</span> model<span class="token punctuation">.</span>history<span class="token punctuation">.</span>history<span class="token punctuation">[</span><span class="token string">'val_accuracy'</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    df_his<span class="token punctuation">.</span>to_csv<span class="token punctuation">(</span><span class="token string">'../data/model_his.csv'</span><span class="token punctuation">,</span> index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 保存模型</span>
+    model<span class="token punctuation">.</span>save<span class="token punctuation">(</span>self<span class="token punctuation">.</span>model_name<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'保存模型：'</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>model_name<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div></li></ol> <h3 id="_3-2-手写数字识别-原文链接🔗"><a href="#_3-2-手写数字识别-原文链接🔗" class="header-anchor">#</a> 3.2. 手写数字识别，<a href="https://cloud.tencent.com/developer/article/1829972" target="_blank" rel="noopener noreferrer">原文链接🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h3> <ol><li><p>加载数据，第一次运行会联网下载数据（可复制运行）</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> keras<span class="token punctuation">.</span>datasets <span class="token keyword">import</span> mnist
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+<span class="token comment"># （训练集输入，训练集输出）, （测试集输入，测试集输出） = 从 mnist 中加载数据集</span>
+<span class="token punctuation">(</span>trainX<span class="token punctuation">,</span> trainY<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>testX<span class="token punctuation">,</span> testY<span class="token punctuation">)</span> <span class="token operator">=</span> mnist<span class="token punctuation">.</span>load_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 训练集 60000 个 28*28 像素个手写数字图片</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Train: X=%s, Y=%s'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>trainX<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> trainY<span class="token punctuation">.</span>shape<span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment"># Train: X=(60000, 28, 28), Y=(60000,)</span>
+<span class="token comment"># 测试集 10000 个 28*28 像素个手写数字图片</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Test: X=%s, Y=%s'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>testX<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> testY<span class="token punctuation">.</span>shape<span class="token punctuation">)</span><span class="token punctuation">)</span>      <span class="token comment"># Test: X=(10000, 28, 28), Y=(10000,)</span>
+<span class="token comment"># 画出一些图</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">330</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> i<span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>trainX<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p><img src="/assets/img/2022-11-21_45.f74fb09f.png" alt="图 1"></p></li> <li><p>神经网络模型创建 &amp; 训练（可复制运行）</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> keras<span class="token punctuation">.</span>datasets <span class="token keyword">import</span> mnist
+<span class="token keyword">from</span> keras <span class="token keyword">import</span> Sequential
+<span class="token keyword">from</span> keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Dense<span class="token punctuation">,</span> Dropout<span class="token punctuation">,</span> Activation<span class="token punctuation">,</span> Flatten  <span class="token comment"># 常用层</span>
+<span class="token keyword">from</span> keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Conv2D<span class="token punctuation">,</span> MaxPool2D  <span class="token comment"># 卷积层，池化层</span>
+<span class="token keyword">from</span> keras<span class="token punctuation">.</span>utils <span class="token keyword">import</span> np_utils
+
+<span class="token comment"># （训练集输入，训练集输出）, （测试集输入，测试集输出） = 从 mnist 中加载数据集</span>
+<span class="token punctuation">(</span>trainX<span class="token punctuation">,</span> trainY<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>testX<span class="token punctuation">,</span> testY<span class="token punctuation">)</span> <span class="token operator">=</span> mnist<span class="token punctuation">.</span>load_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 数据集从形状（n，宽度，高度）转换为（n，宽度，高度，深度）</span>
+X_train <span class="token operator">=</span> trainX<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span>trainX<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+X_test <span class="token operator">=</span> testX<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span>testX<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>X_train<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>  <span class="token comment"># (60000, 28, 28, 1)</span>
+
+<span class="token comment"># 将 1 维类数组转换为 10 维类矩阵</span>
+Y_train <span class="token operator">=</span> np_utils<span class="token punctuation">.</span>to_categorical<span class="token punctuation">(</span>trainY<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+Y_test <span class="token operator">=</span> np_utils<span class="token punctuation">.</span>to_categorical<span class="token punctuation">(</span>testY<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>Y_train<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>  <span class="token comment"># (60000, 10), 除了对应位是 1 以外都是 0</span>
+
+<span class="token comment"># 模型结构</span>
+model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 创建一个序列</span>
+<span class="token comment"># 卷积层：32 个卷积核，卷积核 3*3, 激活函数 relu, 模型输入 (28, 28, 1)</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Conv2D<span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">,</span> kernel_size<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">,</span> input_shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Conv2D<span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">,</span> kernel_size<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 第二层卷积层</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>MaxPool2D<span class="token punctuation">(</span>pool_size<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 池化层</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dropout<span class="token punctuation">(</span><span class="token number">0.25</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># Dropout 层</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Flatten<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># Flatten 层：将高位矩阵压缩成 2 维矩阵</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">128</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 中间层：全链接，输出维度 (128)</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dropout<span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># Dropout 层</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'softmax'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 输出层：全链接，输出维度 (10)</span>
+
+model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 打印模型信息</span>
+
+model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>loss<span class="token operator">=</span><span class="token string">'categorical_crossentropy'</span><span class="token punctuation">,</span>
+              optimizer<span class="token operator">=</span><span class="token string">'adam'</span><span class="token punctuation">,</span>
+              metrics<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 模型训练</span>
+<span class="token comment"># X_train: 训练集输入</span>
+<span class="token comment"># Y_train: 训练集输出</span>
+<span class="token comment"># batch_size: 每组训练 32 个数据，60000 数据就要训练 60000/32=1875 组</span>
+<span class="token comment"># epochs: 训练 5 回合</span>
+<span class="token comment"># verbose: 1-训练过程可视；0-训练结果不可视</span>
+model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> Y_train<span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">32</span><span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 模型评估</span>
+<span class="token comment"># X_test: 测试集输入</span>
+<span class="token comment"># Y_test: 测试集输出</span>
+<span class="token comment"># batch_size: 默认 32</span>
+score <span class="token operator">=</span> model<span class="token punctuation">.</span>evaluate<span class="token punctuation">(</span>X_test<span class="token punctuation">,</span> Y_test<span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br></div></div></li> <li><p>模型信息，model.summary() 打印结果</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>Model: <span class="token string">&quot;sequential&quot;</span>
+_________________________________________________________________
+<span class="token comment"># 层                        输出维度                   参数个数</span>
+Layer <span class="token punctuation">(</span>type<span class="token punctuation">)</span>                 Output Shape              Param <span class="token comment">#    </span>
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+conv2d <span class="token punctuation">(</span>Conv2D<span class="token punctuation">)</span>              <span class="token punctuation">(</span>None, <span class="token number">26</span>, <span class="token number">26</span>, <span class="token number">32</span><span class="token punctuation">)</span>        <span class="token number">320</span>       
+_________________________________________________________________
+conv2d_1 <span class="token punctuation">(</span>Conv2D<span class="token punctuation">)</span>            <span class="token punctuation">(</span>None, <span class="token number">24</span>, <span class="token number">24</span>, <span class="token number">32</span><span class="token punctuation">)</span>        <span class="token number">9248</span>      
+_________________________________________________________________
+max_pooling2d <span class="token punctuation">(</span>MaxPooling2D<span class="token punctuation">)</span> <span class="token punctuation">(</span>None, <span class="token number">12</span>, <span class="token number">12</span>, <span class="token number">32</span><span class="token punctuation">)</span>        <span class="token number">0</span>         
+_________________________________________________________________
+dropout <span class="token punctuation">(</span>Dropout<span class="token punctuation">)</span>            <span class="token punctuation">(</span>None, <span class="token number">12</span>, <span class="token number">12</span>, <span class="token number">32</span><span class="token punctuation">)</span>        <span class="token number">0</span>         
+_________________________________________________________________
+flatten <span class="token punctuation">(</span>Flatten<span class="token punctuation">)</span>            <span class="token punctuation">(</span>None, <span class="token number">4608</span><span class="token punctuation">)</span>              <span class="token number">0</span>         
+_________________________________________________________________
+dense <span class="token punctuation">(</span>Dense<span class="token punctuation">)</span>                <span class="token punctuation">(</span>None, <span class="token number">128</span><span class="token punctuation">)</span>               <span class="token number">589952</span>    
+_________________________________________________________________
+dropout_1 <span class="token punctuation">(</span>Dropout<span class="token punctuation">)</span>          <span class="token punctuation">(</span>None, <span class="token number">128</span><span class="token punctuation">)</span>               <span class="token number">0</span>         
+_________________________________________________________________
+dense_1 <span class="token punctuation">(</span>Dense<span class="token punctuation">)</span>              <span class="token punctuation">(</span>None, <span class="token number">10</span><span class="token punctuation">)</span>                <span class="token number">1290</span>      
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+
+Total params: <span class="token number">600,810</span>       <span class="token comment"># 总参数个数</span>
+Trainable params: <span class="token number">600,810</span>   <span class="token comment"># 可训练参数</span>
+Non-trainable params: <span class="token number">0</span>     <span class="token comment"># 不可训练参数</span>
+_________________________________________________________________
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div></li> <li><p>模型训练信息</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>Epoch <span class="token number">1</span>/5   <span class="token comment"># 第 1 回合</span>
+<span class="token comment"># 训练集 60000, 32 个数据为一组训练，训练 60000/32=1875 组；回合耗时，每组耗时；损失；精度</span>
+<span class="token number">1875</span>/1875 <span class="token punctuation">[</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token punctuation">]</span> - 55s 29ms/step - loss: <span class="token number">0.4725</span> - accuracy: <span class="token number">0.8922</span>
+Epoch <span class="token number">2</span>/5   <span class="token comment"># 第 2 回合</span>
+<span class="token number">1875</span>/1875 <span class="token punctuation">[</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token punctuation">]</span> - 64s 34ms/step - loss: <span class="token number">0.1421</span> - accuracy: <span class="token number">0.9591</span>
+Epoch <span class="token number">3</span>/5   <span class="token comment"># 第 3 回合</span>
+<span class="token number">1875</span>/1875 <span class="token punctuation">[</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token punctuation">]</span> - 62s 33ms/step - loss: <span class="token number">0.1103</span> - accuracy: <span class="token number">0.9685</span>
+Epoch <span class="token number">4</span>/5   <span class="token comment"># 第 4 回合</span>
+<span class="token number">1875</span>/1875 <span class="token punctuation">[</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token punctuation">]</span> - 65s 35ms/step - loss: <span class="token number">0.0964</span> - accuracy: <span class="token number">0.9719</span>
+Epoch <span class="token number">5</span>/5   <span class="token comment"># 第 5 回合</span>
+<span class="token number">1875</span>/1875 <span class="token punctuation">[</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token punctuation">]</span> - 61s 33ms/step - loss: <span class="token number">0.0841</span> - accuracy: <span class="token number">0.9749</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div></li></ol> <h3 id="_3-3-长短期记忆-lstm"><a href="#_3-3-长短期记忆-lstm" class="header-anchor">#</a> 3.3. 长短期记忆 LSTM</h3> <ol><li><p>单层 lstm 预测模型</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># x_train 训练集输入</span>
+<span class="token comment"># x_train.shape[0] 表示 x_train 有多少条</span>
+<span class="token comment"># x_train.shape[1] 表示 x_train 每条数据有几个值</span>
+x_train <span class="token operator">=</span> np<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> <span class="token punctuation">(</span>x_train<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> x_train<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># x_test 测试集输入</span>
+x_test <span class="token operator">=</span> np<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span>x_test<span class="token punctuation">,</span> <span class="token punctuation">(</span>x_test<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> x_test<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>x_train<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+
+<span class="token comment"># 模型结构</span>
+model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 定义 LSTM 模型，第一个隐藏层含有 100 个神经元</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>LSTM<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> input_shape<span class="token operator">=</span><span class="token punctuation">(</span>x_train<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> x_train<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dropout<span class="token punctuation">(</span><span class="token number">0.25</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 暂时从网络中移除神经网络中的单元</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 输出维数</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Activation<span class="token punctuation">(</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment"># 激活函数</span>
+
+<span class="token comment"># 使用均方差损失函数，优化器 Adam，评估标准</span>
+model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>loss<span class="token operator">=</span>losses<span class="token punctuation">.</span>mean_squared_error<span class="token punctuation">,</span>  <span class="token comment"># 损失函数</span>
+            optimizer<span class="token operator">=</span><span class="token string">'adam'</span><span class="token punctuation">,</span>  <span class="token comment"># 优化器</span>
+            metrics<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'mae'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 评估标准</span>
+
+<span class="token comment"># 模型将会进行 30 个 epochs（回合）的训练，每个回合将数据分成 batch=100 的组进行训练</span>
+<span class="token comment"># 比如有 1000 条训练数据，batch_size=100 表示将 1000 条数据分成 10 组，每组 100 条数据，重复进行 epochs 次训练</span>
+history <span class="token operator">=</span> model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span>
+                    validation_data<span class="token operator">=</span><span class="token punctuation">(</span>x_test<span class="token punctuation">,</span> y_test<span class="token punctuation">)</span><span class="token punctuation">,</span>   <span class="token comment"># 验证集</span>
+                    callbacks<span class="token operator">=</span><span class="token punctuation">[</span>EarlyStopping<span class="token punctuation">(</span>monitor<span class="token operator">=</span><span class="token string">'val_loss'</span><span class="token punctuation">,</span> patience<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment"># 当被检测值不再提升，提前结束训练</span>
+                    verbose<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>  <span class="token comment"># 日志显示（默认 1): 0-不在标准输出流输出日志信息；1-输出进度条记录；2-每个 epoch 输出一行记录</span>
+                    shuffle<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>   <span class="token comment"># shuffle=False 不打乱数据顺序，一般设置为 True 训练结果会好一些</span>
+model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 打印模型信息</span>
+
+<span class="token comment"># 做出预测</span>
+test_predict <span class="token operator">=</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>x_test<span class="token punctuation">)</span>
+<span class="token comment"># 预测值求逆</span>
+test_predict <span class="token operator">=</span> scaler<span class="token punctuation">.</span>inverse_transform<span class="token punctuation">(</span>test_predict<span class="token punctuation">)</span>
+<span class="token comment"># 真实值求逆</span>
+y_test <span class="token operator">=</span> scaler<span class="token punctuation">.</span>inverse_transform<span class="token punctuation">(</span>y_test<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div></li> <li><p>多层 lstm 预测模型</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 创建神经网络</span>
+<span class="token keyword">def</span> <span class="token function">build_model</span><span class="token punctuation">(</span>x_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 模型结构</span>
+    model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># 定义 LSTM 模型</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>LSTM<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> input_shape<span class="token operator">=</span><span class="token punctuation">(</span>x_train<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> x_train<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> return_sequences<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 第一层 lstm</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>LSTM<span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span> return_sequences<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 第二层 lstm</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dropout<span class="token punctuation">(</span><span class="token number">0.2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 暂时从网络中移除神经网络中的单元</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 输出维数</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Activation<span class="token punctuation">(</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 使用均方差损失函数，优化器 Adam，评估标准</span>
+    model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>loss<span class="token operator">=</span>losses<span class="token punctuation">.</span>mean_squared_error<span class="token punctuation">,</span>  <span class="token comment"># 损失函数</span>
+                optimizer<span class="token operator">=</span><span class="token string">'adam'</span><span class="token punctuation">,</span>  <span class="token comment"># 优化器</span>
+                metrics<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'mae'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 评估标准</span>
+
+    model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> model
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div></li> <li><p>attention-lstm</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 安装 attention 包</span>
+pip <span class="token function">install</span> attention
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 创建神经网络</span>
+<span class="token keyword">def</span> <span class="token function">build_model</span><span class="token punctuation">(</span>x_train<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 模型结构</span>
+    model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># 定义 LSTM 模型</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>LSTM<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> input_shape<span class="token operator">=</span><span class="token punctuation">(</span>x_train<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> x_train<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> return_sequences<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 第一层 lstm</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>LSTM<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> return_sequences<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 第二层 lstm</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Attention<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># attention 层</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dropout<span class="token punctuation">(</span><span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 暂时从网络中移除神经网络中的单元</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 输出维数</span>
+    model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Activation<span class="token punctuation">(</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 激活函数</span>
+
+    <span class="token comment"># 使用均方差损失函数，优化器 Adam，评估标准</span>
+    model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>loss<span class="token operator">=</span>losses<span class="token punctuation">.</span>mean_squared_error<span class="token punctuation">,</span>  <span class="token comment"># 损失函数</span>
+                optimizer<span class="token operator">=</span><span class="token string">'adam'</span><span class="token punctuation">,</span>  <span class="token comment"># 优化器</span>
+                metrics<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'mae'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 评估标准</span>
+
+    model<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 显示模型信息</span>
+
+    <span class="token keyword">return</span> model
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div></li> <li><p>训练结果</p> <table><thead><tr><th>history</th> <th>备注</th></tr></thead> <tbody><tr><td>loss</td> <td>训练集损失（根据设置的损失函数）</td></tr> <tr><td>mae</td> <td>训练集平均绝对误差</td></tr> <tr><td>acc</td> <td>训练集准确率（用于分类问题）</td></tr> <tr><td>val_loss</td> <td>验证集损失（根据设置的损失函数）</td></tr> <tr><td>val_mae</td> <td>验证集平均绝对误差</td></tr> <tr><td>val_acc</td> <td>验证集准确率（用于分类问题）</td></tr></tbody></table> <ul><li><a href="https://www.zhihu.com/question/432212136" target="_blank" rel="noopener noreferrer">keras 中 LSTM 能用 accuracy 进行评价么？🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ol> <h2 id="_4-备注"><a href="#_4-备注" class="header-anchor">#</a> 4. 备注</h2> <ul><li><a href="http://www.tensorflownews.com/2018/03/15/%e4%bd%bf%e7%94%a8keras%e8%bf%9b%e8%a1%8c%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0%ef%bc%9a%ef%bc%88%e4%b8%80%ef%bc%89keras-%e5%85%a5%e9%97%a8/" target="_blank" rel="noopener noreferrer">Keras 入门🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://keras.io/zh/" target="_blank" rel="noopener noreferrer">Keras 中文文档🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">3/30/2023, 2:14:30 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/Python/Py-13-PyTorch.html" class="prev">
+        13. PyTorch 笔记
+      </a></span> <span class="next"><a href="/pages/Python/Py-15-Sklearn.html">
+        15. Scikit-learn
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div class="cat-container" data-v-a13867c0><canvas id="vuepress-cat" width="280" height="250" class="live2d" data-v-a13867c0></canvas></div></div></div>
+    <script src="/assets/js/app.bf86356c.js" defer></script><script src="/assets/js/2.6938d6ea.js" defer></script><script src="/assets/js/14.aa571088.js" defer></script>
+  </body>
+</html>

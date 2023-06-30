@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>electron 打包web应用流程 | 北方酱Hoppou~</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/hoppou_nobg.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="北方酱Hoppou~的个人主页">
+    
+    <link rel="preload" href="/assets/css/0.styles.80a5cd61.css" as="style"><link rel="preload" href="/assets/js/app.bf86356c.js" as="script"><link rel="preload" href="/assets/js/2.6938d6ea.js" as="script"><link rel="preload" href="/assets/js/15.4b03a2d2.js" as="script"><link rel="prefetch" href="/assets/js/10.bdca0d0f.js"><link rel="prefetch" href="/assets/js/11.9c73297f.js"><link rel="prefetch" href="/assets/js/12.cefb5eb3.js"><link rel="prefetch" href="/assets/js/13.ca6f67af.js"><link rel="prefetch" href="/assets/js/14.aa571088.js"><link rel="prefetch" href="/assets/js/16.0b5aec7f.js"><link rel="prefetch" href="/assets/js/17.d10fbfcf.js"><link rel="prefetch" href="/assets/js/18.36f2bd4c.js"><link rel="prefetch" href="/assets/js/19.15e74034.js"><link rel="prefetch" href="/assets/js/20.ffefd55c.js"><link rel="prefetch" href="/assets/js/21.24c9c02a.js"><link rel="prefetch" href="/assets/js/22.f8d73958.js"><link rel="prefetch" href="/assets/js/23.cea2b23f.js"><link rel="prefetch" href="/assets/js/24.6606b9ff.js"><link rel="prefetch" href="/assets/js/25.7e2c4009.js"><link rel="prefetch" href="/assets/js/26.2f486bca.js"><link rel="prefetch" href="/assets/js/27.f4499c41.js"><link rel="prefetch" href="/assets/js/28.5a381f2d.js"><link rel="prefetch" href="/assets/js/29.41102da9.js"><link rel="prefetch" href="/assets/js/3.d7ced79a.js"><link rel="prefetch" href="/assets/js/30.3ffc23c2.js"><link rel="prefetch" href="/assets/js/31.077ec6e9.js"><link rel="prefetch" href="/assets/js/32.d21611cb.js"><link rel="prefetch" href="/assets/js/33.38ceb61b.js"><link rel="prefetch" href="/assets/js/34.59a0c927.js"><link rel="prefetch" href="/assets/js/35.255eafcb.js"><link rel="prefetch" href="/assets/js/36.41916c0d.js"><link rel="prefetch" href="/assets/js/37.3577f14e.js"><link rel="prefetch" href="/assets/js/38.071709da.js"><link rel="prefetch" href="/assets/js/39.097851a2.js"><link rel="prefetch" href="/assets/js/4.0244df3b.js"><link rel="prefetch" href="/assets/js/40.d59840e6.js"><link rel="prefetch" href="/assets/js/41.ad25d8ab.js"><link rel="prefetch" href="/assets/js/42.b7fe8f20.js"><link rel="prefetch" href="/assets/js/43.0af61973.js"><link rel="prefetch" href="/assets/js/44.e566586b.js"><link rel="prefetch" href="/assets/js/45.d267435e.js"><link rel="prefetch" href="/assets/js/46.25a0d6c7.js"><link rel="prefetch" href="/assets/js/47.60f82362.js"><link rel="prefetch" href="/assets/js/48.2bb12b8d.js"><link rel="prefetch" href="/assets/js/49.5662a3a5.js"><link rel="prefetch" href="/assets/js/5.80568f0c.js"><link rel="prefetch" href="/assets/js/50.2554a84b.js"><link rel="prefetch" href="/assets/js/51.eaf58ddb.js"><link rel="prefetch" href="/assets/js/52.1ced69b6.js"><link rel="prefetch" href="/assets/js/53.9fcc79ec.js"><link rel="prefetch" href="/assets/js/54.079120a0.js"><link rel="prefetch" href="/assets/js/55.2aeb89d2.js"><link rel="prefetch" href="/assets/js/56.d39d2ed5.js"><link rel="prefetch" href="/assets/js/57.d7667a7f.js"><link rel="prefetch" href="/assets/js/58.21d55374.js"><link rel="prefetch" href="/assets/js/59.36cbba10.js"><link rel="prefetch" href="/assets/js/6.cb285fdc.js"><link rel="prefetch" href="/assets/js/60.f56e1f99.js"><link rel="prefetch" href="/assets/js/61.85d4e33a.js"><link rel="prefetch" href="/assets/js/62.09de7b0c.js"><link rel="prefetch" href="/assets/js/63.d4950e6d.js"><link rel="prefetch" href="/assets/js/64.95d3600e.js"><link rel="prefetch" href="/assets/js/65.b44dc974.js"><link rel="prefetch" href="/assets/js/66.88899658.js"><link rel="prefetch" href="/assets/js/67.042d954c.js"><link rel="prefetch" href="/assets/js/68.ac7810f1.js"><link rel="prefetch" href="/assets/js/69.4f9e7e09.js"><link rel="prefetch" href="/assets/js/7.6a9b305d.js"><link rel="prefetch" href="/assets/js/70.48b19758.js"><link rel="prefetch" href="/assets/js/71.748e8cf7.js"><link rel="prefetch" href="/assets/js/72.d50bef4b.js"><link rel="prefetch" href="/assets/js/73.0ac924bc.js"><link rel="prefetch" href="/assets/js/74.ef39d98b.js"><link rel="prefetch" href="/assets/js/75.4b8f6284.js"><link rel="prefetch" href="/assets/js/76.018f7ad0.js"><link rel="prefetch" href="/assets/js/77.69175c21.js"><link rel="prefetch" href="/assets/js/78.da0cf581.js"><link rel="prefetch" href="/assets/js/79.fbdce5ea.js"><link rel="prefetch" href="/assets/js/8.9c0ce64e.js"><link rel="prefetch" href="/assets/js/80.5ff6044c.js"><link rel="prefetch" href="/assets/js/81.972cb6f6.js"><link rel="prefetch" href="/assets/js/82.c1c485ba.js"><link rel="prefetch" href="/assets/js/83.6fe57a40.js"><link rel="prefetch" href="/assets/js/84.6fadc008.js"><link rel="prefetch" href="/assets/js/85.05e412a1.js"><link rel="prefetch" href="/assets/js/86.1fe91a31.js"><link rel="prefetch" href="/assets/js/87.99ed37ff.js"><link rel="prefetch" href="/assets/js/88.bd5c1c43.js"><link rel="prefetch" href="/assets/js/89.96dd7681.js"><link rel="prefetch" href="/assets/js/9.1901a415.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.80a5cd61.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/hoppou_nobg.jpg" alt="北方酱Hoppou~" class="logo"> <span class="site-name can-hide">北方酱Hoppou~</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Py-01-环境_Env.html" class="nav-link">
+  Py-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-02-数据类型_DataType.html" class="nav-link">
+  Py-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-03-文件处理_File.html" class="nav-link">
+  Py-03-文件处理_File
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-04-Numpy.html" class="nav-link">
+  Py-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-05-Pandas.html" class="nav-link">
+  Py-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-06-绘图_Plot.html" class="nav-link">
+  Py-06-绘图_Plot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-07-SciPy.html" class="nav-link">
+  Py-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-08-Pyinstaller.html" class="nav-link">
+  Py-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-09-Database.html" class="nav-link">
+  Py-09-Database
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-10-Neo4j.html" class="nav-link">
+  Py-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-11-Django.html" class="nav-link">
+  Py-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-12-Word2Vec.html" class="nav-link">
+  Py-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-13-PyTorch.html" class="nav-link">
+  Py-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-14-Keras.html" class="nav-link">
+  Py-14-Keras
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-15-Sklearn.html" class="nav-link">
+  Py-15-Sklearn
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-16-Tkinter.html" class="nav-link">
+  Py-16-Tkinter
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-17-Geatpy.html" class="nav-link">
+  Py-17-Geatpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-18-MachineLearning.html" class="nav-link">
+  Py-18-MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-19-PandaPower.html" class="nav-link">
+  Py-19-PandaPower
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-20-PyQt.html" class="nav-link">
+  Py-20-PyQt
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py_代码块.html" class="nav-link">
+  Py_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境_Env.html" class="nav-link">
+  Cpp-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型_DataType.html" class="nav-link">
+  Cpp-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构_DataStruct.html" class="nav-link">
+  Cpp-03-数据结构_DataStruct
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针_Point.html" class="nav-link">
+  Cpp-04-指针_Point
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数_Func.html" class="nav-link">
+  Cpp-05-函数_Func
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出&amp;文件_IO.html" class="nav-link">
+  Cpp-06-输入输出&amp;文件_IO
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象_Class.html" class="nav-link">
+  Cpp-07-面向对象_Class
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-08-知识点_Knowledge.html" class="nav-link">
+  Cpp-08-知识点_Knowledge
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/强化学习.html" class="nav-link">
+  强化学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/朴素贝叶斯.html" class="nav-link">
+  朴素贝叶斯
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/统计学习方法.html" class="nav-link">
+  统计学习方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Go 学习笔记.html" class="nav-link">
+  Go 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/KotlinNote.html" class="nav-link">
+  KotlinNote
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MATLAB笔记.html" class="nav-link">
+  MATLAB笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VSCode插件开发.html" class="nav-link">
+  VSCode插件开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Windows笔记.html" class="nav-link">
+  Windows笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Word 技巧.html" class="nav-link">
+  Word 技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Py-01-环境_Env.html" class="nav-link">
+  Py-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-02-数据类型_DataType.html" class="nav-link">
+  Py-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-03-文件处理_File.html" class="nav-link">
+  Py-03-文件处理_File
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-04-Numpy.html" class="nav-link">
+  Py-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-05-Pandas.html" class="nav-link">
+  Py-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-06-绘图_Plot.html" class="nav-link">
+  Py-06-绘图_Plot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-07-SciPy.html" class="nav-link">
+  Py-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-08-Pyinstaller.html" class="nav-link">
+  Py-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-09-Database.html" class="nav-link">
+  Py-09-Database
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-10-Neo4j.html" class="nav-link">
+  Py-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-11-Django.html" class="nav-link">
+  Py-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-12-Word2Vec.html" class="nav-link">
+  Py-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-13-PyTorch.html" class="nav-link">
+  Py-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-14-Keras.html" class="nav-link">
+  Py-14-Keras
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-15-Sklearn.html" class="nav-link">
+  Py-15-Sklearn
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-16-Tkinter.html" class="nav-link">
+  Py-16-Tkinter
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-17-Geatpy.html" class="nav-link">
+  Py-17-Geatpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-18-MachineLearning.html" class="nav-link">
+  Py-18-MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-19-PandaPower.html" class="nav-link">
+  Py-19-PandaPower
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-20-PyQt.html" class="nav-link">
+  Py-20-PyQt
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py_代码块.html" class="nav-link">
+  Py_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境_Env.html" class="nav-link">
+  Cpp-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型_DataType.html" class="nav-link">
+  Cpp-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构_DataStruct.html" class="nav-link">
+  Cpp-03-数据结构_DataStruct
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针_Point.html" class="nav-link">
+  Cpp-04-指针_Point
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数_Func.html" class="nav-link">
+  Cpp-05-函数_Func
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出&amp;文件_IO.html" class="nav-link">
+  Cpp-06-输入输出&amp;文件_IO
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象_Class.html" class="nav-link">
+  Cpp-07-面向对象_Class
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-08-知识点_Knowledge.html" class="nav-link">
+  Cpp-08-知识点_Knowledge
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/强化学习.html" class="nav-link">
+  强化学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/朴素贝叶斯.html" class="nav-link">
+  朴素贝叶斯
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/统计学习方法.html" class="nav-link">
+  统计学习方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Go 学习笔记.html" class="nav-link">
+  Go 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/KotlinNote.html" class="nav-link">
+  KotlinNote
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MATLAB笔记.html" class="nav-link">
+  MATLAB笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VSCode插件开发.html" class="nav-link">
+  VSCode插件开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Windows笔记.html" class="nav-link">
+  Windows笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Word 技巧.html" class="nav-link">
+  Word 技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/front-end/electron打包web应用流程.html" class="active sidebar-link">electron 打包web应用流程</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/front-end/electron打包web应用流程.html#_1-前言" class="sidebar-link">1. 前言</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/electron打包web应用流程.html#_2-环境" class="sidebar-link">2. 环境</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/electron打包web应用流程.html#_3-方法" class="sidebar-link">3. 方法</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/electron打包web应用流程.html#_4-备注" class="sidebar-link">4. 备注</a></li></ul></li><li><a href="/pages/front-end/Electron笔记.html" class="sidebar-link">Electron 笔记</a></li><li><a href="/pages/front-end/ElementUI笔记.html" class="sidebar-link">ElementUI 笔记</a></li><li><a href="/pages/front-end/HTTP学习笔记.html" class="sidebar-link">HTTP学习笔记</a></li><li><a href="/pages/front-end/JavaScript学习笔记.html" class="sidebar-link">JavaScript 学习笔记</a></li><li><a href="/pages/front-end/Nginx笔记.html" class="sidebar-link">Nginx 笔记</a></li><li><a href="/pages/front-end/NodeJS笔记.html" class="sidebar-link">NodeJS 笔记</a></li><li><a href="/pages/front-end/PHP读取数据库方法.html" class="sidebar-link">PHP读取数据库方法</a></li><li><a href="/pages/front-end/TypeScript学习笔记.html" class="sidebar-link">TypeScript 学习笔记</a></li><li><a href="/pages/front-end/VSCode插件开发.html" class="sidebar-link">VSCode 插件开发</a></li><li><a href="/pages/front-end/Vue-cli笔记.html" class="sidebar-link">Vue3 学习笔记</a></li><li><a href="/pages/front-end/VuePress笔记.html" class="sidebar-link">VuePress 笔记</a></li><li><a href="/pages/front-end/Vue学习笔记.html" class="sidebar-link">Vue 学习笔记</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="electron-打包web应用流程"><a href="#electron-打包web应用流程" class="header-anchor">#</a> electron 打包web应用流程</h1> <h2 id="_1-前言"><a href="#_1-前言" class="header-anchor">#</a> 1. 前言</h2> <p>Electron（最初名为Atom Shell）是GitHub开发的一个开源框架。 它允许使用Node.js（作为后端）和Chromium（作为前端）完成桌面GUI应用程序的开发。</p> <p>使用的方法均来自官方文档，能力强的人可根据备注的[官方文档][1]进行操作</p> <h2 id="_2-环境"><a href="#_2-环境" class="header-anchor">#</a> 2. 环境</h2> <ul><li>Windows 10</li> <li>npm 5.6.0</li> <li>node 8.11.3</li></ul> <h2 id="_3-方法"><a href="#_3-方法" class="header-anchor">#</a> 3. 方法</h2> <ol><li><p>有一个可以运行的网页程序</p></li> <li><p>创建一个空文件夹</p></li> <li><p>在命令行窗口运行npm init，如图</p> <p><img src="/assets/img/2018-07-18-14-56-06.9c1866bb.png" alt="npm init"></p> <p>可以一路回车，生成一个标准的package文件，也可以根据提示进行设定，不过不用担心，生成的package可以随时根据需求更改</p></li> <li><p>生成的package文件如下</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;test1&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0.0&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index.js&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;license&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ISC&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>其中main标签指的是文档开始的文件
+我们需要修改script的内容为</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">&quot;start&quot;</span><span class="token operator">:</span> <span class="token string">&quot;electron .&quot;</span>  <span class="token comment">// 注意中间的空格，不要忘打</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>安装electron，同样在命令行执行</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> --save-dev electron
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>国内网络问题，速度极慢或出错。需要配置环境变量为淘宝npm</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token assign-left variable">ELECTRON_MIRROR</span><span class="token operator">=</span><span class="token string">&quot;https://npm.taobao.org/mirrors/electron/&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>或使用cnpm</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> cnpm <span class="token parameter variable">--registry</span><span class="token operator">=</span>https://registry.npm.taobao.org
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>安装结果如图</p> <p><img src="/assets/img/electron.14c78fde.png" alt="安装electron"></p></li> <li><p>此时文件内会多出一个node_modules 文件夹和package-lock文件，我们需要创建一个index.js文件，内容如下：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span>app<span class="token punctuation">,</span> BrowserWindow<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'electron'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Keep a global reference of the window object, if you don't, the window will</span>
+<span class="token comment">// be closed automatically when the JavaScript object is garbage collected.</span>
+<span class="token keyword">let</span> win
+
+<span class="token keyword">function</span> <span class="token function">createWindow</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 创建浏览器窗口。</span>
+    win <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BrowserWindow</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">800</span><span class="token punctuation">,</span> <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">600</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// 然后加载应用的 index.html。</span>
+    win<span class="token punctuation">.</span><span class="token function">loadFile</span><span class="token punctuation">(</span><span class="token string">'index.html'</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// 打开开发者工具</span>
+    win<span class="token punctuation">.</span>webContents<span class="token punctuation">.</span><span class="token function">openDevTools</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// 当 window 被关闭，这个事件会被触发。</span>
+    win<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'closed'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 取消引用 window 对象，如果你的应用支持多窗口的话，</span>
+    <span class="token comment">// 通常会把多个 window 对象存放在一个数组里面，</span>
+    <span class="token comment">// 与此同时，你应该删除相应的元素。</span>
+    win <span class="token operator">=</span> <span class="token keyword">null</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Electron 会在初始化后并准备</span>
+<span class="token comment">// 创建浏览器窗口时，调用这个函数。</span>
+<span class="token comment">// 部分 API 在 ready 事件触发后才能使用。</span>
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'ready'</span><span class="token punctuation">,</span> createWindow<span class="token punctuation">)</span>
+
+<span class="token comment">// 当全部窗口关闭时退出。</span>
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'window-all-closed'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 在 macOS 上，除非用户用 Cmd + Q 确定地退出，</span>
+    <span class="token comment">// 否则绝大部分应用及其菜单栏会保持激活。</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>platform <span class="token operator">!==</span> <span class="token string">'darwin'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    app<span class="token punctuation">.</span><span class="token function">quit</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'activate'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 在macOS上，当单击dock图标并且没有其他窗口打开时，</span>
+    <span class="token comment">// 通常在应用程序中重新创建一个窗口。</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>win <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">createWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 在这个文件中，你可以续写应用剩下主进程代码。</span>
+<span class="token comment">// 也可以拆分成几个文件，然后用 require 导入。</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br></div></div></li> <li><p>导入或创建HTML项目到文件夹下，起始页面为index.html，项目文件如下图所示，style.css是html文件的样式，非必须</p> <p><img src="data:image/png;base64,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" alt="项目文件"></p></li> <li><p>运行项目，在控制台执行，就可以运行项目</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">npm</span> start
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>项目打包，生成exe文件，只介绍其中一种方法，另一种大致相似，可以参考官方文档</p> <ol><li>创建一个新的文件夹用于存放新内容</li> <li>拷贝之前文件夹内node_modules&gt;electron&gt;dist文件夹内全部内容到新的文件夹</li> <li>在新文件夹&gt;resources目录下创建一个名为app的文件夹，拷贝之前文件夹内除node_modules外所有文件到app文件夹内</li> <li>运行新文件夹下的electron.exe文件即可运行，这个文件也可以改成任意的名字</li></ol></li> <li><p>修改exe文件，编辑icon等其他信息，官方推荐使用<a href="https://github.com/electron/rcedit" target="_blank" rel="noopener noreferrer">rcedit🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li></ol> <h2 id="_4-备注"><a href="#_4-备注" class="header-anchor">#</a> 4. 备注</h2> <ul><li><a href="https://electronjs.org/docs" target="_blank" rel="noopener noreferrer">官方文档🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://electronjs.org/docs/tutorial/first-app" target="_blank" rel="noopener noreferrer">官方文档——打造你第一个 Electron 应用🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://electronjs.org/docs/tutorial/application-distribution" target="_blank" rel="noopener noreferrer">官方文档——分发应用🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://electronjs.org/docs/tutorial/application-packaging" target="_blank" rel="noopener noreferrer">官方文档——应用程序打包🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">3/30/2023, 2:14:30 PM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/pages/front-end/Electron笔记.html">
+        Electron 笔记
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div class="cat-container" data-v-a13867c0><canvas id="vuepress-cat" width="280" height="250" class="live2d" data-v-a13867c0></canvas></div></div></div>
+    <script src="/assets/js/app.bf86356c.js" defer></script><script src="/assets/js/2.6938d6ea.js" defer></script><script src="/assets/js/15.4b03a2d2.js" defer></script>
+  </body>
+</html>

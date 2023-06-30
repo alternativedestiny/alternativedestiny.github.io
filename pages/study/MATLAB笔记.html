@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MATLAB &amp; Matpower 笔记 | 北方酱Hoppou~</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/hoppou_nobg.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="北方酱Hoppou~的个人主页">
+    
+    <link rel="preload" href="/assets/css/0.styles.80a5cd61.css" as="style"><link rel="preload" href="/assets/js/app.bf86356c.js" as="script"><link rel="preload" href="/assets/js/2.6938d6ea.js" as="script"><link rel="preload" href="/assets/js/28.5a381f2d.js" as="script"><link rel="prefetch" href="/assets/js/10.bdca0d0f.js"><link rel="prefetch" href="/assets/js/11.9c73297f.js"><link rel="prefetch" href="/assets/js/12.cefb5eb3.js"><link rel="prefetch" href="/assets/js/13.ca6f67af.js"><link rel="prefetch" href="/assets/js/14.aa571088.js"><link rel="prefetch" href="/assets/js/15.4b03a2d2.js"><link rel="prefetch" href="/assets/js/16.0b5aec7f.js"><link rel="prefetch" href="/assets/js/17.d10fbfcf.js"><link rel="prefetch" href="/assets/js/18.36f2bd4c.js"><link rel="prefetch" href="/assets/js/19.15e74034.js"><link rel="prefetch" href="/assets/js/20.ffefd55c.js"><link rel="prefetch" href="/assets/js/21.24c9c02a.js"><link rel="prefetch" href="/assets/js/22.f8d73958.js"><link rel="prefetch" href="/assets/js/23.cea2b23f.js"><link rel="prefetch" href="/assets/js/24.6606b9ff.js"><link rel="prefetch" href="/assets/js/25.7e2c4009.js"><link rel="prefetch" href="/assets/js/26.2f486bca.js"><link rel="prefetch" href="/assets/js/27.f4499c41.js"><link rel="prefetch" href="/assets/js/29.41102da9.js"><link rel="prefetch" href="/assets/js/3.d7ced79a.js"><link rel="prefetch" href="/assets/js/30.3ffc23c2.js"><link rel="prefetch" href="/assets/js/31.077ec6e9.js"><link rel="prefetch" href="/assets/js/32.d21611cb.js"><link rel="prefetch" href="/assets/js/33.38ceb61b.js"><link rel="prefetch" href="/assets/js/34.59a0c927.js"><link rel="prefetch" href="/assets/js/35.255eafcb.js"><link rel="prefetch" href="/assets/js/36.41916c0d.js"><link rel="prefetch" href="/assets/js/37.3577f14e.js"><link rel="prefetch" href="/assets/js/38.071709da.js"><link rel="prefetch" href="/assets/js/39.097851a2.js"><link rel="prefetch" href="/assets/js/4.0244df3b.js"><link rel="prefetch" href="/assets/js/40.d59840e6.js"><link rel="prefetch" href="/assets/js/41.ad25d8ab.js"><link rel="prefetch" href="/assets/js/42.b7fe8f20.js"><link rel="prefetch" href="/assets/js/43.0af61973.js"><link rel="prefetch" href="/assets/js/44.e566586b.js"><link rel="prefetch" href="/assets/js/45.d267435e.js"><link rel="prefetch" href="/assets/js/46.25a0d6c7.js"><link rel="prefetch" href="/assets/js/47.60f82362.js"><link rel="prefetch" href="/assets/js/48.2bb12b8d.js"><link rel="prefetch" href="/assets/js/49.5662a3a5.js"><link rel="prefetch" href="/assets/js/5.80568f0c.js"><link rel="prefetch" href="/assets/js/50.2554a84b.js"><link rel="prefetch" href="/assets/js/51.eaf58ddb.js"><link rel="prefetch" href="/assets/js/52.1ced69b6.js"><link rel="prefetch" href="/assets/js/53.9fcc79ec.js"><link rel="prefetch" href="/assets/js/54.079120a0.js"><link rel="prefetch" href="/assets/js/55.2aeb89d2.js"><link rel="prefetch" href="/assets/js/56.d39d2ed5.js"><link rel="prefetch" href="/assets/js/57.d7667a7f.js"><link rel="prefetch" href="/assets/js/58.21d55374.js"><link rel="prefetch" href="/assets/js/59.36cbba10.js"><link rel="prefetch" href="/assets/js/6.cb285fdc.js"><link rel="prefetch" href="/assets/js/60.f56e1f99.js"><link rel="prefetch" href="/assets/js/61.85d4e33a.js"><link rel="prefetch" href="/assets/js/62.09de7b0c.js"><link rel="prefetch" href="/assets/js/63.d4950e6d.js"><link rel="prefetch" href="/assets/js/64.95d3600e.js"><link rel="prefetch" href="/assets/js/65.b44dc974.js"><link rel="prefetch" href="/assets/js/66.88899658.js"><link rel="prefetch" href="/assets/js/67.042d954c.js"><link rel="prefetch" href="/assets/js/68.ac7810f1.js"><link rel="prefetch" href="/assets/js/69.4f9e7e09.js"><link rel="prefetch" href="/assets/js/7.6a9b305d.js"><link rel="prefetch" href="/assets/js/70.48b19758.js"><link rel="prefetch" href="/assets/js/71.748e8cf7.js"><link rel="prefetch" href="/assets/js/72.d50bef4b.js"><link rel="prefetch" href="/assets/js/73.0ac924bc.js"><link rel="prefetch" href="/assets/js/74.ef39d98b.js"><link rel="prefetch" href="/assets/js/75.4b8f6284.js"><link rel="prefetch" href="/assets/js/76.018f7ad0.js"><link rel="prefetch" href="/assets/js/77.69175c21.js"><link rel="prefetch" href="/assets/js/78.da0cf581.js"><link rel="prefetch" href="/assets/js/79.fbdce5ea.js"><link rel="prefetch" href="/assets/js/8.9c0ce64e.js"><link rel="prefetch" href="/assets/js/80.5ff6044c.js"><link rel="prefetch" href="/assets/js/81.972cb6f6.js"><link rel="prefetch" href="/assets/js/82.c1c485ba.js"><link rel="prefetch" href="/assets/js/83.6fe57a40.js"><link rel="prefetch" href="/assets/js/84.6fadc008.js"><link rel="prefetch" href="/assets/js/85.05e412a1.js"><link rel="prefetch" href="/assets/js/86.1fe91a31.js"><link rel="prefetch" href="/assets/js/87.99ed37ff.js"><link rel="prefetch" href="/assets/js/88.bd5c1c43.js"><link rel="prefetch" href="/assets/js/89.96dd7681.js"><link rel="prefetch" href="/assets/js/9.1901a415.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.80a5cd61.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/hoppou_nobg.jpg" alt="北方酱Hoppou~" class="logo"> <span class="site-name can-hide">北方酱Hoppou~</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Py-01-环境_Env.html" class="nav-link">
+  Py-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-02-数据类型_DataType.html" class="nav-link">
+  Py-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-03-文件处理_File.html" class="nav-link">
+  Py-03-文件处理_File
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-04-Numpy.html" class="nav-link">
+  Py-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-05-Pandas.html" class="nav-link">
+  Py-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-06-绘图_Plot.html" class="nav-link">
+  Py-06-绘图_Plot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-07-SciPy.html" class="nav-link">
+  Py-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-08-Pyinstaller.html" class="nav-link">
+  Py-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-09-Database.html" class="nav-link">
+  Py-09-Database
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-10-Neo4j.html" class="nav-link">
+  Py-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-11-Django.html" class="nav-link">
+  Py-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-12-Word2Vec.html" class="nav-link">
+  Py-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-13-PyTorch.html" class="nav-link">
+  Py-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-14-Keras.html" class="nav-link">
+  Py-14-Keras
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-15-Sklearn.html" class="nav-link">
+  Py-15-Sklearn
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-16-Tkinter.html" class="nav-link">
+  Py-16-Tkinter
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-17-Geatpy.html" class="nav-link">
+  Py-17-Geatpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-18-MachineLearning.html" class="nav-link">
+  Py-18-MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-19-PandaPower.html" class="nav-link">
+  Py-19-PandaPower
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-20-PyQt.html" class="nav-link">
+  Py-20-PyQt
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py_代码块.html" class="nav-link">
+  Py_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境_Env.html" class="nav-link">
+  Cpp-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型_DataType.html" class="nav-link">
+  Cpp-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构_DataStruct.html" class="nav-link">
+  Cpp-03-数据结构_DataStruct
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针_Point.html" class="nav-link">
+  Cpp-04-指针_Point
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数_Func.html" class="nav-link">
+  Cpp-05-函数_Func
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出&amp;文件_IO.html" class="nav-link">
+  Cpp-06-输入输出&amp;文件_IO
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象_Class.html" class="nav-link">
+  Cpp-07-面向对象_Class
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-08-知识点_Knowledge.html" class="nav-link">
+  Cpp-08-知识点_Knowledge
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/强化学习.html" class="nav-link">
+  强化学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/朴素贝叶斯.html" class="nav-link">
+  朴素贝叶斯
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/统计学习方法.html" class="nav-link">
+  统计学习方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Go 学习笔记.html" class="nav-link">
+  Go 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/KotlinNote.html" class="nav-link">
+  KotlinNote
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MATLAB笔记.html" class="nav-link">
+  MATLAB笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VSCode插件开发.html" class="nav-link">
+  VSCode插件开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Windows笔记.html" class="nav-link">
+  Windows笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Word 技巧.html" class="nav-link">
+  Word 技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Py-01-环境_Env.html" class="nav-link">
+  Py-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-02-数据类型_DataType.html" class="nav-link">
+  Py-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-03-文件处理_File.html" class="nav-link">
+  Py-03-文件处理_File
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-04-Numpy.html" class="nav-link">
+  Py-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-05-Pandas.html" class="nav-link">
+  Py-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-06-绘图_Plot.html" class="nav-link">
+  Py-06-绘图_Plot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-07-SciPy.html" class="nav-link">
+  Py-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-08-Pyinstaller.html" class="nav-link">
+  Py-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-09-Database.html" class="nav-link">
+  Py-09-Database
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-10-Neo4j.html" class="nav-link">
+  Py-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-11-Django.html" class="nav-link">
+  Py-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-12-Word2Vec.html" class="nav-link">
+  Py-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-13-PyTorch.html" class="nav-link">
+  Py-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-14-Keras.html" class="nav-link">
+  Py-14-Keras
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-15-Sklearn.html" class="nav-link">
+  Py-15-Sklearn
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-16-Tkinter.html" class="nav-link">
+  Py-16-Tkinter
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-17-Geatpy.html" class="nav-link">
+  Py-17-Geatpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-18-MachineLearning.html" class="nav-link">
+  Py-18-MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-19-PandaPower.html" class="nav-link">
+  Py-19-PandaPower
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-20-PyQt.html" class="nav-link">
+  Py-20-PyQt
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py_代码块.html" class="nav-link">
+  Py_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境_Env.html" class="nav-link">
+  Cpp-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型_DataType.html" class="nav-link">
+  Cpp-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构_DataStruct.html" class="nav-link">
+  Cpp-03-数据结构_DataStruct
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针_Point.html" class="nav-link">
+  Cpp-04-指针_Point
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数_Func.html" class="nav-link">
+  Cpp-05-函数_Func
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出&amp;文件_IO.html" class="nav-link">
+  Cpp-06-输入输出&amp;文件_IO
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象_Class.html" class="nav-link">
+  Cpp-07-面向对象_Class
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-08-知识点_Knowledge.html" class="nav-link">
+  Cpp-08-知识点_Knowledge
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/强化学习.html" class="nav-link">
+  强化学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/朴素贝叶斯.html" class="nav-link">
+  朴素贝叶斯
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/统计学习方法.html" class="nav-link">
+  统计学习方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Go 学习笔记.html" class="nav-link">
+  Go 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/KotlinNote.html" class="nav-link">
+  KotlinNote
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MATLAB笔记.html" class="nav-link">
+  MATLAB笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VSCode插件开发.html" class="nav-link">
+  VSCode插件开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Windows笔记.html" class="nav-link">
+  Windows笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Word 技巧.html" class="nav-link">
+  Word 技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/study/Docker笔记.html" class="sidebar-link">Docker</a></li><li><a href="/pages/study/Git学习笔记.html" class="sidebar-link">Git 学习笔记</a></li><li><a href="/pages/study/Go 学习笔记.html" class="sidebar-link">Go 学习笔记</a></li><li><a href="/pages/study/Java学习笔记.html" class="sidebar-link">Java笔记</a></li><li><a href="/pages/study/KotlinNote.html" class="sidebar-link">Kotlin 笔记</a></li><li><a href="/pages/study/libsvm学习笔记.html" class="sidebar-link">libsvm学习笔记</a></li><li><a href="/pages/study/Linux学习笔记.html" class="sidebar-link">Linux 学习笔记 (Ubuntu)</a></li><li><a href="/pages/study/Markdown语法.html" class="sidebar-link">Markdown 语法速览</a></li><li><a href="/pages/study/MATLAB笔记.html" class="active sidebar-link">MATLAB &amp; Matpower 笔记</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/study/MATLAB笔记.html#_1-语法" class="sidebar-link">1. 语法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/study/MATLAB笔记.html#_1-1-基础语法" class="sidebar-link">1.1. 基础语法</a></li><li class="sidebar-sub-header"><a href="/pages/study/MATLAB笔记.html#_1-2-随机数" class="sidebar-link">1.2. 随机数</a></li><li class="sidebar-sub-header"><a href="/pages/study/MATLAB笔记.html#_1-3-矩阵操作" class="sidebar-link">1.3. 矩阵操作</a></li><li class="sidebar-sub-header"><a href="/pages/study/MATLAB笔记.html#_1-4-命令行指令" class="sidebar-link">1.4. 命令行指令</a></li><li class="sidebar-sub-header"><a href="/pages/study/MATLAB笔记.html#_1-5-读写文件" class="sidebar-link">1.5. 读写文件</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/study/MATLAB笔记.html#_2-matpower" class="sidebar-link">2. MATPOWER</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/study/MATLAB笔记.html#_2-1-安装" class="sidebar-link">2.1. 安装</a></li><li class="sidebar-sub-header"><a href="/pages/study/MATLAB笔记.html#_2-2-算例使用" class="sidebar-link">2.2. 算例使用</a></li><li class="sidebar-sub-header"><a href="/pages/study/MATLAB笔记.html#_2-3-数据说明" class="sidebar-link">2.3. 数据说明</a></li><li class="sidebar-sub-header"><a href="/pages/study/MATLAB笔记.html#_2-4-使用方法" class="sidebar-link">2.4. 使用方法</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/study/MATLAB笔记.html#_3-备注" class="sidebar-link">3. 备注</a></li></ul></li><li><a href="/pages/study/MySQL笔记.html" class="sidebar-link">MySQL笔记</a></li><li><a href="/pages/study/TCP IP学习笔记.html" class="sidebar-link">TCP/IP笔记</a></li><li><a href="/pages/study/Tomcat笔记.html" class="sidebar-link">Tomcat笔记</a></li><li><a href="/pages/study/力扣题解.html" class="sidebar-link">力扣题解</a></li><li><a href="/pages/study/文件系统.html" class="sidebar-link">文件系统</a></li><li><a href="/pages/study/算法笔记.html" class="sidebar-link">算法笔记</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="matlab-matpower-笔记"><a href="#matlab-matpower-笔记" class="header-anchor">#</a> MATLAB &amp; Matpower 笔记</h1> <h2 id="_1-语法"><a href="#_1-语法" class="header-anchor">#</a> 1. 语法</h2> <h3 id="_1-1-基础语法"><a href="#_1-1-基础语法" class="header-anchor">#</a> 1.1. 基础语法</h3> <ol><li><p>循环</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code><span class="token comment">%% 需要注意 matlab 计算一般是从 1 开始</span>
+<span class="token comment">% 普通循环</span>
+<span class="token keyword">for</span> <span class="token number">i</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token operator">:</span><span class="token number">10</span>
+    <span class="token function">fprintf</span><span class="token punctuation">(</span><span class="token string">'i = %d\n'</span><span class="token punctuation">,</span> <span class="token number">i</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span>
+
+<span class="token comment">% 等间隔循环</span>
+<span class="token keyword">for</span> <span class="token number">i</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token operator">:</span><span class="token number">2</span><span class="token operator">:</span><span class="token number">10</span>
+    <span class="token function">fprintf</span><span class="token punctuation">(</span><span class="token string">'i = %d\n'</span><span class="token punctuation">,</span> <span class="token number">i</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">% 0-10, 间隔为 2</span>
+<span class="token keyword">end</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></li> <li><p>程序计时</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code>tic<span class="token punctuation">;</span>    <span class="token comment">% 开始计时</span>
+
+<span class="token comment">% 代码</span>
+
+toc<span class="token punctuation">;</span>    <span class="token comment">% 结束计时并显示从 tic 到 toc 的时间</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li></ol> <h3 id="_1-2-随机数"><a href="#_1-2-随机数" class="header-anchor">#</a> 1.2. 随机数</h3> <ol><li><p>基本随机数</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code><span class="token comment">% 生成 0~1 范围内均匀分布的随机数</span>
+<span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">% 生成一个随机数</span>
+<span class="token function">rand</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment">% 生成 [3x3] 的随机数</span>
+<span class="token function">rand</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>   <span class="token comment">% 生成 3x2 的随机数</span>
+<span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">% 同上</span>
+
+<span class="token comment">% 生成设定范围随机数，其他用法同 rand</span>
+<span class="token function">unifrnd</span><span class="token punctuation">(</span>min<span class="token punctuation">,</span> max<span class="token punctuation">)</span>   <span class="token comment">% 生成一个 min-max 间的随机数</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li> <li><p>正态分布随机数</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code><span class="token comment">% 生成标准正态分布（均值 0，方差 1）的随机数</span>
+<span class="token function">randn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">% 用法同 rand</span>
+
+<span class="token comment">% 生成设定正态分布随机数</span>
+<span class="token function">normrnd</span><span class="token punctuation">(</span>μ<span class="token punctuation">,</span> σ<span class="token punctuation">)</span>   <span class="token comment">% 均值μ，方差σ</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li> <li><p>参考 <a href="https://blog.csdn.net/MALSIS/article/details/82025281" target="_blank" rel="noopener noreferrer">MATLAB 随机数生成🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li></ol> <h3 id="_1-3-矩阵操作"><a href="#_1-3-矩阵操作" class="header-anchor">#</a> 1.3. 矩阵操作</h3> <ol><li><p>增加行/列</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code><span class="token comment">% 增加一行</span>
+A <span class="token operator">=</span> <span class="token punctuation">[</span>A<span class="token punctuation">;</span> row_data<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">% 增加一列</span>
+B <span class="token operator">=</span> <span class="token punctuation">[</span>B<span class="token punctuation">,</span> col_data<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li> <li><p>转置</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code>B <span class="token operator">=</span> A<span class="token operator">.'</span> <span class="token comment">% 英文的单引号</span>
+B <span class="token operator">=</span> <span class="token function">transpose</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li></ol> <h3 id="_1-4-命令行指令"><a href="#_1-4-命令行指令" class="header-anchor">#</a> 1.4. 命令行指令</h3> <ol><li><p>清理命令</p> <table><thead><tr><th>命令</th> <th>功能</th></tr></thead> <tbody><tr><td>clc</td> <td>清除命令窗口的内容，对工作环境中的全部变量无任何影响</td></tr> <tr><td>close</td> <td>关闭当前的 Figure 窗口</td></tr> <tr><td>close all</td> <td>关闭所有的 Figure 窗口</td></tr> <tr><td>clear</td> <td>清除工作空间的所有变量</td></tr> <tr><td>clear all</td> <td>清除工作空间的所有变量，函数，和 MEX 文件</td></tr></tbody></table></li></ol> <h3 id="_1-5-读写文件"><a href="#_1-5-读写文件" class="header-anchor">#</a> 1.5. 读写文件</h3> <h4 id="_1-5-1-读文件"><a href="#_1-5-1-读文件" class="header-anchor">#</a> 1.5.1. 读文件</h4> <ol><li><p>读取 mat 文件</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code>data <span class="token operator">=</span> <span class="token function">load</span><span class="token punctuation">(</span><span class="token string">'data.mat'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>读取 csv 文件</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code><span class="token comment">% 只能读取纯数字，不推荐，可以通过参数跳过</span>
+data <span class="token operator">=</span> <span class="token function">csvread</span><span class="token punctuation">(</span><span class="token string">'file_name.csv'</span><span class="token punctuation">,</span> row<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> col<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">% 可以读取带表头文件</span>
+A <span class="token operator">=</span> <span class="token function">importdata</span><span class="token punctuation">(</span><span class="token string">'file_name.csv'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+data <span class="token operator">=</span> A<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li></ol> <h4 id="_1-5-2-写文件"><a href="#_1-5-2-写文件" class="header-anchor">#</a> 1.5.2. 写文件</h4> <ol><li><p>保存数据</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code><span class="token function">save</span><span class="token punctuation">(</span><span class="token string">'data.mat'</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>保存 csv 文件</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code><span class="token comment">% 文件会保存在 matlab 打开的当前目录下</span>
+<span class="token function">csvwrite</span><span class="token punctuation">(</span>file_name<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li></ol> <h2 id="_2-matpower"><a href="#_2-matpower" class="header-anchor">#</a> 2. MATPOWER</h2> <h3 id="_2-1-安装"><a href="#_2-1-安装" class="header-anchor">#</a> 2.1. 安装</h3> <ol><li><p>在 <a href="https://github.com/MATPOWER/matpower" target="_blank" rel="noopener noreferrer">MATPOWER 的 GitHub 页面🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 的 Releases 页面下载安装的压缩包</p></li> <li><p>将压缩包解压并放到 matlab 安装目录的 bin 目录下，即<code>../Matlab/bin</code>，也可以根据需求放到其他目录下</p></li> <li><p>添加 matpower 路径</p> <ol><li>点击主页<code>设置路径</code></li> <li>点击<code>添加并包含子文件夹</code>选择 matpower 文件夹，并保存</li> <li>发现 matpower 文件夹变成黑色字体表示添加成功</li></ol> <p><img src="/assets/img/2021-08-23_43.b42839b8.png" alt="图 1"></p></li> <li><p>在命令窗口输入<code>test_matpower</code></p> <blockquote><p>有许多 ok 输出表示安装成功，有部分失败不用在意</p></blockquote> <p><img src="/assets/img/2021-08-23_97.9da9415c.png" alt="图 2"></p></li></ol> <h3 id="_2-2-算例使用"><a href="#_2-2-算例使用" class="header-anchor">#</a> 2.2. 算例使用</h3> <ol><li><p>Matpower 自带英文手册，在<code>matpower7.1/docs</code>目录下</p></li> <li><p>运行简单的牛顿潮流，新建 m 文件，并输入下列指令运行</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code><span class="token comment">%% 默认 9 节点 case9</span>
+<span class="token function">runpf</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">%% 指定节点文件</span>
+<span class="token function">runpf</span><span class="token punctuation">(</span><span class="token string">'case5'</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li> <li><p>计算最优潮流</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code><span class="token comment">%% 30 节点</span>
+<span class="token function">runopf</span><span class="token punctuation">(</span><span class="token string">'case30'</span><span class="token punctuation">)</span>
+<span class="token comment">%% 关闭高耗机组</span>
+<span class="token function">runuopf</span><span class="token punctuation">(</span><span class="token string">'case30'</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><p>修改数据进行潮流计算</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code><span class="token comment">% 读取节点数据</span>
+mpc <span class="token operator">=</span> <span class="token function">loadcase</span><span class="token punctuation">(</span><span class="token string">'case33'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">% 计算潮流</span>
+<span class="token function">runpf</span><span class="token punctuation">(</span>mpc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">% 计算最优潮流</span>
+<span class="token function">runopf</span><span class="token punctuation">(</span>mpc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">% 修改节点负载</span>
+mpc<span class="token punctuation">.</span><span class="token function">bus</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0.2</span><span class="token punctuation">;</span>
+<span class="token function">disp</span><span class="token punctuation">(</span>mpc<span class="token punctuation">.</span><span class="token function">bus</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">% 重新计算潮流</span>
+<span class="token function">runopf</span><span class="token punctuation">(</span>mpc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div></li></ol> <h3 id="_2-3-数据说明"><a href="#_2-3-数据说明" class="header-anchor">#</a> 2.3. 数据说明</h3> <ol><li><p>数据文件在<code>matpower7.1/data</code>路径下，以<code>case33bw</code>数据为例</p></li> <li><p>节点名</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code><span class="token keyword">function</span> mpc <span class="token operator">=</span> case33bw
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>数据格式的版本，新版本一般都用 version2, 不需要修改</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code>mpc<span class="token punctuation">.</span>version <span class="token operator">=</span> <span class="token string">'2'</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>bus 母线字段</p> <table><thead><tr><th>字段</th> <th>说明</th></tr></thead> <tbody><tr><td>bus_i</td> <td>节点号</td></tr> <tr><td>type</td> <td>母线类型，1-PQ 节点，2-PV 节点，3-平衡（参考）节点，4-孤立节点</td></tr> <tr><td>Pd,Qd</td> <td>设置母线注入负荷的有功功率和无功功率</td></tr> <tr><td>Gs,Bs</td> <td>设置与母线并联的电导和电纳</td></tr> <tr><td>area</td> <td>设置电网断面号，设置范围 1~100，一般设为 1</td></tr> <tr><td>Vm,Va</td> <td>设置母线电压的初始幅值和相角</td></tr> <tr><td>baseKV</td> <td>设置母线的基准电压（有名值）</td></tr> <tr><td>zone</td> <td>设置分区号，可设置范围为 1~999，一般设置为 1</td></tr> <tr><td>Vmax,Vmin</td> <td>设置工作时母线电压的最高值和最低值</td></tr></tbody></table></li> <li><p>generator 发电机字段</p> <table><thead><tr><th>字段</th> <th>说明</th></tr></thead> <tbody><tr><td>bus</td> <td>节点号</td></tr> <tr><td>Pg,Qg</td> <td>设置发电机有功无功功率（有名值）</td></tr> <tr><td>Qmax,Qmin</td> <td>设置发电机无功功率最大最小值</td></tr> <tr><td>Vg</td> <td>设置发电机工作电压</td></tr> <tr><td>mBase</td> <td>设置接入发电机的功率基准</td></tr> <tr><td>status</td> <td>设置发电机工作状态，1-运行，2-停运</td></tr> <tr><td>Pmax,Pmin</td> <td>设置发电机有功功率最大最小值</td></tr> <tr><td>Pc1,Pc2</td> <td>发电机特征量，一般设为 0</td></tr> <tr><td>Qc1min,Qc1max</td> <td>发电机特征量，一般设为 0</td></tr> <tr><td>Qc2min,Qc2max</td> <td>发电机特征量，一般设为 0</td></tr> <tr><td>ramp_agc</td> <td>发电机特征量，一般设为 0</td></tr> <tr><td>ramp_10,ramp_30,ramp_q</td> <td>发电机特征量，一般设为 0</td></tr> <tr><td>apf</td> <td>发电机特征量，一般设为 0</td></tr></tbody></table></li> <li><p>branch 支路字段</p> <table><thead><tr><th>字段</th> <th>说明</th></tr></thead> <tbody><tr><td>fbus</td> <td>支路起始节点号</td></tr> <tr><td>tbus</td> <td>支路终止节点号</td></tr> <tr><td>r,x,b</td> <td>支路电阻，电抗，电纳</td></tr> <tr><td>rateA</td> <td>支路长期允许功率</td></tr> <tr><td>rateB</td> <td>支路短期允许功率</td></tr> <tr><td>rateC</td> <td>支路紧急允许功率</td></tr> <tr><td>ratio</td> <td>支路变比，若该支路仅仅为导线则设置为 0，若含有变压器，则该变比为 fbus 侧母线基准电压与 tbus 侧基准变压之比</td></tr> <tr><td>angle</td> <td>支路的相位角度，如果支路元件为变压器，则就是变压器的转角，如果支路元件不是变压器，则相位角度为 0 度</td></tr> <tr><td>status</td> <td>支路工作状态，1-入运行，0-退出运行</td></tr> <tr><td>angmin,angmax</td> <td>支路相位角最小最大值</td></tr></tbody></table></li> <li><p>generator cost data 发电成本</p> <table><thead><tr><th>字段</th> <th>说明</th></tr></thead> <tbody><tr><td>model</td> <td>模型，1-分段线性，2-多项式</td></tr> <tr><td>startup</td> <td>启动成本（美元）</td></tr> <tr><td>shutdown</td> <td>关闭成本（美元）</td></tr> <tr><td>n</td> <td>多项式成本函数遵循的成本系数数，或分段线性遵循的数据点数</td></tr> <tr><td>其余参数</td> <td>定义总成本函数 f§的参数，f 和 p 的单位分别是$/hr 和 MW（或 MVAr)</td></tr></tbody></table></li> <li><p>convert branch impedances from Ohms to p.u. 将支路阻抗从欧姆转换为 p.u.</p></li> <li><p>convert loads from kW to MW 负荷从 kW 转 MW</p></li></ol> <h3 id="_2-4-使用方法"><a href="#_2-4-使用方法" class="header-anchor">#</a> 2.4. 使用方法</h3> <ol><li><p>加载&amp;保存模型</p> <div class="language-matlab line-numbers-mode"><pre class="language-matlab"><code>mpc <span class="token operator">=</span> <span class="token function">loadcase</span><span class="token punctuation">(</span><span class="token string">'case30'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">% 加载电网模型</span>
+
+<span class="token comment">% 修改模型参数（举例）</span>
+mpc<span class="token punctuation">.</span><span class="token function">bus</span><span class="token punctuation">(</span><span class="token number">j</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">% 修改节点负荷 P</span>
+mpc<span class="token punctuation">.</span><span class="token function">bus</span><span class="token punctuation">(</span><span class="token number">j</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">% 修改节点负荷 Q</span>
+
+<span class="token function">savecase</span><span class="token punctuation">(</span><span class="token string">'./file.m'</span><span class="token punctuation">,</span> mpc<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">% 保存模型到 file.m 文件</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></li></ol> <h2 id="_3-备注"><a href="#_3-备注" class="header-anchor">#</a> 3. 备注</h2> <ol><li><p>参考</p> <ul><li><a href="https://blog.csdn.net/qq_29629293/article/details/108610843" target="_blank" rel="noopener noreferrer">MATPOWER 快速上手及应用实例🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://blog.csdn.net/Gentleheng/article/details/112980489?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162979368816780265477280%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162979368816780265477280&amp;biz_id=0&amp;spm=1018.2226.3001.4187" target="_blank" rel="noopener noreferrer">基于 Matpower 的电力系统潮流计算原理及仿真设计（详细）🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">3/30/2023, 2:14:30 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/study/Markdown语法.html" class="prev">
+        Markdown 语法速览
+      </a></span> <span class="next"><a href="/pages/study/MySQL笔记.html">
+        MySQL笔记
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div class="cat-container" data-v-a13867c0><canvas id="vuepress-cat" width="280" height="250" class="live2d" data-v-a13867c0></canvas></div></div></div>
+    <script src="/assets/js/app.bf86356c.js" defer></script><script src="/assets/js/2.6938d6ea.js" defer></script><script src="/assets/js/28.5a381f2d.js" defer></script>
+  </body>
+</html>

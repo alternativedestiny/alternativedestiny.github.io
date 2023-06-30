@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1. Python 环境 | 北方酱Hoppou~</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/hoppou_nobg.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="北方酱Hoppou~的个人主页">
+    
+    <link rel="preload" href="/assets/css/0.styles.80a5cd61.css" as="style"><link rel="preload" href="/assets/js/app.bf86356c.js" as="script"><link rel="preload" href="/assets/js/2.6938d6ea.js" as="script"><link rel="preload" href="/assets/js/3.d7ced79a.js" as="script"><link rel="prefetch" href="/assets/js/10.bdca0d0f.js"><link rel="prefetch" href="/assets/js/11.9c73297f.js"><link rel="prefetch" href="/assets/js/12.cefb5eb3.js"><link rel="prefetch" href="/assets/js/13.ca6f67af.js"><link rel="prefetch" href="/assets/js/14.aa571088.js"><link rel="prefetch" href="/assets/js/15.4b03a2d2.js"><link rel="prefetch" href="/assets/js/16.0b5aec7f.js"><link rel="prefetch" href="/assets/js/17.d10fbfcf.js"><link rel="prefetch" href="/assets/js/18.36f2bd4c.js"><link rel="prefetch" href="/assets/js/19.15e74034.js"><link rel="prefetch" href="/assets/js/20.ffefd55c.js"><link rel="prefetch" href="/assets/js/21.24c9c02a.js"><link rel="prefetch" href="/assets/js/22.f8d73958.js"><link rel="prefetch" href="/assets/js/23.cea2b23f.js"><link rel="prefetch" href="/assets/js/24.6606b9ff.js"><link rel="prefetch" href="/assets/js/25.7e2c4009.js"><link rel="prefetch" href="/assets/js/26.2f486bca.js"><link rel="prefetch" href="/assets/js/27.f4499c41.js"><link rel="prefetch" href="/assets/js/28.5a381f2d.js"><link rel="prefetch" href="/assets/js/29.41102da9.js"><link rel="prefetch" href="/assets/js/30.3ffc23c2.js"><link rel="prefetch" href="/assets/js/31.077ec6e9.js"><link rel="prefetch" href="/assets/js/32.d21611cb.js"><link rel="prefetch" href="/assets/js/33.38ceb61b.js"><link rel="prefetch" href="/assets/js/34.59a0c927.js"><link rel="prefetch" href="/assets/js/35.255eafcb.js"><link rel="prefetch" href="/assets/js/36.41916c0d.js"><link rel="prefetch" href="/assets/js/37.3577f14e.js"><link rel="prefetch" href="/assets/js/38.071709da.js"><link rel="prefetch" href="/assets/js/39.097851a2.js"><link rel="prefetch" href="/assets/js/4.0244df3b.js"><link rel="prefetch" href="/assets/js/40.d59840e6.js"><link rel="prefetch" href="/assets/js/41.ad25d8ab.js"><link rel="prefetch" href="/assets/js/42.b7fe8f20.js"><link rel="prefetch" href="/assets/js/43.0af61973.js"><link rel="prefetch" href="/assets/js/44.e566586b.js"><link rel="prefetch" href="/assets/js/45.d267435e.js"><link rel="prefetch" href="/assets/js/46.25a0d6c7.js"><link rel="prefetch" href="/assets/js/47.60f82362.js"><link rel="prefetch" href="/assets/js/48.2bb12b8d.js"><link rel="prefetch" href="/assets/js/49.5662a3a5.js"><link rel="prefetch" href="/assets/js/5.80568f0c.js"><link rel="prefetch" href="/assets/js/50.2554a84b.js"><link rel="prefetch" href="/assets/js/51.eaf58ddb.js"><link rel="prefetch" href="/assets/js/52.1ced69b6.js"><link rel="prefetch" href="/assets/js/53.9fcc79ec.js"><link rel="prefetch" href="/assets/js/54.079120a0.js"><link rel="prefetch" href="/assets/js/55.2aeb89d2.js"><link rel="prefetch" href="/assets/js/56.d39d2ed5.js"><link rel="prefetch" href="/assets/js/57.d7667a7f.js"><link rel="prefetch" href="/assets/js/58.21d55374.js"><link rel="prefetch" href="/assets/js/59.36cbba10.js"><link rel="prefetch" href="/assets/js/6.cb285fdc.js"><link rel="prefetch" href="/assets/js/60.f56e1f99.js"><link rel="prefetch" href="/assets/js/61.85d4e33a.js"><link rel="prefetch" href="/assets/js/62.09de7b0c.js"><link rel="prefetch" href="/assets/js/63.d4950e6d.js"><link rel="prefetch" href="/assets/js/64.95d3600e.js"><link rel="prefetch" href="/assets/js/65.b44dc974.js"><link rel="prefetch" href="/assets/js/66.88899658.js"><link rel="prefetch" href="/assets/js/67.042d954c.js"><link rel="prefetch" href="/assets/js/68.ac7810f1.js"><link rel="prefetch" href="/assets/js/69.4f9e7e09.js"><link rel="prefetch" href="/assets/js/7.6a9b305d.js"><link rel="prefetch" href="/assets/js/70.48b19758.js"><link rel="prefetch" href="/assets/js/71.748e8cf7.js"><link rel="prefetch" href="/assets/js/72.d50bef4b.js"><link rel="prefetch" href="/assets/js/73.0ac924bc.js"><link rel="prefetch" href="/assets/js/74.ef39d98b.js"><link rel="prefetch" href="/assets/js/75.4b8f6284.js"><link rel="prefetch" href="/assets/js/76.018f7ad0.js"><link rel="prefetch" href="/assets/js/77.69175c21.js"><link rel="prefetch" href="/assets/js/78.da0cf581.js"><link rel="prefetch" href="/assets/js/79.fbdce5ea.js"><link rel="prefetch" href="/assets/js/8.9c0ce64e.js"><link rel="prefetch" href="/assets/js/80.5ff6044c.js"><link rel="prefetch" href="/assets/js/81.972cb6f6.js"><link rel="prefetch" href="/assets/js/82.c1c485ba.js"><link rel="prefetch" href="/assets/js/83.6fe57a40.js"><link rel="prefetch" href="/assets/js/84.6fadc008.js"><link rel="prefetch" href="/assets/js/85.05e412a1.js"><link rel="prefetch" href="/assets/js/86.1fe91a31.js"><link rel="prefetch" href="/assets/js/87.99ed37ff.js"><link rel="prefetch" href="/assets/js/88.bd5c1c43.js"><link rel="prefetch" href="/assets/js/89.96dd7681.js"><link rel="prefetch" href="/assets/js/9.1901a415.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.80a5cd61.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/hoppou_nobg.jpg" alt="北方酱Hoppou~" class="logo"> <span class="site-name can-hide">北方酱Hoppou~</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Py-01-环境_Env.html" class="nav-link">
+  Py-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-02-数据类型_DataType.html" class="nav-link">
+  Py-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-03-文件处理_File.html" class="nav-link">
+  Py-03-文件处理_File
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-04-Numpy.html" class="nav-link">
+  Py-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-05-Pandas.html" class="nav-link">
+  Py-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-06-绘图_Plot.html" class="nav-link">
+  Py-06-绘图_Plot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-07-SciPy.html" class="nav-link">
+  Py-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-08-Pyinstaller.html" class="nav-link">
+  Py-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-09-Database.html" class="nav-link">
+  Py-09-Database
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-10-Neo4j.html" class="nav-link">
+  Py-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-11-Django.html" class="nav-link">
+  Py-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-12-Word2Vec.html" class="nav-link">
+  Py-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-13-PyTorch.html" class="nav-link">
+  Py-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-14-Keras.html" class="nav-link">
+  Py-14-Keras
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-15-Sklearn.html" class="nav-link">
+  Py-15-Sklearn
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-16-Tkinter.html" class="nav-link">
+  Py-16-Tkinter
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-17-Geatpy.html" class="nav-link">
+  Py-17-Geatpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-18-MachineLearning.html" class="nav-link">
+  Py-18-MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-19-PandaPower.html" class="nav-link">
+  Py-19-PandaPower
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-20-PyQt.html" class="nav-link">
+  Py-20-PyQt
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py_代码块.html" class="nav-link">
+  Py_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境_Env.html" class="nav-link">
+  Cpp-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型_DataType.html" class="nav-link">
+  Cpp-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构_DataStruct.html" class="nav-link">
+  Cpp-03-数据结构_DataStruct
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针_Point.html" class="nav-link">
+  Cpp-04-指针_Point
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数_Func.html" class="nav-link">
+  Cpp-05-函数_Func
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出&amp;文件_IO.html" class="nav-link">
+  Cpp-06-输入输出&amp;文件_IO
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象_Class.html" class="nav-link">
+  Cpp-07-面向对象_Class
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-08-知识点_Knowledge.html" class="nav-link">
+  Cpp-08-知识点_Knowledge
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/强化学习.html" class="nav-link">
+  强化学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/朴素贝叶斯.html" class="nav-link">
+  朴素贝叶斯
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/统计学习方法.html" class="nav-link">
+  统计学习方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Go 学习笔记.html" class="nav-link">
+  Go 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/KotlinNote.html" class="nav-link">
+  KotlinNote
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MATLAB笔记.html" class="nav-link">
+  MATLAB笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VSCode插件开发.html" class="nav-link">
+  VSCode插件开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Windows笔记.html" class="nav-link">
+  Windows笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Word 技巧.html" class="nav-link">
+  Word 技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Py-01-环境_Env.html" class="nav-link">
+  Py-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-02-数据类型_DataType.html" class="nav-link">
+  Py-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-03-文件处理_File.html" class="nav-link">
+  Py-03-文件处理_File
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-04-Numpy.html" class="nav-link">
+  Py-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-05-Pandas.html" class="nav-link">
+  Py-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-06-绘图_Plot.html" class="nav-link">
+  Py-06-绘图_Plot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-07-SciPy.html" class="nav-link">
+  Py-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-08-Pyinstaller.html" class="nav-link">
+  Py-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-09-Database.html" class="nav-link">
+  Py-09-Database
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-10-Neo4j.html" class="nav-link">
+  Py-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-11-Django.html" class="nav-link">
+  Py-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-12-Word2Vec.html" class="nav-link">
+  Py-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-13-PyTorch.html" class="nav-link">
+  Py-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-14-Keras.html" class="nav-link">
+  Py-14-Keras
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-15-Sklearn.html" class="nav-link">
+  Py-15-Sklearn
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-16-Tkinter.html" class="nav-link">
+  Py-16-Tkinter
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-17-Geatpy.html" class="nav-link">
+  Py-17-Geatpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-18-MachineLearning.html" class="nav-link">
+  Py-18-MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-19-PandaPower.html" class="nav-link">
+  Py-19-PandaPower
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-20-PyQt.html" class="nav-link">
+  Py-20-PyQt
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py_代码块.html" class="nav-link">
+  Py_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境_Env.html" class="nav-link">
+  Cpp-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型_DataType.html" class="nav-link">
+  Cpp-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构_DataStruct.html" class="nav-link">
+  Cpp-03-数据结构_DataStruct
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针_Point.html" class="nav-link">
+  Cpp-04-指针_Point
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数_Func.html" class="nav-link">
+  Cpp-05-函数_Func
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出&amp;文件_IO.html" class="nav-link">
+  Cpp-06-输入输出&amp;文件_IO
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象_Class.html" class="nav-link">
+  Cpp-07-面向对象_Class
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-08-知识点_Knowledge.html" class="nav-link">
+  Cpp-08-知识点_Knowledge
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/强化学习.html" class="nav-link">
+  强化学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/朴素贝叶斯.html" class="nav-link">
+  朴素贝叶斯
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/统计学习方法.html" class="nav-link">
+  统计学习方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Go 学习笔记.html" class="nav-link">
+  Go 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/KotlinNote.html" class="nav-link">
+  KotlinNote
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MATLAB笔记.html" class="nav-link">
+  MATLAB笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VSCode插件开发.html" class="nav-link">
+  VSCode插件开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Windows笔记.html" class="nav-link">
+  Windows笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Word 技巧.html" class="nav-link">
+  Word 技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/Python/Py-01-环境_Env.html" class="active sidebar-link">1. Python 环境</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_1-python-使用" class="sidebar-link">1. Python 使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_1-1-下载及安装" class="sidebar-link">1.1. 下载及安装</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_1-2-使用库" class="sidebar-link">1.2. 使用库</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_1-3-虚拟环境" class="sidebar-link">1.3. 虚拟环境</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_2-anaconda-miniconda-使用" class="sidebar-link">2. Anaconda / Miniconda 使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_2-1-安装" class="sidebar-link">2.1. 安装</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_2-2-配置清华源" class="sidebar-link">2.2. 配置清华源</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_2-3-conda-虚拟环境" class="sidebar-link">2.3. conda 虚拟环境</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_2-4-conda-升级" class="sidebar-link">2.4. conda 升级</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_3-离线安装库文件" class="sidebar-link">3. 离线安装库文件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_3-1-安装-requirements" class="sidebar-link">3.1. 安装 requirements</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_3-2-生成-requirements" class="sidebar-link">3.2. 生成 requirements</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_4-vscode-配置-python-环境" class="sidebar-link">4. VSCode 配置 Python 环境</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_5-cuda-安装" class="sidebar-link">5. CUDA 安装</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_6-pycharm-使用技巧" class="sidebar-link">6. Pycharm 使用技巧</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_6-1-模板" class="sidebar-link">6.1. 模板</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_6-2-补全" class="sidebar-link">6.2. 补全</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_6-3-运行配置" class="sidebar-link">6.3. 运行配置</a></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_6-4-terminal-自动激活虚拟环境" class="sidebar-link">6.4. Terminal 自动激活虚拟环境</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/Python/Py-01-环境_Env.html#_7-备注" class="sidebar-link">7. 备注</a></li></ul></li><li><a href="/pages/Python/Py-02-数据类型_DataType.html" class="sidebar-link">2. Python 数据类型</a></li><li><a href="/pages/Python/Py-03-文件处理_File.html" class="sidebar-link">3. 文件</a></li><li><a href="/pages/Python/Py-04-Numpy.html" class="sidebar-link">4. Numpy 矩阵运算</a></li><li><a href="/pages/Python/Py-05-Pandas.html" class="sidebar-link">5. Pandas 数据处理</a></li><li><a href="/pages/Python/Py-06-绘图_Plot.html" class="sidebar-link">6. Matplotlib, Pyecharts 绘图</a></li><li><a href="/pages/Python/Py-07-SciPy.html" class="sidebar-link">7. SciPy 笔记</a></li><li><a href="/pages/Python/Py-08-Pyinstaller.html" class="sidebar-link">8. Pyinstaller 打包</a></li><li><a href="/pages/Python/Py-09-Database.html" class="sidebar-link">9. Database</a></li><li><a href="/pages/Python/Py-10-Neo4j.html" class="sidebar-link">10. Neo4j 图数据库</a></li><li><a href="/pages/Python/Py-11-Django.html" class="sidebar-link">11. Django-基于 Python 的 Web 框架</a></li><li><a href="/pages/Python/Py-12-Word2Vec.html" class="sidebar-link">12. Word2Vec</a></li><li><a href="/pages/Python/Py-13-PyTorch.html" class="sidebar-link">13. PyTorch 笔记</a></li><li><a href="/pages/Python/Py-14-Keras.html" class="sidebar-link">14. Keras 学习笔记</a></li><li><a href="/pages/Python/Py-15-Sklearn.html" class="sidebar-link">15. Scikit-learn</a></li><li><a href="/pages/Python/Py-16-Tkinter.html" class="sidebar-link">16. Tkinter</a></li><li><a href="/pages/Python/Py-17-Geatpy.html" class="sidebar-link">17. Geatpy 进化算法</a></li><li><a href="/pages/Python/Py-18-MachineLearning.html" class="sidebar-link">18. 机器学习 MachineLearning</a></li><li><a href="/pages/Python/Py-19-PandaPower.html" class="sidebar-link">19. PandaPower</a></li><li><a href="/pages/Python/Py-20-PyQt.html" class="sidebar-link">20. PyQt</a></li><li><a href="/pages/Python/Py_代码块.html" class="sidebar-link">Python 代码块</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_1-python-环境"><a href="#_1-python-环境" class="header-anchor">#</a> 1. Python 环境</h1> <h2 id="_1-python-使用"><a href="#_1-python-使用" class="header-anchor">#</a> 1. Python 使用</h2> <h3 id="_1-1-下载及安装"><a href="#_1-1-下载及安装" class="header-anchor">#</a> 1.1. 下载及安装</h3> <ol><li><p>官网下载 Python 安装包，<a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python 官方网站🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>, linux 下建议使用 anaconda 或 miniconda</p></li> <li><p>Python 默认源在国外，下载速度慢且不稳定，建议更换清华源，在命令行输入以下指令添加清华源</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>pip config <span class="token builtin class-name">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>其他常用国内源</p> <ul><li>清华源：<a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="noopener noreferrer">https://pypi.tuna.tsinghua.edu.cn/simple<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>豆瓣源：<a href="https://pypi.doubanio.com/simple/" target="_blank" rel="noopener noreferrer">https://pypi.doubanio.com/simple/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>阿里源：<a href="https://mirrors.aliyun.com/pypi/simple/" target="_blank" rel="noopener noreferrer">https://mirrors.aliyun.com/pypi/simple/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ol> <h3 id="_1-2-使用库"><a href="#_1-2-使用库" class="header-anchor">#</a> 1.2. 使用库</h3> <ol><li><p>安装库，常使用 pip 指令</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 查看 pip 版本</span>
+pip <span class="token parameter variable">-V</span>      <span class="token comment"># 或 pip --version</span>
+
+<span class="token comment"># 查看已经安装的库</span>
+pip list
+
+<span class="token comment"># 在线安装库，pip 会自动安装库的依赖</span>
+pip <span class="token function">install</span> xxx     <span class="token comment"># xxx 为要安装的库</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li> <li><p>升级库</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>pip list <span class="token parameter variable">--outdate</span>          <span class="token comment"># 显示可升级库</span>
+pip <span class="token function">install</span> <span class="token parameter variable">--upgrade</span> xxx   <span class="token comment"># 升级库</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>下载离线库</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 在目标路径下进入 cmd</span>
+<span class="token comment"># 会连同下载所有依赖包</span>
+pip download <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token punctuation">[</span>pakage<span class="token punctuation">]</span>
+<span class="token comment"># 比如下载 linux 版本 numpy</span>
+pip download --only-binary<span class="token operator">=</span>:all: <span class="token parameter variable">--platform</span> manylinux1_x86_64 --python-version <span class="token number">37</span> numpy
+
+<span class="token comment"># 离线安装</span>
+pip <span class="token function">install</span> --no-index --find-links<span class="token operator">=</span>file: 路径 包名
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><table><thead><tr><th>参数</th> <th>功能</th></tr></thead> <tbody><tr><td>--only-binary=:all:</td> <td>不适用二进制包</td></tr> <tr><td>--platform manylinux1_x86_64</td> <td>linux 64 位</td></tr> <tr><td>--python-version 37</td> <td>python3.7</td></tr></tbody></table></li> <li><p><a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank" rel="noopener noreferrer">whl 离线库网站🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li></ol> <h3 id="_1-3-虚拟环境"><a href="#_1-3-虚拟环境" class="header-anchor">#</a> 1.3. 虚拟环境</h3> <ol><li>创建虚拟环境
+<ol><li>安装 virtualenv 库 <code>pip install virtualenv</code></li> <li>cd 到目标文件夹下</li> <li><code>virtualenv 虚拟环境名</code> 创建虚拟环境</li> <li>在 <code>虚拟环境名/Scripts</code> 下执行 <code>activate</code> 开启虚拟环境</li> <li>退出虚拟环境 <code>deactivate</code></li></ol></li></ol> <h2 id="_2-anaconda-miniconda-使用"><a href="#_2-anaconda-miniconda-使用" class="header-anchor">#</a> 2. Anaconda / Miniconda 使用</h2> <h3 id="_2-1-安装"><a href="#_2-1-安装" class="header-anchor">#</a> 2.1. 安装</h3> <ol><li><p>Miniconda 是 Anaconda 的精简版本，只包含 Python 和一些最基本的库，使用方法与 Anaconda 相同</p></li> <li><p>从清华源下载安装 <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/" target="_blank" rel="noopener noreferrer">Miniconda🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li> <li><p>Linux 安装，将安装文件考入 linux, 然后执行以下命令，根据提示安装即可</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">bash</span> miniconda3_xxx.sh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>配置环境变量，默认不需要配置</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 打开配置文件</span>
+~/miniconda3/bin$ <span class="token function">sudo</span> gedit ~/.bashrc
+<span class="token comment"># 在末尾添加</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=~</span>/anaconda3/bin:<span class="token environment constant">$PATH</span>
+<span class="token comment"># 生效</span>
+<span class="token builtin class-name">source</span> ~/.bashrc
+<span class="token comment"># 验证</span>
+conda <span class="token parameter variable">--version</span>    <span class="token comment"># 或 -V</span>
+pip <span class="token parameter variable">--version</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div></li> <li><p>Windows 安装，默认下一步即可（默认不添加环境变量）, 可在安装过程中选择配置环境变量，也可以自行配置环境变量。根据安装路径添加环境变量，重启生效</p> <img src="/assets/img/Python-01-path.0f8183cd.png" width="600"></li> <li><p>避免一开始就激活 base 环境，可以设置</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 关闭 base 自动激活</span>
+conda config <span class="token parameter variable">--set</span> auto_activate_base <span class="token boolean">false</span>
+<span class="token comment"># 打开 base 自动激活</span>
+conda config <span class="token parameter variable">--set</span> auto_activate_base <span class="token boolean">true</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><p>检测安装是否成功：配置完环境变量可在任意路径执行下列命令；未配置需要进入安装目录下 (Windows：<code>C:\ProgramData\Miniconda3\Scripts</code> Linux：<code>\miniconda3\bin</code>) 执行指令</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>conda list          <span class="token comment"># 查看已安装的包</span>
+conda <span class="token parameter variable">--version</span>     <span class="token comment"># 查看版本，或-V</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>若出现 <code>conda:command not found</code> 问题</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 编辑'.bashrc'文件</span>
+<span class="token function">vi</span> ~/.bashrc
+
+<span class="token comment"># 再文件末尾加入一下内容，根据需要改变路径</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span>:/home/username/anaconda3/bin
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li></ol> <h3 id="_2-2-配置清华源"><a href="#_2-2-配置清华源" class="header-anchor">#</a> 2.2. 配置清华源</h3> <ol><li><p>linux</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 清华源</span>
+<span class="token comment"># 任意目录下编辑'.condarc'文件</span>
+<span class="token function">vi</span> ~/.condarc
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>windows</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 先创建'.condarc'文件</span>
+<span class="token comment"># 文件一般在 C:\Users\username 目录下</span>
+conda config <span class="token parameter variable">--set</span> show_channel_urls <span class="token function">yes</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>在<code>.condarc</code>中写入以下内容，具体以 <a href="https://mirror.tuna.tsinghua.edu.cn/help/anaconda/" target="_blank" rel="noopener noreferrer">清华源🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 为准</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>channels:
+- defaults
+show_channel_urls: <span class="token boolean">true</span>
+default_channels:
+- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div></li> <li><p>注意上述步骤配置的是 conda 源，如果要使用 pip，还是需要根据 <a href="###-1.1.-%E4%B8%8B%E8%BD%BD%E5%8F%8A%E5%AE%89%E8%A3%85">本文 1.1🔗</a>配置 pip 源</p></li></ol> <h3 id="_2-3-conda-虚拟环境"><a href="#_2-3-conda-虚拟环境" class="header-anchor">#</a> 2.3. conda 虚拟环境</h3> <ol><li><p>环境配置</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 创建一个 python3.7 的环境</span>
+conda create <span class="token parameter variable">--name</span> 环境名 <span class="token assign-left variable">python</span><span class="token operator">=</span><span class="token number">3.7</span>
+<span class="token comment"># 或</span>
+conda create <span class="token parameter variable">-n</span> 环境名 <span class="token assign-left variable">python</span><span class="token operator">=</span><span class="token number">3.7</span>
+
+<span class="token comment"># 克隆现有环境</span>
+conda create <span class="token parameter variable">-n</span> 环境名 <span class="token parameter variable">--clone</span> 现有环境名
+
+<span class="token comment"># 激活环境</span>
+conda activate 环境名
+<span class="token comment"># windows bat 脚本激活 conda</span>
+call activate 环境名
+
+<span class="token comment"># 退出环境</span>
+conda deactivate
+
+<span class="token comment"># 删除环境</span>
+conda remove <span class="token parameter variable">-n</span> 环境名 <span class="token parameter variable">--all</span>
+
+<span class="token comment"># 修改环境名：修改虚拟环境文件夹即可</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><blockquote><p>创建虚拟环境失败，出现<code>an unexpected error has occurred</code>问题，可能是源文件出现问题，需要删除<code>.condarc</code>文件</p></blockquote></li> <li><p>列出所有环境</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>conda info <span class="token parameter variable">--envs</span>   <span class="token comment"># 或 -e</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>安装 python 包</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>conda <span class="token function">install</span> package-name
+pip <span class="token function">install</span> package-name
+<span class="token comment"># 本地包只能用 pip, 但是得用环境下的 pip</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li></ol> <h3 id="_2-4-conda-升级"><a href="#_2-4-conda-升级" class="header-anchor">#</a> 2.4. conda 升级</h3> <ol><li><p>conda 版本升级，打开 Anaconda Powershell Prompt(xxx)</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 如果初始环境不在 base 环境下首先要退出当前虚拟环境</span>
+conda deactivate
+
+<span class="token comment"># 然后输入升级指令</span>
+conda update conda
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li></ol> <h2 id="_3-离线安装库文件"><a href="#_3-离线安装库文件" class="header-anchor">#</a> 3. 离线安装库文件</h2> <h3 id="_3-1-安装-requirements"><a href="#_3-1-安装-requirements" class="header-anchor">#</a> 3.1. 安装 requirements</h3> <ol><li><p>下载离线包并创建需要安装的库文件列表 <code>requirements.txt</code></p> <blockquote><p>最好把基础依赖包放在前面，避免某些包因缺少依赖包导致安装失败，<code>#</code>注释掉不需要安装的包</p></blockquote> <div class="language-python line-numbers-mode"><pre class="language-python"><code>six<span class="token operator">-</span><span class="token number">1.15</span><span class="token number">.0</span><span class="token operator">-</span>py2<span class="token punctuation">.</span>py3<span class="token operator">-</span>none<span class="token operator">-</span><span class="token builtin">any</span><span class="token punctuation">.</span>whl
+numpy<span class="token operator">-</span><span class="token number">1.19</span><span class="token number">.1</span><span class="token operator">-</span>cp37<span class="token operator">-</span>cp37m<span class="token operator">-</span>manylinux1_x86_64<span class="token punctuation">.</span>whl
+scipy<span class="token operator">-</span><span class="token number">1.5</span><span class="token number">.2</span><span class="token operator">-</span>cp37<span class="token operator">-</span>cp37m<span class="token operator">-</span>manylinux1_x86_64<span class="token punctuation">.</span>whl
+certifi<span class="token operator">-</span><span class="token number">2020.6</span><span class="token number">.20</span><span class="token operator">-</span>py2<span class="token punctuation">.</span>py3<span class="token operator">-</span>none<span class="token operator">-</span><span class="token builtin">any</span><span class="token punctuation">.</span>whl
+cycler<span class="token operator">-</span><span class="token number">0.10</span><span class="token number">.0</span><span class="token operator">-</span>py2<span class="token punctuation">.</span>py3<span class="token operator">-</span>none<span class="token operator">-</span><span class="token builtin">any</span><span class="token punctuation">.</span>whl
+pyparsing<span class="token operator">-</span><span class="token number">2.4</span><span class="token number">.7</span><span class="token operator">-</span>py2<span class="token punctuation">.</span>py3<span class="token operator">-</span>none<span class="token operator">-</span><span class="token builtin">any</span><span class="token punctuation">.</span>whl
+pytz<span class="token operator">-</span><span class="token number">2020.1</span><span class="token operator">-</span>py2<span class="token punctuation">.</span>py3<span class="token operator">-</span>none<span class="token operator">-</span><span class="token builtin">any</span><span class="token punctuation">.</span>whl
+python_dateutil<span class="token operator">-</span><span class="token number">2.8</span><span class="token number">.1</span><span class="token operator">-</span>py2<span class="token punctuation">.</span>py3<span class="token operator">-</span>none<span class="token operator">-</span><span class="token builtin">any</span><span class="token punctuation">.</span>whl
+pandas<span class="token operator">-</span><span class="token number">1.1</span><span class="token number">.1</span><span class="token operator">-</span>cp37<span class="token operator">-</span>cp37m<span class="token operator">-</span>manylinux1_x86_64<span class="token punctuation">.</span>whl
+
+<span class="token comment"># Pillow-7.2.0-cp37-cp37m-manylinux1_x86_64.whl</span>
+<span class="token comment"># kiwisolver-1.2.0-cp37-cp37m-manylinux1_x86_64.whl</span>
+<span class="token comment"># matplotlib-3.3.1-cp37-cp37m-manylinux1_x86_64.whl</span>
+
+pyDOE<span class="token operator">-</span><span class="token number">0.3</span><span class="token number">.8</span><span class="token punctuation">.</span><span class="token builtin">zip</span>
+pwlf<span class="token operator">-</span><span class="token number">2.0</span><span class="token number">.4</span><span class="token punctuation">.</span>tar<span class="token punctuation">.</span>gz
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div></li> <li><p>批量安装库</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 批量安装</span>
+pip <span class="token function">install</span> <span class="token parameter variable">-r</span> requirements.txt
+<span class="token comment"># 忽略目录批量安装</span>
+pip <span class="token function">install</span> --no-index <span class="token parameter variable">-r</span> requirements.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li></ol> <h3 id="_3-2-生成-requirements"><a href="#_3-2-生成-requirements" class="header-anchor">#</a> 3.2. 生成 requirements</h3> <ol><li><p>方法 1: 生成 requirements.txt 文件</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 这个方法会包含当前环境下所有库，更推荐方法 2</span>
+pip3 freeze <span class="token operator">&gt;</span>requirements.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>方法 2: 只根据当前项目生成 requirements 文件（推荐）</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 安装库</span>
+pip <span class="token function">install</span> pipreqs
+
+<span class="token comment"># 在项目根目录执行，生成 requirements 文件</span>
+pipreqs <span class="token builtin class-name">.</span> <span class="token parameter variable">--encoding</span><span class="token operator">=</span>utf8 <span class="token parameter variable">--force</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li></ol> <h2 id="_4-vscode-配置-python-环境"><a href="#_4-vscode-配置-python-环境" class="header-anchor">#</a> 4. VSCode 配置 Python 环境</h2> <ol><li><p>安装 Python 插件</p> <img src="/assets/img/Python_vscode.4e1ef04e.png" width="400"></li> <li><p>创建虚拟环境（用全局环境可以跳过）</p></li> <li><p>为项目添加环境</p> <ol><li><p>打开一个 Python 项目</p></li> <li><p><code>Ctrl+Shift+P</code> 打开命令面板</p></li> <li><p>选择 <code>Python：选择解释器</code>(<code>Python: Select Interpreter</code>)</p> <img src="/assets/img/select interpreter.195edbbd.png" width="600"></li> <li><p>用全局环境可以选择已经列出的环境，否则选择<code>Enter interpreter path</code>，然后选<code>find</code>在弹出的窗口中选择已创建的虚拟环境</p> <img src="/assets/img/interpreter_path.e9756b8c.png" width="600"> <img src="/assets/img/find.774ff85d.png" width="600"></li></ol></li> <li><p>添加配置：可以根据自己的项目配置 Python、Django 等</p> <img src="/assets/img/add_config.c4116f0a.gif" width="800"></li> <li><p>然后就可以开始调试运行了</p></li></ol> <h2 id="_5-cuda-安装"><a href="#_5-cuda-安装" class="header-anchor">#</a> 5. CUDA 安装</h2> <ol><li><p>如果需要安装 pytorch, 建议根据 pytorch 的版本选择安装对应的 CUDA 版本，教程当前时间 pytorch 最高支持 cuda 11.3, 因此本文以 11.3 版本为例</p></li> <li><p>检查显卡驱动版本是否兼容 <a href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html" target="_blank" rel="noopener noreferrer">CUDA 版本列表🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>, 一般自动更新的驱动都可以兼容（过于老旧的 Nvidia 卡和所有的 AMD 显卡不支持）</p></li> <li><p>在网上搜索对应版本的 cuda 下载地址（官网不好找版本，直接搜索更方便），比如 <a href="https://developer.nvidia.com/cuda-11.3.0-download-archive" target="_blank" rel="noopener noreferrer">CUDA 11.3🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li> <li><p>安装 CUDA</p> <ol><li><p>执行完安装程序后，在 <code>Path</code> 环境变量中添加以下几条，根据自己的版本和位置修改，如果已经有了就不用添加</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>C:<span class="token punctuation">\</span>Program Files<span class="token punctuation">\</span>NVIDIA GPU Computing Toolkit<span class="token punctuation">\</span>CUDA<span class="token punctuation">\</span>v11.3<span class="token punctuation">\</span>bin
+C:<span class="token punctuation">\</span>Program Files<span class="token punctuation">\</span>NVIDIA GPU Computing Toolkit<span class="token punctuation">\</span>CUDA<span class="token punctuation">\</span>v11.3<span class="token punctuation">\</span>lib
+C:<span class="token punctuation">\</span>Program Files<span class="token punctuation">\</span>NVIDIA GPU Computing Toolkit<span class="token punctuation">\</span>CUDA<span class="token punctuation">\</span>v11.3<span class="token punctuation">\</span>libnvvp
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>测试 cuda, 在 cmd 中输入<code>nvcc -V</code>指令，出现类似下图内容表示安装成功</p> <p><img src="/assets/img/2022-01-17_44.b47aff5e.png" alt="图 3"></p></li> <li><p>测试带宽</p> <p><img src="/assets/img/2022-01-17_67.a9e3aa66.png" alt="图 1"></p></li></ol></li> <li><p>下载安装 <a href="https://developer.nvidia.cn/rdp/cudnn-archive" target="_blank" rel="noopener noreferrer">cudnn🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>, 注意要跟 cuda 版本匹配，CUDA11.3 对应 cudnn8.2.1，需要 nvidia 账号。将解压后的文件放入 cuda 的安装目录 (<code>\CUDA\v11.3\</code>) 即可</p></li> <li><p>安装测试 tensorflow</p> <ol><li><p>python 安装 tensorflow-gpu</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>pip <span class="token function">install</span> tensorflow-gpu
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>测试</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 测试 GPU 配置是否成功</span>
+<span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+
+<span class="token comment"># 显示 1 及以上数字说明配置成功</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Num GPUs Available: &quot;</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>tf<span class="token punctuation">.</span>config<span class="token punctuation">.</span>experimental<span class="token punctuation">.</span>list_physical_devices<span class="token punctuation">(</span><span class="token string">'GPU'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 表示有 1 块 gpu 可以使用</span>
+Num GPUs Available:  <span class="token number">1</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li></ol></li> <li><p><a href="https://blog.csdn.net/XunCiy/article/details/89070315" target="_blank" rel="noopener noreferrer">参考教程🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li></ol> <h2 id="_6-pycharm-使用技巧"><a href="#_6-pycharm-使用技巧" class="header-anchor">#</a> 6. Pycharm 使用技巧</h2> <h3 id="_6-1-模板"><a href="#_6-1-模板" class="header-anchor">#</a> 6.1. 模板</h3> <ol><li><p>打开 File-&gt;Settings-&gt;Editor-&gt;File and Code Templates</p></li> <li><p>选择 Python Script，输入模板</p> <p><img src="/assets/img/pycharm-templates.878c6536.png" alt="Python Script"></p></li> <li><p>常用模板设置</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment">#!/usr/bin/python3</span>
+<span class="token comment"># -*- coding:utf-8 -*-</span>
+
+<span class="token comment"># ------------------</span>
+<span class="token comment"># Project: ${PROJECT_NAME}</span>
+<span class="token comment"># Tittle: ${FILE_NAME}</span>
+<span class="token comment"># Version: python3.7</span>
+<span class="token comment"># DateTime: ${DATE}</span>
+<span class="token comment"># Function:</span>
+<span class="token comment"># ------------------</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div></li> <li><p>系统变量</p> <table><thead><tr><th>变量名</th> <th>内容</th></tr></thead> <tbody><tr><td>${PROJECT_NAME}</td> <td>项目名称</td></tr> <tr><td>${PRODUCT_NAME}</td> <td>IDE 名称</td></tr> <tr><td>${FILE_NAME}</td> <td>文件名</td></tr> <tr><td>${DATE}</td> <td>日期</td></tr> <tr><td>${USER}</td> <td>用户名</td></tr> <tr><td>${YEAR} ${MONTH} ${DAY}</td> <td>年、月、日</td></tr> <tr><td>${HOUR} ${MINUTE}</td> <td>时、分</td></tr></tbody></table></li></ol> <h3 id="_6-2-补全"><a href="#_6-2-补全" class="header-anchor">#</a> 6.2. 补全</h3> <ol><li><p>打开 File-&gt;Settings-&gt;Editor-&gt;Live Templates（文件-&gt;设置-&gt;编辑器-&gt;实时模板）</p></li> <li><p>打开需要创建的程序下拉菜单，然后点击右侧“+”号并选择 Live Template</p></li> <li><p>编辑自动补全：</p> <ol><li>把 &lt;abbreviation&gt; 修改为触发词</li> <li>Description 为解释内容</li> <li>最下面红字，点击后面的 Define 选择适用语言</li> <li>右侧 option 选择触发按键</li></ol></li> <li><p>点击 apply 就完成设置。比如下图的设置，在 HTML 文件里输入<code>&lt;!</code>，然后按 Tab 键就会补全称为<code>&lt;!-- --&gt;</code></p> <p><img src="/assets/img/2018-10-07-16-48-50.3ce20aa8.png" alt="设置"></p></li></ol> <h3 id="_6-3-运行配置"><a href="#_6-3-运行配置" class="header-anchor">#</a> 6.3. 运行配置</h3> <ol><li><p>以 Django 为例 (Pycharm 专业版会自动配置）</p></li> <li><p>点击右上角的<code>Add Configurations</code></p> <p><img src="data:image/png;base64,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" alt="图 1"></p></li> <li><p>点击<code>+</code>号，选择 Python</p> <p><img src="/assets/img/2021-05-15_84.ef9838b9.png" alt="图 2"></p></li> <li><p>根据下图进行配置</p> <p><img src="/assets/img/2021-05-15_90.d4b7c780.png" alt="图 3"></p></li> <li><p>接下来就可以用 Pycharm 右上角的快捷键运行 Django 项目</p></li> <li><p>也可以利用此方法添加 makemigratiosn 和 migrate</p></li></ol> <h3 id="_6-4-terminal-自动激活虚拟环境"><a href="#_6-4-terminal-自动激活虚拟环境" class="header-anchor">#</a> 6.4. Terminal 自动激活虚拟环境</h3> <ol><li><p>打开<code>File-&gt;Settings-&gt;Tools-&gt;Terminal</code>, Shell path 选择 cmd</p> <p><img src="/assets/img/2022-11-21_91.d0f38d05.png" alt="图 1"></p></li></ol> <h2 id="_7-备注"><a href="#_7-备注" class="header-anchor">#</a> 7. 备注</h2> <ol><li><p>常用库</p> <table><thead><tr><th>库</th> <th>功能</th></tr></thead> <tbody><tr><td>altair</td> <td>数据可视化工具</td></tr> <tr><td>django</td> <td>django 网站框架</td></tr> <tr><td>jaydebeapi</td> <td>通过 java 的 jdbc 来连接数据库</td></tr> <tr><td>matplotlib</td> <td>绘图</td></tr> <tr><td>nuitka</td> <td>python 程序打包</td></tr> <tr><td>pandas</td> <td>数据分析工具</td></tr> <tr><td>paramiko</td> <td>ssh 工具</td></tr> <tr><td>pillow-&gt;PIL</td> <td>图片处理</td></tr> <tr><td>pretty_errors</td> <td>python 优化错误显示</td></tr> <tr><td>psutil</td> <td>电脑监控信息读取</td></tr> <tr><td>pulp</td> <td>线性求解</td></tr> <tr><td>pwlf</td> <td>分段线性拟合</td></tr> <tr><td>pyecharts</td> <td>python + echarts</td></tr> <tr><td>pymysql</td> <td>MySQL 数据库</td></tr> <tr><td>pyserial</td> <td>串口</td></tr> <tr><td>scipy</td> <td>科学计算库</td></tr> <tr><td>sympy</td> <td>科学（符号）计算库</td></tr> <tr><td>virtualenv</td> <td>虚拟环境</td></tr></tbody></table></li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">3/30/2023, 2:14:30 PM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/pages/Python/Py-02-数据类型_DataType.html">
+        2. Python 数据类型
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div class="cat-container" data-v-a13867c0><canvas id="vuepress-cat" width="280" height="250" class="live2d" data-v-a13867c0></canvas></div></div></div>
+    <script src="/assets/js/app.bf86356c.js" defer></script><script src="/assets/js/2.6938d6ea.js" defer></script><script src="/assets/js/3.d7ced79a.js" defer></script>
+  </body>
+</html>

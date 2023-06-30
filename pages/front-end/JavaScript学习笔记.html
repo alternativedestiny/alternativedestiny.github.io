@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JavaScript 学习笔记 | 北方酱Hoppou~</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/hoppou_nobg.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="北方酱Hoppou~的个人主页">
+    
+    <link rel="preload" href="/assets/css/0.styles.80a5cd61.css" as="style"><link rel="preload" href="/assets/js/app.bf86356c.js" as="script"><link rel="preload" href="/assets/js/2.6938d6ea.js" as="script"><link rel="preload" href="/assets/js/64.95d3600e.js" as="script"><link rel="prefetch" href="/assets/js/10.bdca0d0f.js"><link rel="prefetch" href="/assets/js/11.9c73297f.js"><link rel="prefetch" href="/assets/js/12.cefb5eb3.js"><link rel="prefetch" href="/assets/js/13.ca6f67af.js"><link rel="prefetch" href="/assets/js/14.aa571088.js"><link rel="prefetch" href="/assets/js/15.4b03a2d2.js"><link rel="prefetch" href="/assets/js/16.0b5aec7f.js"><link rel="prefetch" href="/assets/js/17.d10fbfcf.js"><link rel="prefetch" href="/assets/js/18.36f2bd4c.js"><link rel="prefetch" href="/assets/js/19.15e74034.js"><link rel="prefetch" href="/assets/js/20.ffefd55c.js"><link rel="prefetch" href="/assets/js/21.24c9c02a.js"><link rel="prefetch" href="/assets/js/22.f8d73958.js"><link rel="prefetch" href="/assets/js/23.cea2b23f.js"><link rel="prefetch" href="/assets/js/24.6606b9ff.js"><link rel="prefetch" href="/assets/js/25.7e2c4009.js"><link rel="prefetch" href="/assets/js/26.2f486bca.js"><link rel="prefetch" href="/assets/js/27.f4499c41.js"><link rel="prefetch" href="/assets/js/28.5a381f2d.js"><link rel="prefetch" href="/assets/js/29.41102da9.js"><link rel="prefetch" href="/assets/js/3.d7ced79a.js"><link rel="prefetch" href="/assets/js/30.3ffc23c2.js"><link rel="prefetch" href="/assets/js/31.077ec6e9.js"><link rel="prefetch" href="/assets/js/32.d21611cb.js"><link rel="prefetch" href="/assets/js/33.38ceb61b.js"><link rel="prefetch" href="/assets/js/34.59a0c927.js"><link rel="prefetch" href="/assets/js/35.255eafcb.js"><link rel="prefetch" href="/assets/js/36.41916c0d.js"><link rel="prefetch" href="/assets/js/37.3577f14e.js"><link rel="prefetch" href="/assets/js/38.071709da.js"><link rel="prefetch" href="/assets/js/39.097851a2.js"><link rel="prefetch" href="/assets/js/4.0244df3b.js"><link rel="prefetch" href="/assets/js/40.d59840e6.js"><link rel="prefetch" href="/assets/js/41.ad25d8ab.js"><link rel="prefetch" href="/assets/js/42.b7fe8f20.js"><link rel="prefetch" href="/assets/js/43.0af61973.js"><link rel="prefetch" href="/assets/js/44.e566586b.js"><link rel="prefetch" href="/assets/js/45.d267435e.js"><link rel="prefetch" href="/assets/js/46.25a0d6c7.js"><link rel="prefetch" href="/assets/js/47.60f82362.js"><link rel="prefetch" href="/assets/js/48.2bb12b8d.js"><link rel="prefetch" href="/assets/js/49.5662a3a5.js"><link rel="prefetch" href="/assets/js/5.80568f0c.js"><link rel="prefetch" href="/assets/js/50.2554a84b.js"><link rel="prefetch" href="/assets/js/51.eaf58ddb.js"><link rel="prefetch" href="/assets/js/52.1ced69b6.js"><link rel="prefetch" href="/assets/js/53.9fcc79ec.js"><link rel="prefetch" href="/assets/js/54.079120a0.js"><link rel="prefetch" href="/assets/js/55.2aeb89d2.js"><link rel="prefetch" href="/assets/js/56.d39d2ed5.js"><link rel="prefetch" href="/assets/js/57.d7667a7f.js"><link rel="prefetch" href="/assets/js/58.21d55374.js"><link rel="prefetch" href="/assets/js/59.36cbba10.js"><link rel="prefetch" href="/assets/js/6.cb285fdc.js"><link rel="prefetch" href="/assets/js/60.f56e1f99.js"><link rel="prefetch" href="/assets/js/61.85d4e33a.js"><link rel="prefetch" href="/assets/js/62.09de7b0c.js"><link rel="prefetch" href="/assets/js/63.d4950e6d.js"><link rel="prefetch" href="/assets/js/65.b44dc974.js"><link rel="prefetch" href="/assets/js/66.88899658.js"><link rel="prefetch" href="/assets/js/67.042d954c.js"><link rel="prefetch" href="/assets/js/68.ac7810f1.js"><link rel="prefetch" href="/assets/js/69.4f9e7e09.js"><link rel="prefetch" href="/assets/js/7.6a9b305d.js"><link rel="prefetch" href="/assets/js/70.48b19758.js"><link rel="prefetch" href="/assets/js/71.748e8cf7.js"><link rel="prefetch" href="/assets/js/72.d50bef4b.js"><link rel="prefetch" href="/assets/js/73.0ac924bc.js"><link rel="prefetch" href="/assets/js/74.ef39d98b.js"><link rel="prefetch" href="/assets/js/75.4b8f6284.js"><link rel="prefetch" href="/assets/js/76.018f7ad0.js"><link rel="prefetch" href="/assets/js/77.69175c21.js"><link rel="prefetch" href="/assets/js/78.da0cf581.js"><link rel="prefetch" href="/assets/js/79.fbdce5ea.js"><link rel="prefetch" href="/assets/js/8.9c0ce64e.js"><link rel="prefetch" href="/assets/js/80.5ff6044c.js"><link rel="prefetch" href="/assets/js/81.972cb6f6.js"><link rel="prefetch" href="/assets/js/82.c1c485ba.js"><link rel="prefetch" href="/assets/js/83.6fe57a40.js"><link rel="prefetch" href="/assets/js/84.6fadc008.js"><link rel="prefetch" href="/assets/js/85.05e412a1.js"><link rel="prefetch" href="/assets/js/86.1fe91a31.js"><link rel="prefetch" href="/assets/js/87.99ed37ff.js"><link rel="prefetch" href="/assets/js/88.bd5c1c43.js"><link rel="prefetch" href="/assets/js/89.96dd7681.js"><link rel="prefetch" href="/assets/js/9.1901a415.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.80a5cd61.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/hoppou_nobg.jpg" alt="北方酱Hoppou~" class="logo"> <span class="site-name can-hide">北方酱Hoppou~</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Py-01-环境_Env.html" class="nav-link">
+  Py-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-02-数据类型_DataType.html" class="nav-link">
+  Py-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-03-文件处理_File.html" class="nav-link">
+  Py-03-文件处理_File
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-04-Numpy.html" class="nav-link">
+  Py-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-05-Pandas.html" class="nav-link">
+  Py-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-06-绘图_Plot.html" class="nav-link">
+  Py-06-绘图_Plot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-07-SciPy.html" class="nav-link">
+  Py-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-08-Pyinstaller.html" class="nav-link">
+  Py-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-09-Database.html" class="nav-link">
+  Py-09-Database
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-10-Neo4j.html" class="nav-link">
+  Py-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-11-Django.html" class="nav-link">
+  Py-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-12-Word2Vec.html" class="nav-link">
+  Py-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-13-PyTorch.html" class="nav-link">
+  Py-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-14-Keras.html" class="nav-link">
+  Py-14-Keras
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-15-Sklearn.html" class="nav-link">
+  Py-15-Sklearn
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-16-Tkinter.html" class="nav-link">
+  Py-16-Tkinter
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-17-Geatpy.html" class="nav-link">
+  Py-17-Geatpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-18-MachineLearning.html" class="nav-link">
+  Py-18-MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-19-PandaPower.html" class="nav-link">
+  Py-19-PandaPower
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-20-PyQt.html" class="nav-link">
+  Py-20-PyQt
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py_代码块.html" class="nav-link">
+  Py_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境_Env.html" class="nav-link">
+  Cpp-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型_DataType.html" class="nav-link">
+  Cpp-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构_DataStruct.html" class="nav-link">
+  Cpp-03-数据结构_DataStruct
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针_Point.html" class="nav-link">
+  Cpp-04-指针_Point
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数_Func.html" class="nav-link">
+  Cpp-05-函数_Func
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出&amp;文件_IO.html" class="nav-link">
+  Cpp-06-输入输出&amp;文件_IO
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象_Class.html" class="nav-link">
+  Cpp-07-面向对象_Class
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-08-知识点_Knowledge.html" class="nav-link">
+  Cpp-08-知识点_Knowledge
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/强化学习.html" class="nav-link">
+  强化学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/朴素贝叶斯.html" class="nav-link">
+  朴素贝叶斯
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/统计学习方法.html" class="nav-link">
+  统计学习方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Go 学习笔记.html" class="nav-link">
+  Go 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/KotlinNote.html" class="nav-link">
+  KotlinNote
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MATLAB笔记.html" class="nav-link">
+  MATLAB笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VSCode插件开发.html" class="nav-link">
+  VSCode插件开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Windows笔记.html" class="nav-link">
+  Windows笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Word 技巧.html" class="nav-link">
+  Word 技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><span class="title">Python</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python" class="mobile-dropdown-title"><span class="title">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Python/Py-01-环境_Env.html" class="nav-link">
+  Py-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-02-数据类型_DataType.html" class="nav-link">
+  Py-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-03-文件处理_File.html" class="nav-link">
+  Py-03-文件处理_File
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-04-Numpy.html" class="nav-link">
+  Py-04-Numpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-05-Pandas.html" class="nav-link">
+  Py-05-Pandas
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-06-绘图_Plot.html" class="nav-link">
+  Py-06-绘图_Plot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-07-SciPy.html" class="nav-link">
+  Py-07-SciPy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-08-Pyinstaller.html" class="nav-link">
+  Py-08-Pyinstaller
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-09-Database.html" class="nav-link">
+  Py-09-Database
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-10-Neo4j.html" class="nav-link">
+  Py-10-Neo4j
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-11-Django.html" class="nav-link">
+  Py-11-Django
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-12-Word2Vec.html" class="nav-link">
+  Py-12-Word2Vec
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-13-PyTorch.html" class="nav-link">
+  Py-13-PyTorch
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-14-Keras.html" class="nav-link">
+  Py-14-Keras
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-15-Sklearn.html" class="nav-link">
+  Py-15-Sklearn
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-16-Tkinter.html" class="nav-link">
+  Py-16-Tkinter
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-17-Geatpy.html" class="nav-link">
+  Py-17-Geatpy
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-18-MachineLearning.html" class="nav-link">
+  Py-18-MachineLearning
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-19-PandaPower.html" class="nav-link">
+  Py-19-PandaPower
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py-20-PyQt.html" class="nav-link">
+  Py-20-PyQt
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Python/Py_代码块.html" class="nav-link">
+  Py_代码块
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="C++" class="dropdown-title"><span class="title">C++</span> <span class="arrow down"></span></button> <button type="button" aria-label="C++" class="mobile-dropdown-title"><span class="title">C++</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-01-环境_Env.html" class="nav-link">
+  Cpp-01-环境_Env
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-02-数据类型_DataType.html" class="nav-link">
+  Cpp-02-数据类型_DataType
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-03-数据结构_DataStruct.html" class="nav-link">
+  Cpp-03-数据结构_DataStruct
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-04-指针_Point.html" class="nav-link">
+  Cpp-04-指针_Point
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-05-函数_Func.html" class="nav-link">
+  Cpp-05-函数_Func
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-06-输入输出&amp;文件_IO.html" class="nav-link">
+  Cpp-06-输入输出&amp;文件_IO
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-07-面向对象_Class.html" class="nav-link">
+  Cpp-07-面向对象_Class
+</a></li><li class="dropdown-item"><!----> <a href="/pages/C++/Cpp-08-知识点_Knowledge.html" class="nav-link">
+  Cpp-08-知识点_Knowledge
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器学习" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器学习" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/machine-learning/01-机器学习目录.html" class="nav-link">
+  01-机器学习目录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/DBSCAN密度聚类算法.html" class="nav-link">
+  DBSCAN密度聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/K-Means聚类算法.html" class="nav-link">
+  K-Means聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/LSTM学习笔记.html" class="nav-link">
+  LSTM学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/sklearn中SVM程序.html" class="nav-link">
+  sklearn中SVM程序
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/强化学习.html" class="nav-link">
+  强化学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/朴素贝叶斯.html" class="nav-link">
+  朴素贝叶斯
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/机器学习.html" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/统计学习方法.html" class="nav-link">
+  统计学习方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/聚类算法.html" class="nav-link">
+  聚类算法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/machine-learning/预测评价指标.html" class="nav-link">
+  预测评价指标
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程" class="mobile-dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/Docker笔记.html" class="nav-link">
+  Docker笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Git学习笔记.html" class="nav-link">
+  Git学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Go 学习笔记.html" class="nav-link">
+  Go 学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Java学习笔记.html" class="nav-link">
+  Java学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/KotlinNote.html" class="nav-link">
+  KotlinNote
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/libsvm学习笔记.html" class="nav-link">
+  libsvm学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Linux学习笔记.html" class="nav-link">
+  Linux学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Markdown语法.html" class="nav-link">
+  Markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MATLAB笔记.html" class="nav-link">
+  MATLAB笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/MySQL笔记.html" class="nav-link">
+  MySQL笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/TCP IP学习笔记.html" class="nav-link">
+  TCP IP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/Tomcat笔记.html" class="nav-link">
+  Tomcat笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/力扣题解.html" class="nav-link">
+  力扣题解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/文件系统.html" class="nav-link">
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/study/算法笔记.html" class="nav-link">
+  算法笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/front-end/electron打包web应用流程.html" class="nav-link">
+  electron打包web应用流程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Electron笔记.html" class="nav-link">
+  Electron笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/ElementUI笔记.html" class="nav-link">
+  ElementUI笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/HTTP学习笔记.html" class="nav-link">
+  HTTP学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/JavaScript学习笔记.html" class="nav-link">
+  JavaScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Nginx笔记.html" class="nav-link">
+  Nginx笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/NodeJS笔记.html" class="nav-link">
+  NodeJS笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/PHP读取数据库方法.html" class="nav-link">
+  PHP读取数据库方法
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/TypeScript学习笔记.html" class="nav-link">
+  TypeScript学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VSCode插件开发.html" class="nav-link">
+  VSCode插件开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue-cli笔记.html" class="nav-link">
+  Vue-cli笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/VuePress笔记.html" class="nav-link">
+  VuePress笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/front-end/Vue学习笔记.html" class="nav-link">
+  Vue学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件" class="dropdown-title"><span class="title">软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="软件" class="mobile-dropdown-title"><span class="title">软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/skill/VSCode技巧.html" class="nav-link">
+  VSCode技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Windows笔记.html" class="nav-link">
+  Windows笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/Word 技巧.html" class="nav-link">
+  Word 技巧
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/使用natapp发布个人网站.html" class="nav-link">
+  使用natapp发布个人网站
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/常用工具软件.html" class="nav-link">
+  常用工具软件
+</a></li><li class="dropdown-item"><!----> <a href="/pages/skill/微软官方硬盘备份软件SyncToy.html" class="nav-link">
+  微软官方硬盘备份软件SyncToy
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/others/test.html" class="nav-link">
+  功能演示
+</a></div><div class="nav-item"><a href="/pages/others/aboutme.html" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://alternativedestiny.github.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://hoppou.gitee.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/front-end/electron打包web应用流程.html" class="sidebar-link">electron 打包web应用流程</a></li><li><a href="/pages/front-end/Electron笔记.html" class="sidebar-link">Electron 笔记</a></li><li><a href="/pages/front-end/ElementUI笔记.html" class="sidebar-link">ElementUI 笔记</a></li><li><a href="/pages/front-end/HTTP学习笔记.html" class="sidebar-link">HTTP学习笔记</a></li><li><a href="/pages/front-end/JavaScript学习笔记.html" class="active sidebar-link">JavaScript 学习笔记</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_1-js-数据类型" class="sidebar-link">1. JS 数据类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_1-1-基础数据类型" class="sidebar-link">1.1. 基础数据类型</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_1-2-数字-number" class="sidebar-link">1.2. 数字 Number</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_1-3-字符串-string" class="sidebar-link">1.3. 字符串 String</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_1-4-数组-array" class="sidebar-link">1.4. 数组 Array</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_1-5-json" class="sidebar-link">1.5. JSON</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_2-定义变量" class="sidebar-link">2. 定义变量</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_3-操作符" class="sidebar-link">3. 操作符</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_4-函数" class="sidebar-link">4. 函数</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_5-执行环境及作用域" class="sidebar-link">5. 执行环境及作用域</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_6-引用类型" class="sidebar-link">6. 引用类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_6-1-object-类型" class="sidebar-link">6.1. Object 类型</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_6-2-数组-array-类型" class="sidebar-link">6.2. 数组 Array 类型</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_6-3-日期-date-类型" class="sidebar-link">6.3. 日期 Date 类型</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_6-4-正则-regexp-类型" class="sidebar-link">6.4. 正则 RegExp 类型</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_6-5-函数-function-类型" class="sidebar-link">6.5. 函数 Function 类型</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_6-6-基本包装类型" class="sidebar-link">6.6. 基本包装类型</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_6-7-单体内置对象" class="sidebar-link">6.7. 单体内置对象</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_7-面向对象" class="sidebar-link">7. 面向对象</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_8-函数表达式" class="sidebar-link">8. 函数表达式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_8-1-函数的表达式" class="sidebar-link">8.1. 函数的表达式</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_9-选择器" class="sidebar-link">9. 选择器</a></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_10-dom-操作" class="sidebar-link">10. DOM 操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_10-1-操作属性-jquery" class="sidebar-link">10.1. 操作属性 jQuery</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_11-读写文件-nodejs" class="sidebar-link">11. 读写文件 (NodeJS)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_11-1-json-文件处理" class="sidebar-link">11.1. Json 文件处理</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/front-end/JavaScript学习笔记.html#_12-未完待续" class="sidebar-link">12. 未完待续</a></li></ul></li><li><a href="/pages/front-end/Nginx笔记.html" class="sidebar-link">Nginx 笔记</a></li><li><a href="/pages/front-end/NodeJS笔记.html" class="sidebar-link">NodeJS 笔记</a></li><li><a href="/pages/front-end/PHP读取数据库方法.html" class="sidebar-link">PHP读取数据库方法</a></li><li><a href="/pages/front-end/TypeScript学习笔记.html" class="sidebar-link">TypeScript 学习笔记</a></li><li><a href="/pages/front-end/VSCode插件开发.html" class="sidebar-link">VSCode 插件开发</a></li><li><a href="/pages/front-end/Vue-cli笔记.html" class="sidebar-link">Vue3 学习笔记</a></li><li><a href="/pages/front-end/VuePress笔记.html" class="sidebar-link">VuePress 笔记</a></li><li><a href="/pages/front-end/Vue学习笔记.html" class="sidebar-link">Vue 学习笔记</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="javascript-学习笔记"><a href="#javascript-学习笔记" class="header-anchor">#</a> JavaScript 学习笔记</h1> <h2 id="_1-js-数据类型"><a href="#_1-js-数据类型" class="header-anchor">#</a> 1. JS 数据类型</h2> <h3 id="_1-1-基础数据类型"><a href="#_1-1-基础数据类型" class="header-anchor">#</a> 1.1. 基础数据类型</h3> <table><thead><tr><th>类型</th> <th>简介</th></tr></thead> <tbody><tr><td>Undefined</td> <td>未定义，声明但未初始化</td></tr> <tr><td>Boolean</td> <td>布尔值</td></tr> <tr><td>String</td> <td>字符串</td></tr> <tr><td>Number</td> <td>数值</td></tr> <tr><td>Object</td> <td>对象或 null</td></tr> <tr><td>Function</td> <td>函数</td></tr></tbody></table> <ul><li>布尔值转换为 True 的值：<code>true</code>, <code>非空字符串</code>, <code>非零数字</code>, <code>对象</code>, <code>N/A</code></li> <li>布尔值转换为 False 的值：<code>&quot;&quot;</code>, <code>0</code>, <code>NaN</code>, <code>null</code>, <code>undefined</code></li></ul> <h3 id="_1-2-数字-number"><a href="#_1-2-数字-number" class="header-anchor">#</a> 1.2. 数字 Number</h3> <ol><li><p>取整</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 取整</span>
+<span class="token function">parseInt</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 向下取整</span>
+Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 向上取整</span>
+Math<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 四舍五入</span>
+Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li></ol> <h3 id="_1-3-字符串-string"><a href="#_1-3-字符串-string" class="header-anchor">#</a> 1.3. 字符串 String</h3> <ol><li><p>查</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 字符串长度</span>
+str<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>截取</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 截取从 m（包括）到 n（不包括）的字符，支持负数</span>
+str<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>模板字符串</p> <blockquote><p>模板字符串使用反引号 (``) 代替单双引号，${变量}来表示变量</p></blockquote> <div class="language-js line-numbers-mode"><pre class="language-js"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">a + b = </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>a <span class="token operator">+</span> b<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ol> <h3 id="_1-4-数组-array"><a href="#_1-4-数组-array" class="header-anchor">#</a> 1.4. 数组 Array</h3> <ol><li><p>数组</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 新建数组</span>
+<span class="token keyword">let</span> myarray <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 或者</span>
+<span class="token keyword">let</span> myarray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 也可以直接赋值</span>
+<span class="token keyword">let</span> myarray <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 或者</span>
+<span class="token keyword">let</span> myarray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 获取数组长度</span>
+<span class="token keyword">let</span> num <span class="token operator">=</span> myarray<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div></li> <li><p>查</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 查询元素所的索引：前向查询</span>
+myarray<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 查询元素所的索引：后向查询</span>
+myarray<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 查询函数</span>
+myarray<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></li> <li><p>增</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 在数组的末尾添加</span>
+myarray<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 在指定位置插入</span>
+myarray<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 在第 i 个元素前面插入 1</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li> <li><p>删</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 删除单个元素：先找到索引，再删除元素</span>
+<span class="token keyword">let</span> index <span class="token operator">=</span> myarray<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myarray<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 删除第 i 个元素后的 n 个元素</span>
+myarray<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li> <li><p>二维数组</p></li> <li><p>参考</p> <ul><li><a href="https://cloud.tencent.com/developer/article/1780467?from=information.detail.js%20%E6%95%B0%E7%BB%84%E9%A6%96%E4%BD%8D%E6%B7%BB%E5%8A%A0" target="_blank" rel="noopener noreferrer">数组操作🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ol> <h3 id="_1-5-json"><a href="#_1-5-json" class="header-anchor">#</a> 1.5. JSON</h3> <h2 id="_2-定义变量"><a href="#_2-定义变量" class="header-anchor">#</a> 2. 定义变量</h2> <table><thead><tr><th>var</th> <th>let</th> <th>const</th></tr></thead> <tbody><tr><td>存在变量提升</td> <td>不存在变量提升</td> <td>不存在变量提升</td></tr> <tr><td>代码块外部可调用</td> <td>存在块级作用域</td> <td>存在块级作用域</td></tr> <tr><td></td> <td></td> <td>赋值后不可改变</td></tr></tbody></table> <h2 id="_3-操作符"><a href="#_3-操作符" class="header-anchor">#</a> 3. 操作符</h2> <ol><li><p>一元操作符</p> <ol><li>++:   ++变量</li> <li>--:   --变量</li> <li>+:   +变量，不会产生任何操作</li> <li>-:   -变量，转为负数</li></ol></li> <li><p>位操作符：正负数以二进制码存储，负数使用的格式是二进制补码，负数=二进制正数取反+1</p> <ol><li>按位非 (NOT)——~变量</li> <li>按位与 (AND)——变量&amp;变量</li> <li>按位或 (OR)——变量|变量</li> <li>按位异或 (XOR)——变量^变量</li> <li>左移——变量&lt;&lt;位数，用 0 填充</li> <li>有符号右移——变量&gt;&gt;位数，保留符号位，用符号位填充</li> <li>无符号右移——变量&gt;&gt;&gt;位数，用 0 填充</li></ol></li> <li><p>布尔操作符</p> <ol><li>逻辑非——! 变量</li> <li>逻辑与——变量&amp;&amp;变量</li> <li>逻辑或——变量||变量</li></ol></li> <li><p>乘性操作符 * / %</p></li> <li><p>加性操作符 + -</p></li> <li><p>关系操作符 &lt; &gt; &lt;= &gt;=</p></li> <li><p>相等操作符</p> <ol><li>相等和不相等（先转换再比较） == !=</li> <li>全等和不全等（仅比较而不转换） === !==</li></ol></li> <li><p>条件操作符</p> <ol><li>variable = boolean_expression ? true_value : false_value</li></ol></li> <li><p>赋值操作符 = *= /= += -= &lt;&lt;= &gt;&gt;= &gt;&gt;&gt;=</p></li> <li><p>逗号操作符</p></li></ol> <h2 id="_4-函数"><a href="#_4-函数" class="header-anchor">#</a> 4. 函数</h2> <ol><li><p>理解参数：ECMAScript 函数不介意传递进来多少个参数，也不在乎传递进来的参数是什么数据类型</p></li> <li><p>没有重载：如果再 ECMAScript 中定义了两个相同名字的函数，则该名字只属于后定义的函数</p></li></ol> <h2 id="_5-执行环境及作用域"><a href="#_5-执行环境及作用域" class="header-anchor">#</a> 5. 执行环境及作用域</h2> <ol><li>基本类型和引用类型的值
+<ol><li>动态的属性
+对于引用类型的值，可以添加属性和方法，也可以改变和删除其属性和方法；但是不能给基本类型的值添加属性。</li> <li>复制变量的值
+引用类型复制后还是指向同一个对象，变化相互影响；基本类型的值复制后完全独立，不会相互影响</li> <li>传递参数
+ECMAScript 中的所有函数的参数都是按值传递的</li> <li>检测类型
+<ul><li>检测基本类型数据：typeof variable</li> <li>检测引用类型数据：variable instanceof constructor</li></ul></li></ol></li> <li>执行环境与作用域
+<ol><li>执行环境 (execution context, 也称“环境”)
+<ul><li>全局执行环境是最外围的一个执行环境</li> <li>每个函数都有自己的执行环境</li></ul></li> <li>延长作用域链，当执行流进入下面的任何一个语句时，作用链就会加长
+<ul><li>try-catch 语句中的 catch 块</li> <li>with 语句</li></ul></li> <li>JS 没有块级作用域，C、C++、Java 有块级作用域
+<ul><li>let 声明的变量只作用于块级，var 声明的变量就会自动添加到最接近的环境中（函数的局部环境）, 这就是变量提升</li> <li>如果初始化变量时没有用 var 声明，该变量会自动被添加到全局环境</li></ul></li> <li>搜索过程从作用域的前端开始，向上逐级查询与给定的名字匹配的标识符。</li></ol></li> <li>垃圾收集：JavaScript 是一门具有自动垃圾回收机制的编程语言
+<ol><li><ul><li>[x] 标记清除（常用）</li></ul> <ol><li>给内存中的所有变量添加标记</li> <li>去掉环境中的变量和环境中变量引用变量的标记</li> <li>此时被标记的变量就是准备删除的变量</li> <li>垃圾回收器完成内存清除工作</li></ol></li> <li><ul><li>[ ] 引用计数（不常用，有循环引用的问题）</li></ul></li> <li>性能问题，垃圾回收器太频繁运行会导致性能问题</li> <li>管理内存
+解除引用：一旦数据不再有用，最好将其值设置为 null 来释放其引用</li></ol></li></ol> <h2 id="_6-引用类型"><a href="#_6-引用类型" class="header-anchor">#</a> 6. 引用类型</h2> <p>在 ECMAScript 中，引用类型是一种数据结构，用于将数据和功能组织在一起。</p> <h3 id="_6-1-object-类型"><a href="#_6-1-object-类型" class="header-anchor">#</a> 6.1. Object 类型</h3> <ol><li><p>创建 object 实例有两种方法</p> <ul><li><p>[ ] 使用 new 操作符后跟 Object 构造函数</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+person<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;Nicholas&quot;</span><span class="token punctuation">;</span>
+person<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">19</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>[x] 使用<em>对象字面量</em>表示法</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span> <span class="token operator">:</span> <span class="token string">&quot;Nicholas&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">age</span> <span class="token operator">:</span> <span class="token number">19</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li></ul></li> <li><p>访问对象属性也有两种方法</p> <ul><li><p>[x] 点表示法</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>[ ] 方括号语法，若果属性名使用的是关键字或保留字，用方括号就不会报错</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ul></li></ol> <h3 id="_6-2-数组-array-类型"><a href="#_6-2-数组-array-类型" class="header-anchor">#</a> 6.2. 数组 Array 类型</h3> <ol><li><p>创建数组方法</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> colors <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> colors <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;red&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;blue&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;green&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><p>检测数组</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">if</span><span class="token punctuation">(</span>value <span class="token keyword">instanceof</span> <span class="token class-name">Array</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 对数组执行某些操作</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 对数组执行某些操作</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li> <li><p>属性</p> <table><thead><tr><th>属性</th> <th>功能</th></tr></thead> <tbody><tr><td>constructor</td> <td>返回对创建此对象的数组函数的引用</td></tr> <tr><td>length</td> <td>设置或返回数组元素的数目</td></tr> <tr><td>prototype</td> <td>向对象添加属性或方法</td></tr></tbody></table></li> <li><p>增</p></li> <li><p>删</p></li> <li><p>改</p> <ol><li><p>字符串分割</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>arr<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ol></li> <li><p>查</p></li> <li><p>转换方法</p> <ol><li>.toString()</li> <li>.valueOf()</li> <li>.toLocalString()</li> <li>.join()——改变数组分隔符</li></ol></li> <li><p>栈方法</p> <ol><li>.push()——推入队尾，返回修改后长度</li> <li>.pop()——移除队尾，返回移除的项</li></ol></li> <li><p>队列方法</p> <ol><li>.push()——推入队尾，返回修改后长度</li> <li>.shift()——移除第一项，并返回该项</li> <li>.unshift()——在数组前端插入，并返回长度</li></ol></li> <li><p>重排序方法</p> <ol><li><p>.reverse()——反向</p></li> <li><p>.sort()——从小到大排序，按字符串排序</p></li> <li><p>按数值排序</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">compare</span><span class="token punctuation">(</span><span class="token parameter">value1<span class="token punctuation">,</span> value2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> value2 <span class="token operator">-</span> value1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+arr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>compare<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li></ol></li> <li><p>操作方法</p> <ol><li><p>.concat()——数组拼接，不影响原数组</p></li> <li><p>.slice()——数组截取，不影响原数组</p></li> <li><p>.splice()——主要用途是向数组中插入项，影响原数组</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>arr<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> num2<span class="token punctuation">,</span> arr1<span class="token punctuation">)</span>——删除位置，删除数量，插入数组
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ol></li> <li><p>位置方法</p> <ol><li>.indexOf()——查找元素所在位置，（可选）查找起点位置</li> <li>.lastIndexOf()—— 从末尾向前查找</li></ol></li> <li><p>迭代方法
+影响 this 的值。传入这些方法中的函数会接受三个参数：数组项的值、该项在数组中的位置、数组对象本身。</p> <ol><li>.every()——对数组的每一项运行给定函数，每项返回 True 则返回 True</li> <li>.filter()——对数组的每一项运行给定函数，返回该函数会返回 True 的项组成的数组</li> <li>.forEach()——对数组的每一项运行给定函数，没有返回值</li> <li>.map()——对数组的每一项运行给定函数，返回每次函数调用的结果组成的数组</li> <li>.some()——对数组的每一项运行给定函数，只要有一项返回 True 则返回 True</li></ol></li> <li><p>归并方法</p> <ol><li>这两个方法都接收两个参数：在每一项上调用的函数和（可选的）作为归并基础的初始值</li> <li>传递给函数 4 个参数：前一个值、当前值、项的索引、数组对象</li> <li>.reduce()——从数组的第一项开始，逐个遍历到最后</li> <li>.reduceRight()——从数组的最后一项开始，向前遍历到第一项</li></ol></li></ol> <h3 id="_6-3-日期-date-类型"><a href="#_6-3-日期-date-类型" class="header-anchor">#</a> 6.3. 日期 Date 类型</h3> <ol><li>Date 类型
+<ul><li>Date.parse()</li> <li>Date.UTC()</li> <li>Date.now()</li></ul></li> <li>继承方法
+<ul><li>.toLocalString()</li> <li>.toString()</li> <li>.valueOf()</li></ul></li> <li>日期格式化方法</li> <li>日期时间组件</li></ol> <h3 id="_6-4-正则-regexp-类型"><a href="#_6-4-正则-regexp-类型" class="header-anchor">#</a> 6.4. 正则 RegExp 类型</h3> <ol><li><p>ECMAScript 通过 RegExp 类型来支持正则表达式。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> expression <span class="token operator">=</span> <span class="token operator">/</span> pattern（模式） <span class="token operator">/</span> flags（标志）
+<span class="token keyword">var</span> expression <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">&quot;pattern&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;flags&quot;</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ul><li>flags——g: 全局模式；i: 不区分大小写模式；m: 多行模式</li> <li>元字符需转义</li></ul></li> <li><p>RegExp 实例属性</p> <ul><li>global——布尔值，表示是否设置了 g 标志</li> <li>ignoreCase——布尔值，表示是否设置了 i 标志</li> <li>lastIndex——整数，表示开始搜索下一个匹配项的字符位置，从 0 开始</li> <li>multiline——布尔值，表示是否设置了 m 标志</li> <li>source——正则表达式的字符串表示</li></ul></li> <li><p>RegExp 实例方法</p> <ul><li>.ecec()——捕获组
+<ul><li>.index——表示匹配项所在字符串中的位置</li> <li>.input——表示应用正则表达式的字符串</li></ul></li></ul></li> <li><p>RegExp 构造函数属性</p></li> <li><p>模式的局限性</p></li></ol> <h3 id="_6-5-函数-function-类型"><a href="#_6-5-函数-function-类型" class="header-anchor">#</a> 6.5. 函数 Function 类型</h3> <ol><li><p>声明函数</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 函数声明，会有函数声明提升的过程</span>
+<span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+     <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+ <span class="token comment">// 函数表达式，不会提升</span>
+<span class="token keyword">var</span> <span class="token function-variable function">sum</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li> <li><p>作为值的函数
+因为 ECMAScript 中的函数名本来就是变量，所以函数也可以作为值来使用。</p></li> <li><p>函数内部的值</p> <ol><li>arguments
+是一个类数组对象，包含着传入函数中的所有参数
+arguments.callee 是一个指针，指向拥有这个 arguments 的函数，可以解除函数代码耦合</li> <li>this
+this 引用的是函数执行的环境对象</li> <li>.caller
+这个属性中保存着调用当前函数的函数的引用</li></ol></li> <li><p>函数的属性和方法</p> <ol><li>length: 表示函数希望接受命名参数的个数</li> <li>prototype: 保存他们所有实例方法的真正所在</li></ol></li></ol> <h3 id="_6-6-基本包装类型"><a href="#_6-6-基本包装类型" class="header-anchor">#</a> 6.6. 基本包装类型</h3> <ol><li>Boolean 类型
+<ol><li>布尔表达式中的所有对象都会被转换成 true, 因此 falseObject 对象在布尔表达式中代表的是 true</li> <li>建议不要使用 Boolean 对象</li></ol></li> <li>Number 类型
+<ol><li><p>Number 对象</p> <ul><li>valueOf() 方法返回对象表示的基本类型的数值</li> <li>toString() 和 toLocalString() 返回字符串的形式的数值</li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> numberObject <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Number</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> numberObject<span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// number</span>
+<span class="token keyword">var</span> c <span class="token operator">=</span> numberObject<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// string</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>Number 变量的方法</p> <ul><li>.toFixed(n)——显示 n 位小数</li> <li>.toExponential(n)——格式化数值，科学计数法，显示 n 位小数</li> <li>.toPrecision(n)——格式化数值，变成 n 位</li></ul></li></ol></li> <li>String 类型
+<ol><li>字符方法
+<ul><li>.chatAt(n)——返回字符串的第 n+1 个字符</li> <li>.chatCodeAt(n)——返回字符串的第 n+1 个字符的字符编码 (ASCII)</li></ul></li> <li>字符串操作方法
+<ul><li>.concat()——拼接字符串，不过“+”更常用</li> <li>.slice(n)——脚标从 0 开始，截取第 n（包含）个字符之后的字符串，负数表示从尾部算起，不修改原字符</li> <li>.substring(a,b)——截取第 a（包含）个到第 b（不包含）个字符，负数变成 0, 不修改源字符</li> <li>.substr(a,b)——从第 a（包含）个字符开始，截取 b（不包含）个字符，第一个负数加上字符串长度，第二个负数变成 0, 不修改源字符</li></ul></li> <li>字符串位置方法
+<ul><li>.indexOf(&quot;a&quot;)——返回字符“a”所在位置，没有则返回-1</li> <li>.lastIndexOf(&quot;a&quot;)——从末尾向前搜索字符“a”的位置，没有则返回-1</li></ul></li> <li>trim() 方法
+.trim() 方法会创建一个字符串的副本，删除前置及后缀的所有空格，然后返回结果</li> <li>字符串大小写的转换方法
+.toLocaleLowerCase()
+.toLowerCase()
+.toLocaleUpperCase()
+.toUpperCase()</li> <li>字符串的模式匹配方法
+<ul><li>.match()——本质与调用 RegExp 的 exec() 方法相同</li> <li>.search()——返回字符串中第一个匹配项的索引，没有则返回-1</li> <li>.replace(a,b)——参数 b 替换参数 a, 如果 a 是字符串则只替换第一个，全部替换需要 a 是正则表达式而且要指定全局 (g) 标志。第二个参数 b 可以是字符串、特殊的字符序列、函数</li> <li>.split()——基于指定的分隔符将一个字符串分割成多个子字符串</li></ul></li> <li>localeCompare() 方法，字符串比较，可用于判断大小写</li> <li>HTML 方法，尽量不要使用</li></ol></li></ol> <h3 id="_6-7-单体内置对象"><a href="#_6-7-单体内置对象" class="header-anchor">#</a> 6.7. 单体内置对象</h3> <p>定义：由 ECMAScript 实现提供的、不依赖宿主环境的对象，这些对象在 ECMAScript 程序执行之前就已经存在了</p> <ol><li>Global 对象</li> <li>Math 对象
+<ol><li>min() 和 max() 方法</li> <li>舍入方法
+<ul><li>Math.ceil()——执行向上舍入，即小数进一</li> <li>Math.floor()——执行向下舍入，即小数舍去</li> <li>Math.round()——执行标准舍入，即四舍五入</li></ul></li> <li>Math.random() 方法，生成一个≥0,&lt;1 的随机数</li> <li>其他方法：绝对值、次幂、三角函数等</li></ol></li></ol> <h2 id="_7-面向对象"><a href="#_7-面向对象" class="header-anchor">#</a> 7. 面向对象</h2> <h2 id="_8-函数表达式"><a href="#_8-函数表达式" class="header-anchor">#</a> 8. 函数表达式</h2> <h3 id="_8-1-函数的表达式"><a href="#_8-1-函数的表达式" class="header-anchor">#</a> 8.1. 函数的表达式</h3> <ol><li>定义函数的方式有两种：一种是函数声明，另一种是函数表达式
+<ol><li><p>函数声明</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">functionName</span><span class="token punctuation">(</span><span class="token parameter">arg0<span class="token punctuation">,</span> arg1<span class="token punctuation">,</span> arg2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 函数体</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>函数声明提升：意思是执行代码之前会先读取函数声明。这就意味着可以把函数声明放在调用它的语句后面</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">laert</span><span class="token punctuation">(</span><span class="token string">&quot;Hi!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><p>函数表达式</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> <span class="token function-variable function">functionName</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">arg0<span class="token punctuation">,</span> arg1<span class="token punctuation">,</span> arg2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 函数体</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>区别</p> <ol><li>函数表达书创建的函数叫做匿名函数 (anonymous function), 也称为拉姆达函数，因为 function 关键字后面没有标识符。匿名函数的 name 属性是空字符串</li> <li>函数表达式与其他表达式一样使用前必须先赋值</li> <li>理解函数提升的关键就是理解函数声明与函数表达式之间的区别，函数表达式能够创建函数再赋值给变量，也就能够把函数作为其他函数的返回值</li></ol></li></ol></li> <li>递归：递归函数是在一个函数通过名字调用自身的情况下构成的</li> <li>闭包：是指有权访问另一个函数作用域中变量的函数。创建闭包的常见方式，就是在函数内部创建另一个函数。</li></ol> <h2 id="_9-选择器"><a href="#_9-选择器" class="header-anchor">#</a> 9. 选择器</h2> <ol><li><p>js</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// id 选择</span>
+document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// name 属性选择</span>
+document<span class="token punctuation">.</span><span class="token function">getElementByName</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 标签/元素选择</span>
+document<span class="token punctuation">.</span><span class="token function">getElementByTagName</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 选择所有&lt;p&gt;元素</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li> <li><p>jquery</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 元素选择</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span>  <span class="token comment">// 选择所有&lt;p&gt;元素</span>
+
+<span class="token comment">// id 选择</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#i'</span><span class="token punctuation">)</span>    <span class="token comment">// 选择元素 id=i 的元素</span>
+
+<span class="token comment">// .class 选择</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.cls'</span><span class="token punctuation">)</span>   <span class="token comment">// 选择所有 class='cls'的元素</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li></ol> <h2 id="_10-dom-操作"><a href="#_10-dom-操作" class="header-anchor">#</a> 10. DOM 操作</h2> <h3 id="_10-1-操作属性-jquery"><a href="#_10-1-操作属性-jquery" class="header-anchor">#</a> 10.1. 操作属性 jQuery</h3> <ol><li><p>增加属性</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// jquery</span>
+<span class="token function">$</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span>classname<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>替换属性</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// jquery</span>
+<span class="token function">$</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span>attribute<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 或带参数</span>
+<span class="token function">$</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span>attribute<span class="token punctuation">,</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><p>删除属性</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token function">$</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span>classname<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ol> <h2 id="_11-读写文件-nodejs"><a href="#_11-读写文件-nodejs" class="header-anchor">#</a> 11. 读写文件 (NodeJS)</h2> <ol><li><p>读文件</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span>    <span class="token comment">// 头文件</span>
+
+<span class="token keyword">let</span> fname <span class="token operator">=</span> <span class="token string">'abc.csv'</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span>fname<span class="token punctuation">,</span> <span class="token string">'utf-8'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">let</span> list <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'\r\n'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 按行分割</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> xx <span class="token keyword">in</span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>list<span class="token punctuation">[</span>xx<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 按行输出</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div></li> <li><p>写文件</p></li></ol> <h3 id="_11-1-json-文件处理"><a href="#_11-1-json-文件处理" class="header-anchor">#</a> 11.1. Json 文件处理</h3> <ol><li><p>读取 Json 文件</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 头文件</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;fs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 读取 json 配置文件</span>
+<span class="token keyword">var</span> index <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">&quot;xxx.json&quot;</span><span class="token punctuation">,</span> <span class="token string">'utf-8'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Read file error!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Read file success.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> data<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// json 数据格式化</span>
+index <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div></li> <li><p>写入 Json 文件</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 头文件</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;fs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 读取 json 配置文件</span>
+<span class="token keyword">var</span> json_data <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">&quot;xxx.json&quot;</span><span class="token punctuation">,</span> <span class="token string">'utf-8'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Read file error!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Read file success.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> data<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// json 数据格式化</span>
+json_data <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>json_data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 创建新数据</span>
+<span class="token keyword">let</span> new_data <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">key1</span><span class="token operator">:</span> value1<span class="token punctuation">,</span>
+    <span class="token literal-property property">key2</span><span class="token operator">:</span> value2<span class="token punctuation">,</span>
+    <span class="token literal-property property">key3</span><span class="token operator">:</span> value3
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+json_data<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>new_data<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// 添加数据</span>
+<span class="token keyword">var</span> t <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>json_data<span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;\t&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// Json 数据格式化</span>
+fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span><span class="token string">&quot;xxx.json&quot;</span><span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 写入文件</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div></li> <li><p>路径问题，<a href="https://www.cnblogs.com/yinhaiying/p/10782303.html" target="_blank" rel="noopener noreferrer">参考🔗<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li></ol> <h2 id="_12-未完待续"><a href="#_12-未完待续" class="header-anchor">#</a> 12. 未完待续</h2></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">3/30/2023, 2:14:30 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/front-end/HTTP学习笔记.html" class="prev">
+        HTTP学习笔记
+      </a></span> <span class="next"><a href="/pages/front-end/Nginx笔记.html">
+        Nginx 笔记
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div class="cat-container" data-v-a13867c0><canvas id="vuepress-cat" width="280" height="250" class="live2d" data-v-a13867c0></canvas></div></div></div>
+    <script src="/assets/js/app.bf86356c.js" defer></script><script src="/assets/js/2.6938d6ea.js" defer></script><script src="/assets/js/64.95d3600e.js" defer></script>
+  </body>
+</html>
